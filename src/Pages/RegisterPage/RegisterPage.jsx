@@ -1,19 +1,19 @@
-import { useState } from "react";
-import "./LoginPage.css";
 import { Link } from "react-router-dom";
-export default function LoginPage() {
+import "./RegisterPage.css";
+
+export default function RegisterPage() {
   function handleSubmit(e) {
     e.preventDefault();
   }
 
   return (
-    <main className="LoginPage page">
+    <main className="RegisterPage page">
       <div className="login-container">
         <div className="wave">
           <h1>Hello Gamer 👋</h1>
         </div>
         <div className="login">
-          <h1>Login to your account</h1>
+          <h1>Create My Account</h1>
           <div className="form-container">
             <form onSubmit={(e) => handleSubmit(e)}>
               <input type="email" name="email" placeholder="Enter Your Email" />
@@ -22,13 +22,13 @@ export default function LoginPage() {
                 name="password"
                 placeholder="Enter Your Password"
               />
-              <button>Login</button>
+              <button>Register</button>
             </form>
           </div>
           <p className="register">
-            You don't have one?
-            <Link className="register" to={"/register"}>
-              <span>Register</span>
+            You have one?
+            <Link to={"/login"} className="register">
+              <span>Login</span>
             </Link>
           </p>
         </div>

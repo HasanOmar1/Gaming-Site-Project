@@ -1,17 +1,18 @@
-.LoginPage{
+
+.RegisterPage{
     height: 93.6vh;
     display: flex;
 
 }
 
-.LoginPage .login-container{
+.RegisterPage .login-container{
     display: flex;
     margin: 6% 20%;
     height: 500px;
 
 }
 
-.LoginPage .wave{
+.RegisterPage .wave{
     padding: 160px;
     border-right: none;
     border-top-left-radius: 20px;
@@ -20,12 +21,12 @@
     background-size: cover;
 
 }
-.LoginPage .wave h1{
+.RegisterPage .wave h1{
     padding-top: 60px;
 }
 
 
-.LoginPage .login-container .login{
+.RegisterPage .login-container .login{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -39,14 +40,14 @@
 
 
 }
-.LoginPage .login-container .login h1{
+.RegisterPage .login-container .login h1{
     padding-bottom: 20px;
     margin-top: 70px;
     font-size: 1.6rem;
     
 }
 
-.LoginPage form{
+.RegisterPage form{
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -55,8 +56,8 @@
     
 }
 
-.LoginPage form input,
-.LoginPage form button{
+.RegisterPage form input,
+.RegisterPage form button{
     padding: 15px 10px;
     width: 350px;
     font-size: 1.2rem;
@@ -67,28 +68,28 @@
     border:none;
 }
 
-.LoginPage form button{
+.RegisterPage form button{
     cursor: pointer;
     background-color: #4e5e75;
     
 
 }
 
-.LoginPage form button:hover{
+.RegisterPage form button:hover{
+
     background-color: #4e5e758c;
 
 }
 
-.LoginPage .register{
+.RegisterPage .register{
     padding-top: 20px;
     font-size: 0.9rem;
     text-decoration: none;
-    
+
 }
 
-.LoginPage .register span{
+.RegisterPage .register span{
     color: rgb(128, 128, 249);
     cursor: pointer;
     padding-left: 5px;
-
 }
