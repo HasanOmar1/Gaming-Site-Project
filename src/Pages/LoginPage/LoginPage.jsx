@@ -13,7 +13,7 @@ export default function LoginPage() {
           <h1>Hello Gamer 👋</h1>
         </div>
         <div className="login">
-          <h1>Login to your account</h1>
+          <h1>Login to My Account</h1>
           <div className="form-container">
             <form onSubmit={(e) => handleSubmit(e)}>
               <input type="email" name="email" placeholder="Enter Your Email" />
