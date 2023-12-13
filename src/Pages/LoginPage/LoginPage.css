@@ -1,0 +1,78 @@
+.LoginPage{
+    height: 93.6vh;
+    display: flex;
+
+}
+
+.LoginPage .login-container{
+    display: flex;
+    margin: 6% 20%;
+    height: 500px;
+
+}
+
+.LoginPage .wave{
+    padding: 160px;
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: url('https://img.freepik.com/premium-vector/rgb-hexagonal-background_11469-76.jpg') no-repeat;
+    background-size: cover;
+
+}
+.LoginPage .wave h1{
+    padding-top: 60px;
+}
+
+
+.LoginPage .login-container .login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px ;
+    border-left: none;
+    width: 500px;
+    background-color: #22283152;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+
+}
+.LoginPage .login-container .login h1{
+    padding-bottom: 20px;
+    margin-top: 70px;
+    font-size: 1.6rem;
+}
+
+.LoginPage form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 15px;
+    
+    
+}
+
+.LoginPage form input{
+    padding: 15px 10px;
+    width: 350px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    background-color: #222831;
+    color: white;
+    border:none;
+}
+
+.LoginPage form input[type='submit']{
+    cursor: pointer;
+    background-color: #4e5e75;
+}
+
+.LoginPage form input[type='submit']:hover{
+
+    background-color: #4e5e758c;
+    font-size: 1.1rem;
+
+}
