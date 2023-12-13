@@ -2,8 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
 export default function Navbar() {
-  const location = useLocation();
-  // if (location.pathname === "/") {
+  // const location = useLocation();
+  // if (location.pathname === `/404`) {
   //   return null;
   // }
 

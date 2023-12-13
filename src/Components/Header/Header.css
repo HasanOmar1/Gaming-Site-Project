@@ -46,3 +46,8 @@
     border-color: rgb(59, 59, 151);
     color: darkcyan;
 }
+
+.Header .register:hover{
+    transform: rotateY(360deg);
+    transition: transform 3s ease-in-out;
+}
