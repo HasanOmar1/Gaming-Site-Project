@@ -1,5 +1,29 @@
 .HomePage{
+    width: 100%;
+    height: 93.6vh;   
+   
+}
+
+.HomePage .welcome-msg{
     display: flex;
     justify-content: center;
-    
+    padding: 50px 10px ;
+    letter-spacing: 1.2px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.HomePage .welcome-msg button{
+    padding: 10px;
+    background-color: #00ADB5;
+    border: none;
+    color: #EEEEEE;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.HomePage .welcome-msg button:hover{
+
+    background-color: #00acb5a9;
 }
