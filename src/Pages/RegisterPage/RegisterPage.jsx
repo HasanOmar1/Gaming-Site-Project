@@ -26,7 +26,7 @@ export default function RegisterPage() {
             </form>
           </div>
           <p className="register">
-            You have one?
+            Already a member?
             <Link to={"/login"} className="register">
               <span>Login</span>
             </Link>

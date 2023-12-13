@@ -14,8 +14,11 @@ export default function Navbar() {
           <h1>GAMES</h1>
         </div>
       </Link>
-      <Link to={"/login"} className="login">
+      <Link to={"/login"} className="loginOrRegister login">
         <div>Log in</div>
+      </Link>
+      <Link to={"/register"} className="loginOrRegister register">
+        <div>Join us</div>
       </Link>
     </div>
   );

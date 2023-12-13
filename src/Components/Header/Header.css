@@ -3,7 +3,6 @@
     height: 60px;
     background-color: #222831;
     display: flex;
-    justify-content: space-around;
 
 
 }
@@ -11,11 +10,12 @@
 .Header .logo{
     padding: 0.3rem 0 ;
     font-size: 1.4rem;
-    color: #00ADB5;
+    color: #00acb5ba;
     text-decoration: none;
+    margin-left: 20%;
 }
 
-.Header .login{
+.Header .loginOrRegister{
     color: #EEEEEE;
     padding-top: 1.3rem;
     border: 2px solid rgb(41, 119, 119);
@@ -23,10 +23,22 @@
     border-radius: 10px;
     margin: 5px 0;
     text-decoration: none;
+    margin-left: 10%;
     
+
 }
 
-.Header .login:hover{
+.Header .login{
+    margin-left: 710px;
+    border: none;
+    color: #adb4be;
+}
+
+.Header .register{
+    margin-left: 10px;
+}
+
+.Header .loginOrRegister:hover{
     border-color: white;
     color: darkcyan;
 }
