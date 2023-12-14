@@ -21,13 +21,11 @@
 
 .Header .loginOrRegister{
     color: #EEEEEE;
-    padding-top: 1.3rem;
     border: 2px solid rgb(41, 119, 119);
     padding: 1rem 20px;
     border-radius: 10px;
     margin: 5px 0;
     text-decoration: none;
-    margin-left: 10%;
     
 
 }
@@ -36,6 +34,18 @@
     margin-left: 710px;
     border: none;
     color: #adb4be;
+}
+
+.Header .logout{
+    margin-left: 10px;
+    padding-top: 1rem;
+    border: 2px solid rgb(188, 82, 82);
+    color: #7ea5de; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    
 }
 
 .Header .register{
@@ -50,4 +60,19 @@
 .Header .register:hover{
     transform: rotateY(360deg);
     transition: transform 3s ease-in-out;
+}
+
+.Header .logged-user{
+    color: #7ea5de;
+    margin-left: 500px;
+    padding-top: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.Header .my-library{
+    color: #EEEEEE;
+    padding: 1rem 20px;
+    margin: 5px 0;
+    text-decoration: none;
+    
 }

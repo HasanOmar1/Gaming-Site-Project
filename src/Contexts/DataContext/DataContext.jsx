@@ -5,6 +5,7 @@ export const UserDataContext = createContext();
 
 export default function UserDataProvider({ children }) {
   const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
     async function fetchUserData() {
@@ -24,7 +25,7 @@ export default function UserDataProvider({ children }) {
       const response = await axios.post(`/users`, {
         email: email,
         password: password,
-        library: [{}],
+        library: [],
       });
       setUsers([...users, response.data]);
     } catch (error) {
@@ -32,8 +33,16 @@ export default function UserDataProvider({ children }) {
     }
   }
 
+  useEffect(() => {
+    if (users) {
+      setCurrentUser(users.find((user) => user?.id === currentUser?.id));
+    }
+  }, [users]);
+
   return (
-    <UserDataContext.Provider value={{ users, createUser }}>
+    <UserDataContext.Provider
+      value={{ users, createUser, setCurrentUser, currentUser }}
+    >
       {children}
     </UserDataContext.Provider>
   );

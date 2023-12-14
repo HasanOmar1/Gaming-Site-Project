@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./RegisterPage.css";
 import { useState } from "react";
 import { useUserData } from "../../Contexts/DataContext/DataContext";
@@ -7,17 +7,43 @@ export default function RegisterPage() {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [isValid, setIsValid] = useState(false);
-  const { createUser } = useUserData();
+  const { createUser, users } = useUserData();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-  }
 
-  function handleRegister() {
-    if (emailValue && passwordValue) {
+    if (emailValue.includes("@") && passwordValue.length > 5) {
+      users.map((users) => {
+        if (emailValue === users.email) {
+          setIsValid(false);
+          alert("User already exists");
+          setEmailValue("");
+          setPasswordValue("");
+        } else {
+          setIsValid(true);
+        }
+      });
+    }
+    if (passwordValue.length < 6) {
+      setIsValid(false);
+      alert("password must be longer than 5 characters");
+    }
+
+    if (isValid) {
       createUser(emailValue, passwordValue);
+      navigate("/login");
     }
   }
+
+  // function handleRegister() {
+  //   if (emailValue.includes("@") && passwordValue.length > 4) {
+  //     setIsValid(true);
+  //     createUser(emailValue, passwordValue);
+  //   } else {
+  //     alert("not valid");
+  //   }
+  // }
 
   return (
     <main className="RegisterPage page">
@@ -43,7 +69,7 @@ export default function RegisterPage() {
                 value={passwordValue}
                 onChange={(e) => setPasswordValue(e.target.value)}
               />
-              <button onClick={handleRegister}>Register</button>
+              <button type="submit">Register</button>
             </form>
           </div>
           <p className="register">
