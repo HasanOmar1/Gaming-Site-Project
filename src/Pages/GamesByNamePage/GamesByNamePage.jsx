@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import "./GamesByNamePage.css";
 import Button from "@mui/material/Button";
+import RadioGroupRating from "../../Components/Rating/Rating";
 
 export default function GamesByNamePage() {
   const { state } = useLocation();
@@ -11,16 +12,26 @@ export default function GamesByNamePage() {
         <a href={state?.game.game_url} target="_blank">
           <img src={state?.game?.thumbnail} alt={state?.game?.title} />
         </a>
-        <Button
-          variant="contained"
-          href={state?.game?.game_url}
-          target="_blank"
-        >
-          Play
-        </Button>
-        <Button variant="contained" color="success" className="add-to-library">
-          Add To Library
-        </Button>
+
+        <div className="play-library-container">
+          <Button
+            variant="contained"
+            href={state?.game?.game_url}
+            target="_blank"
+          >
+            Play
+          </Button>
+          <Button
+            variant="contained"
+            color="success"
+            className="add-to-library"
+          >
+            Add To Library
+          </Button>
+        </div>
+        <div className="rating">
+          <RadioGroupRating />
+        </div>
       </div>
       <div className="description">
         <h1 className="game-title">{state?.game?.title}</h1>

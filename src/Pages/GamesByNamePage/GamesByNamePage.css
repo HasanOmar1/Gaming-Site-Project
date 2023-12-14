@@ -9,6 +9,8 @@
 .GamesByNamePage .img-container{
     width: 400px;
     height: 300px;
+    border-radius: 20px;
+
     
 }
 
@@ -23,6 +25,11 @@
 
 .GamesByNamePage .img-container img:hover{
     transform: scale(1.1);
+
+}
+
+.GamesByNamePage .play-library-container{
+    margin-top: 20px;
 
 }
 .GamesByNamePage .add-to-library{
@@ -56,4 +63,12 @@
 .GamesByNamePage .game-info span{
     font-size: 0.9rem;
     color: #eeeeeec4;
+}
+.GamesByNamePage .rating{
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 150px;
+    border: 2px solid rgb(189, 123, 123);
+    border-radius: 10px;
+   
 }
