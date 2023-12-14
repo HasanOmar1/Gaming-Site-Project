@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
+import Cards from "../../Components/Cards/Cards";
 
 export default function HomePage() {
   const { users, currentUser } = useUserData();
@@ -18,6 +19,8 @@ export default function HomePage() {
               </Link>
             </>
           )}
+
+          <Cards />
         </div>
       )}
     </main>
