@@ -9,7 +9,7 @@ export default function GamesDataProvider({ children }) {
     async function gamesAPI() {
       try {
         const response = await axios.get("games?platform=pc");
-        const tenGames = response.data.slice(0, 10);
+        const tenGames = response.data.slice(0, 5);
         setGamesData(tenGames);
         console.log(tenGames);
       } catch (error) {

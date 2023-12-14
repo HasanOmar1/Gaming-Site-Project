@@ -19,10 +19,15 @@ export default function HomePage() {
               </Link>
             </>
           )}
-
-          <Cards />
         </div>
       )}
+      <h2 className="cards-title">Recently Added</h2>
+      <section className="cards-section">
+        <div className="left-cards-container">
+          <Cards />
+        </div>
+        <div className="right-cards-container">{/* <h3>Hello</h3> */}</div>
+      </section>
     </main>
   );
 }

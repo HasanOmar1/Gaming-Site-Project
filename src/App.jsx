@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import GamesDataProvider from "./Contexts/GamesDataContext/GamesDataContext";
+import GamesByNamePage from "./Pages/GamesByNamePage/GamesByNamePage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={"/"} exact element={<HomePage />} />
           <Route path={"/login"} element={<LoginPage />} />
           <Route path={"/register"} element={<RegisterPage />} />
+          <Route path={"/:name"} element={<GamesByNamePage />} />
           <Route path={"*"} element={<NotFoundPage />} />
         </Routes>
       </GamesDataProvider>

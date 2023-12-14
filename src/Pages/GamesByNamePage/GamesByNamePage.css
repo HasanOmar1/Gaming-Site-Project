@@ -1,0 +1,59 @@
+.GamesByNamePage{
+
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-right: 300px;
+}
+
+.GamesByNamePage .img-container{
+    width: 400px;
+    height: 300px;
+    
+}
+
+.GamesByNamePage .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 1s;
+    border-radius: 330px;
+   
+}
+
+.GamesByNamePage .img-container img:hover{
+    transform: scale(1.1);
+
+}
+.GamesByNamePage .add-to-library{
+    width: 300px;
+    margin-left: 10px;
+}
+
+.GamesByNamePage .description{
+    padding-left: 30px;
+    padding-top: 50px;
+}
+.GamesByNamePage .game-title{
+    padding-bottom: 20px;
+
+}
+
+.GamesByNamePage .game-description{
+    width: 60ch;
+    line-height: 1.7;
+    color: rgb(173, 172, 172);
+}
+
+.GamesByNamePage .game-info{
+    margin-top: 20px;
+    line-height: 1.7;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: #00ADB5;
+}
+
+.GamesByNamePage .game-info span{
+    font-size: 0.9rem;
+    color: #eeeeeec4;
+}
