@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./LoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useUserData } from "../../Contexts/DataContext/DataContext";
+import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 export default function LoginPage() {
   const navigate = useNavigate();
   const [emailInput, setEmailInput] = useState("");
@@ -22,7 +22,9 @@ export default function LoginPage() {
       } else if (emailInput === user.email && passwordInput !== user.password) {
         setIsValid(false);
         setPasswordInput("");
-        setPasswordErrorMsg("Password is not correct");
+        setEmailErrorMsg("Email or Password is not correct");
+      } else if (emailInput === user.email) {
+        setEmailErrorMsg("not found");
       }
     });
 

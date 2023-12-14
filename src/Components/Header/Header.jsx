@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
-import { useUserData } from "../../Contexts/DataContext/DataContext";
+import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 
 export default function Navbar() {
   const { currentUser, setCurrentUser } = useUserData();

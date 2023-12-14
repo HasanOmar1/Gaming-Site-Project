@@ -1,13 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./RegisterPage.css";
 import { useState } from "react";
-import { useUserData } from "../../Contexts/DataContext/DataContext";
+import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 
 export default function RegisterPage() {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const { createUser, users } = useUserData();
+  const [emailErrorMsg, setEmailErrorMsg] = useState("");
+  const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
   const navigate = useNavigate();
 
   function handleSubmit(e) {
@@ -17,7 +19,7 @@ export default function RegisterPage() {
       users.map((users) => {
         if (emailValue === users.email) {
           setIsValid(false);
-          alert("User already exists");
+          setEmailErrorMsg("User already exists");
           setEmailValue("");
           setPasswordValue("");
         } else {
@@ -27,7 +29,7 @@ export default function RegisterPage() {
     }
     if (passwordValue.length < 6) {
       setIsValid(false);
-      alert("password must be longer than 5 characters");
+      setPasswordErrorMsg("password must be longer than 5 characters");
     }
 
     if (isValid) {
@@ -36,14 +38,12 @@ export default function RegisterPage() {
     }
   }
 
-  // function handleRegister() {
-  //   if (emailValue.includes("@") && passwordValue.length > 4) {
-  //     setIsValid(true);
-  //     createUser(emailValue, passwordValue);
-  //   } else {
-  //     alert("not valid");
-  //   }
-  // }
+  function handlePasswordInput(e) {
+    setPasswordValue(e.target.value);
+    if (passwordValue.length > 5) {
+      setPasswordErrorMsg("");
+    }
+  }
 
   return (
     <main className="RegisterPage page">
@@ -55,6 +55,7 @@ export default function RegisterPage() {
           <h1>Create My Account</h1>
           <div className="form-container">
             <form onSubmit={(e) => handleSubmit(e)}>
+              <div className="email-error-msg">{emailErrorMsg}</div>
               <input
                 type="email"
                 name="email"
@@ -62,12 +63,13 @@ export default function RegisterPage() {
                 value={emailValue}
                 onChange={(e) => setEmailValue(e.target.value)}
               />
+              <div className="password-error-msg">{passwordErrorMsg}</div>
               <input
                 type="password"
                 name="password"
                 placeholder="Enter Your Password"
                 value={passwordValue}
-                onChange={(e) => setPasswordValue(e.target.value)}
+                onChange={(e) => handlePasswordInput(e)}
               />
               <button type="submit">Register</button>
             </form>

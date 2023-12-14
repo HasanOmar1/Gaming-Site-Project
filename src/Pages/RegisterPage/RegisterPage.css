@@ -93,3 +93,8 @@
     cursor: pointer;
     padding-left: 5px;
 }
+
+.RegisterPage .password-error-msg,
+.RegisterPage .email-error-msg{
+    color: red;
+}
