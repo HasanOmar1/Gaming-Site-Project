@@ -1,4 +1,10 @@
+import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import "./Cards.css";
 export default function Cards() {
-  return <div className="Cards">Cards</div>;
+  const { gamesData } = useGamesData();
+  return (
+    <div className="Cards">
+      <div className="cards-container"></div>
+    </div>
+  );
 }
