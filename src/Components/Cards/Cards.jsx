@@ -8,7 +8,11 @@ export default function Cards() {
       <div className="cards-container">
         {gamesData.map((game) => {
           return (
-            <Link key={game.id} to={`/${game.title}`} state={{ game }}>
+            <Link
+              key={game.id}
+              to={`/${game.title.replace(/ /g, "-")}`}
+              state={{ game }}
+            >
               <div className="games-container">
                 <div className="img-container">
                   <img
