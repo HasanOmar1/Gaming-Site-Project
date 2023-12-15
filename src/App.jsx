@@ -36,7 +36,7 @@ function App() {
             <Route path={"/Sports"} element={<Sports />} />
             <Route path={"/Strategy"} element={<Strategy />} />
             <Route path={"/BattleRoyale"} element={<BattleRoyale />} />
-            <Route path={"*"} element={<NotFoundPage />} />
+            <Route path={"/*"} element={<NotFoundPage />} />
           </Routes>
         </CategoriesProvider>
       </GamesDataProvider>

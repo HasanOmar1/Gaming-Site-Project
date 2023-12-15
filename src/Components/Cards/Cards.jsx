@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import "./Cards.css";
 export default function Cards({ genre }) {
   return (
