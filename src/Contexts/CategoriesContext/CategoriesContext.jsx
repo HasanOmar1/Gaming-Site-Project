@@ -6,7 +6,6 @@ export const CategoriesContext = createContext();
 export default function CategoriesProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [shooterCategory, setShooterCategory] = useState([]);
-  const [tenShooterGames, setTenShooterGames] = useState([]);
   const [recommendedShooterGames, setRecommendedShooterGames] = useState([]);
 
   useEffect(() => {
@@ -14,8 +13,6 @@ export default function CategoriesProvider({ children }) {
       try {
         const response = await axios.get("games?category=shooter");
         setShooterCategory(response.data);
-        const tenShooterGames = response.data.slice(10, 20);
-        setTenShooterGames(tenShooterGames);
       } catch (error) {
         console.log(error);
       } finally {
@@ -45,7 +42,6 @@ export default function CategoriesProvider({ children }) {
       value={{
         loading,
         shooterCategory,
-        tenShooterGames,
         recommendedShooterGames,
       }}
     >

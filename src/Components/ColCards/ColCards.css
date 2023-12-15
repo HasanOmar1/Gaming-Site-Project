@@ -1,0 +1,15 @@
+.ColCards{
+
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+    /* margin-top: 40px; */
+}
+
+.ColCards .img-container{
+    transition: transform 1s;
+}
+.ColCards .img-container:hover{
+    transform: scale(1.1);
+}

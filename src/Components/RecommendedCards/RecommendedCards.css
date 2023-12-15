@@ -1,13 +1,13 @@
-.BigCards {
+.RecommendedCards {
     display: flex;
     gap: 20px;
     justify-content: space-evenly;
     margin-top: 40px;
 }
 
-.BigCards .img-container{
+.RecommendedCards .img-container{
     transition: transform 1s;
 }
-.BigCards .img-container:hover{
+.RecommendedCards .img-container:hover{
     transform: scale(1.1);
 }

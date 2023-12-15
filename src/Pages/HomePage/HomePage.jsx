@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import Cards from "../../Components/Cards/Cards";
+import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 
 export default function HomePage() {
   const { users, currentUser } = useUserData();
+  const { gamesData } = useGamesData();
 
   return (
     <main className="HomePage page">
@@ -24,7 +26,7 @@ export default function HomePage() {
       <h2 className="cards-title">Recently Added</h2>
       <section className="cards-section">
         <div className="left-cards-container">
-          <Cards />
+          <Cards genre={gamesData.slice(0, 7)} />
         </div>
         <div className="right-cards-container">{/* <h3>Hello</h3> */}</div>
       </section>

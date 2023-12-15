@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import "./Cards.css";
-export default function Cards() {
-  const { gamesData } = useGamesData();
+export default function Cards({ genre }) {
   return (
     <div className="Cards">
       <div className="cards-container">
-        {gamesData.map((game) => {
+        {genre?.map((game) => {
           return (
             <Link
               key={game.id}

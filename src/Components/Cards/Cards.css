@@ -10,6 +10,8 @@
     background-color: #32383e;
     position: relative;
     transition: transform 1s;
+    border: none;
+    border-radius: 10px;
     
 }
 

@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import "./BigCards.css";
-import { useCategories } from "../../Contexts/CategoriesContext/CategoriesContext";
+import "./RecommendedCards.css";
 
-export default function BigCards({ recommended }) {
+export default function RecommendedCards({ recommended }) {
   return (
-    <section className="BigCards">
-      {recommended.map((game) => {
+    <section className="RecommendedCards">
+      {recommended?.map((game) => {
         return (
           <Link
             key={game?.id}
