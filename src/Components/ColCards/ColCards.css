@@ -1,6 +1,6 @@
 .ColCards{
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-direction: column;
 }
 

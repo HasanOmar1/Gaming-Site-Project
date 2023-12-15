@@ -20,10 +20,10 @@ export default function Shooter() {
           </div>
           <div className="games-container">
             <div className="left-cards-container">
-              <Cards genre={shooterCategory.slice(4, 11)} />
+              <Cards genre={shooterCategory.slice(4, 13)} />
             </div>
             <div className="right-cards-container">
-              <ColCards recommended={recommendedShooterGames} />
+              <ColCards recommended={shooterCategory.slice(36, 42)} />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import Cards from "../../Components/Cards/Cards";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
+import ColCards from "../../Components/ColCards/ColCards";
 
 export default function HomePage() {
   const { users, currentUser } = useUserData();
@@ -28,7 +29,9 @@ export default function HomePage() {
         <div className="left-cards-container">
           <Cards genre={gamesData.slice(0, 7)} />
         </div>
-        <div className="right-cards-container">{/* <h3>Hello</h3> */}</div>
+        <div className="right-cards-container">
+          <ColCards recommended={gamesData.slice(50, 55)} />
+        </div>
       </section>
     </main>
   );
