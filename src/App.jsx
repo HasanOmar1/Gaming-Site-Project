@@ -8,20 +8,23 @@ import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import GamesDataProvider from "./Contexts/GamesDataContext/GamesDataContext";
 import GamesByNamePage from "./Pages/GamesByNamePage/GamesByNamePage";
 import Shooter from "./Pages/Categories/Shooter/Shooter";
+import CategoriesProvider from "./Contexts/CategoriesContext/CategoriesContext";
 
 function App() {
   return (
     <>
       <GamesDataProvider>
-        <Header />
-        <Routes>
-          <Route path={"/"} exact element={<HomePage />} />
-          <Route path={"/login"} element={<LoginPage />} />
-          <Route path={"/register"} element={<RegisterPage />} />
-          <Route path={"/:name"} element={<GamesByNamePage />} />
-          <Route path={"/shooter"} element={<Shooter />} />
-          <Route path={"*"} element={<NotFoundPage />} />
-        </Routes>
+        <CategoriesProvider>
+          <Header />
+          <Routes>
+            <Route path={"/"} exact element={<HomePage />} />
+            <Route path={"/login"} element={<LoginPage />} />
+            <Route path={"/register"} element={<RegisterPage />} />
+            <Route path={"/:name"} element={<GamesByNamePage />} />
+            <Route path={"/shooter"} element={<Shooter />} />
+            <Route path={"*"} element={<NotFoundPage />} />
+          </Routes>
+        </CategoriesProvider>
       </GamesDataProvider>
     </>
   );

@@ -1,4 +1,23 @@
-.Shooter{
 
-    
+
+.Shooter .all-container{
+    padding-top: 30px;
+    margin: 0 300px;
+    background-color:#43485068 ;
 }
+
+.Shooter .recommended-container{
+    /* border: 2px solid red; */
+    height: 60vh;
+    padding-top: 30px;
+}
+
+ .Shooter .recommended-games-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+   
+}
+
+
