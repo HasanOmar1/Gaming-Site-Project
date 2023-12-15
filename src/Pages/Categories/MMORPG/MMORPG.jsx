@@ -18,9 +18,10 @@ export default function MMORPG() {
               <RecommendedCards recommended={mmorpgCategory.slice(23, 26)} />
             </div>
           </div>
+          <h3 id="more-games">More Games</h3>
           <div className="games-container">
             <div className="left-cards-container">
-              <Cards genre={mmorpgCategory.slice(4, 13)} />
+              <Cards genre={mmorpgCategory.slice(29, 38)} />
             </div>
             <div className="right-cards-container">
               <ColCards recommended={mmorpgCategory.slice(36, 42)} />

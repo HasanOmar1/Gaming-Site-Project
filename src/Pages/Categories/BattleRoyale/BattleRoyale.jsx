@@ -1,19 +1,19 @@
-import "./Shooter.css";
+import "./BattleRoyale.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
 import { Spinner } from "react-bootstrap";
 import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
 
-export default function Shooter() {
+export default function BattleRoyale() {
   const { loading, recommendedShooterGames, shooterCategory } = useCategories();
 
   return (
-    <main className="Shooter page">
+    <main className="BattleRoyale page">
       {!loading ? (
         <div className="all-container">
           <div className="recommended-container">
-            <h3>Recommended games in Shooter genre</h3>
+            <h3>Recommended games in Battle-royale genre</h3>
             <div className="recommended-games-container">
               <RecommendedCards recommended={recommendedShooterGames} />
             </div>

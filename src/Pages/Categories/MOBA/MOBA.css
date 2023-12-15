@@ -1,45 +1,45 @@
-.MMORPG{
+.MOBA{
     height: 235vh;
 }
 
-.MMORPG .all-container{
+.MOBA .all-container{
     padding-top: 30px;
     margin: 0 300px;
     background-color:#43485068 ;
     height: 225vh;
 }
 
-.MMORPG .recommended-container{
+.MOBA .recommended-container{
     padding-top: 30px;
 }
 
- .MMORPG .recommended-container h3{
+ .MOBA .recommended-container h3{
     margin-left: 2.3rem;
   
 }
 
-.MMORPG .games-container{
+.MOBA .games-container{
     display: flex;
 
 }
 
-.MMORPG .left-cards-container{
+.MOBA .left-cards-container{
     display: flex;
     flex-direction: column;
     width: 800px;
     height: 150px;
     margin-top: 1rem;
     margin-left: 3rem;
- 
 }
 
-.MMORPG .right-cards-container{
+.MOBA .right-cards-container{
     margin-top: 1rem;
     margin-left: 3.7rem;
     display: flex;
     flex-direction: column;
 }
-.MMORPG #more-games{
+
+.MOBA #more-games{
     margin-left: 3rem;
     margin-top: 4rem;
     color: #00ADB5;

@@ -1,12 +1,12 @@
 .Shooter{
-    height: 230vh;
+    height: 235vh;
 }
 
 .Shooter .all-container{
     padding-top: 30px;
     margin: 0 300px;
     background-color:#43485068 ;
-    height: 220vh;
+    height: 225vh;
 }
 
 .Shooter .recommended-container{
@@ -28,14 +28,19 @@
     flex-direction: column;
     width: 800px;
     height: 150px;
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-left: 3rem;
- 
 }
 
 .Shooter .right-cards-container{
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-left: 3.7rem;
     display: flex;
     flex-direction: column;
+}
+
+.Shooter #more-games{
+    margin-left: 3rem;
+    margin-top: 4rem;
+    color: #00ADB5;
 }
