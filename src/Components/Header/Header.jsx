@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
+import DropdownBtn from "../Dropdown/Dropdown";
 
 export default function Navbar() {
   const { currentUser, setCurrentUser } = useUserData();
@@ -21,50 +22,28 @@ export default function Navbar() {
       </Link>
 
       <div className="navbar-links">
-        <nav id="menu">
-          <input type="checkbox" id="responsive-menu" />
-          <label></label>
-          <ul>
-            <li>
-              <a class="dropdown-arrow">Products</a>
-              <ul class="sub-menus">
-                <li>
-                  <Link to="/">Products 1</Link>
-                </li>
-                <li>
-                  <Link to="/">Products 2</Link>
-                </li>
-                <li>
-                  <Link to="/">Products 3</Link>
-                </li>
-                <li>
-                  <Link to="/">Products 4</Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
         <Link to={"/"} className="link home">
           Home
         </Link>
+        <DropdownBtn />
         {!currentUser ? (
           <>
             <Link to={"/login"} className="loginOrRegister login">
               <div>Log in</div>
             </Link>
-            <Link to={"/register"} className="loginOrRegister register">
+            <Link to={"/register"} className="register">
               <div>Join us</div>
             </Link>
           </>
         ) : (
           <>
-            <h3 className="logged-user">{currentUser.email}</h3>
             <div className="my-library ">My Library</div>
             <Link to={"/"} className="link">
               <div onClick={handleLogOut} className="loginOrRegister logout">
                 Log out
               </div>
             </Link>
+            <h5 className="logged-user">{currentUser.email}</h5>
           </>
         )}
       </div>

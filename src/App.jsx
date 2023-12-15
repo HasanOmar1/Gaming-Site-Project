@@ -7,6 +7,7 @@ import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import GamesDataProvider from "./Contexts/GamesDataContext/GamesDataContext";
 import GamesByNamePage from "./Pages/GamesByNamePage/GamesByNamePage";
+import Shooter from "./Pages/Categories/Shooter/Shooter";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path={"/login"} element={<LoginPage />} />
           <Route path={"/register"} element={<RegisterPage />} />
           <Route path={"/:name"} element={<GamesByNamePage />} />
+          <Route path={"/shooter"} element={<Shooter />} />
           <Route path={"*"} element={<NotFoundPage />} />
         </Routes>
       </GamesDataProvider>

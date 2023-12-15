@@ -20,21 +20,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .Header .loginOrRegister{
     color: #EEEEEE;
     border: 2px solid rgb(41, 119, 119);
-    padding: 1.2rem 20px;
+    padding: 1.2rem 0;
     border-radius: 10px;
-    margin: 5px 0;
     text-decoration: none;
     
 
 }
 
 .Header .login{
-    /* margin-left: 50px; */
+    margin-left: 490px;
     border: none;
     color: #adb4be;
 }
@@ -48,14 +48,22 @@
     justify-content: center;
     align-items: center;
     margin-top: 1px;
+    padding: 5px 30px;
     
 }
 
 .Header .register{
-    margin-left: 10px;
+    color: #7ea5de;
+    border: 2px solid rgb(41, 119, 119);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+
+    
 }
 
-.Header .loginOrRegister:hover{
+.Header .loginOrRegister:hover,
+.Header .register:hover{
     border-color: rgb(59, 59, 151);
     color: darkcyan;
 }
@@ -64,116 +72,22 @@
 
 .Header .logged-user{
     color: #7ea5de;
-    margin-left: 500px;
-    padding-top: 1.5rem;
-    letter-spacing: 0.5px;
+    margin-left: 100px;
+    padding-right: 20px;
+    padding-top: 0.5rem;
+
 }
 
 .Header .my-library{
     color: #EEEEEE;
-    padding: 1.5rem 20px;
+    padding: 1.5rem 0;
     margin: 5px 0;
     text-decoration: none;
+    margin-left: 400px;
     
 }
 
 .Header .home{
     color: #7ea5de;
-    margin-left: 600px;
-}
-
-#menu {
-	background: #444444;
-	height: 45px;
-	/* padding-left: 18px; */
-	/* border-radius: 10px; */
-    cursor: pointer;
-}
-#menu ul, #menu li {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none
-}
-#menu ul {
-	width: 100%;
-	text-align: left;
-}
-#menu li {
-	display: inline-block;
-	position: relative;
-}
-#menu a {
-	display: block;
-	line-height: 45px;
-	padding: 0 14px;
-	text-decoration: none;
-	color: #FFFFFF;
-	font-size: 16px;
-}
-#menu a.dropdown-arrow:after {
-	content: "\25BE";
-	margin-left: 5px;
-}
-#menu li a:hover {
-	color: #0099CC;
-	background: #F2F2F2;
-}
-#menu input {
-	display: none;
-	margin: 0;
-	padding: 0;
-	height: 45px;
-	width: 100%;
-	opacity: 0;
-	cursor: pointer
-}
-#menu label {
-	display: none;
-	line-height: 45px;
-	text-align: center;
-	position: absolute;
-	left: 35px
-}
-#menu label:before {
-	font-size: 1.6em;
-	color: #FFFFFF;
-	content: "\2261"; 
-	margin-left: 20px;
-}
-#menu ul.sub-menus{
-	height: auto;
-	overflow: hidden;
-	width: 170px;
-	background: #444444;
-	position: absolute;
-	z-index: 99;
-	display: none;
-}
-#menu ul.sub-menus li {
-	display: block;
-	text-align: left;
-	width: 100%;
-}
-#menu ul.sub-menus a {
-	color: #FFFFFF;
-	font-size: 16px;
-}
-#menu li:hover ul.sub-menus {
-	display: block
-}
-#menu ul.sub-menus a:hover{
-	background: #F2F2F2;
-	color: #444444;
-}
-@media screen and (max-width: 800px){
-	#menu {position:relative}
-	#menu ul {background:#444444;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
-	#menu ul.sub-menus {width:100%;position:static;}
-	#menu ul.sub-menus a {padding-left:30px;}
-	#menu li {display:block;float:none;width:auto;}
-	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
-	#menu input {z-index:4}
-	#menu input:checked + label {color:#FFFFFF}
-	#menu input:checked + label:before {content:"\00d7"}
-	#menu input:checked ~ ul {display:block}
+    margin-left: 20px;
 }
