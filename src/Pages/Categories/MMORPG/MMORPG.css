@@ -1,0 +1,41 @@
+.MMORPG{
+    height: 230vh;
+}
+
+.MMORPG .all-container{
+    padding-top: 30px;
+    margin: 0 300px;
+    background-color:#43485068 ;
+    height: 220vh;
+}
+
+.MMORPG .recommended-container{
+    padding-top: 30px;
+}
+
+ .MMORPG .recommended-container h3{
+    margin-left: 2.3rem;
+  
+}
+
+.MMORPG .games-container{
+    display: flex;
+
+}
+
+.MMORPG .left-cards-container{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 150px;
+    margin-top: 4rem;
+    margin-left: 3rem;
+ 
+}
+
+.MMORPG .right-cards-container{
+    margin-top: 4rem;
+    margin-left: 3.7rem;
+    display: flex;
+    flex-direction: column;
+}

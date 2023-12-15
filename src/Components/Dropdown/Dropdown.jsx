@@ -13,8 +13,10 @@ function DropdownBtn() {
         <Dropdown.Item onClick={() => navigate("/shooter")}>
           Shooter
         </Dropdown.Item>
-        <Dropdown.Item>Another action</Dropdown.Item>
-        <Dropdown.Item>Something else</Dropdown.Item>
+        <Dropdown.Item onClick={() => navigate("/MMORPG")}>
+          MMORPG
+        </Dropdown.Item>
+        {/* <Dropdown.Item>Something else</Dropdown.Item> */}
       </Dropdown.Menu>
     </Dropdown>
   );

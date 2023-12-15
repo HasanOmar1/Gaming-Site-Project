@@ -9,6 +9,7 @@ import GamesDataProvider from "./Contexts/GamesDataContext/GamesDataContext";
 import GamesByNamePage from "./Pages/GamesByNamePage/GamesByNamePage";
 import Shooter from "./Pages/Categories/Shooter/Shooter";
 import CategoriesProvider from "./Contexts/CategoriesContext/CategoriesContext";
+import MMORPG from "./Pages/Categories/MMORPG/MMORPG";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path={"/register"} element={<RegisterPage />} />
             <Route path={"/:name"} element={<GamesByNamePage />} />
             <Route path={"/shooter"} element={<Shooter />} />
+            <Route path={"/MMORPG"} element={<MMORPG />} />
             <Route path={"*"} element={<NotFoundPage />} />
           </Routes>
         </CategoriesProvider>
