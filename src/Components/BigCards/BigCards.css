@@ -1,7 +1,13 @@
-
-/* .BigCards .recommended-games-container{
-    margin-top: 40px;
+.BigCards {
     display: flex;
+    gap: 20px;
     justify-content: space-evenly;
-    gap: 30px;
-} */
+    margin-top: 40px;
+}
+
+.BigCards .img-container{
+    transition: transform 1s;
+}
+.BigCards .img-container:hover{
+    transform: scale(1.1);
+}

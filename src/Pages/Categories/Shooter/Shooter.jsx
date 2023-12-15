@@ -5,8 +5,7 @@ import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesCon
 import BigCards from "../../../Components/BigCards/BigCards";
 
 export default function Shooter() {
-  const { loading, shooterCategory, tenShooterGames, recommendedShooterGames } =
-    useCategories();
+  const { loading, recommendedShooterGames } = useCategories();
 
   return (
     <main className="Shooter page">
@@ -15,13 +14,7 @@ export default function Shooter() {
           <div className="recommended-container">
             <h3>Check out these recommended shooter games</h3>
             <div className="recommended-games-container">
-              {recommendedShooterGames.map((game) => {
-                return (
-                  <div key={game?.id}>
-                    <BigCards title={game?.title} img={game?.thumbnail} />
-                  </div>
-                );
-              })}
+              <BigCards recommended={recommendedShooterGames} />
             </div>
           </div>
           <div className="test"></div>
