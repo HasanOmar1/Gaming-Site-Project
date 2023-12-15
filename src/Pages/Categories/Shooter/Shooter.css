@@ -7,17 +7,19 @@
 }
 
 .Shooter .recommended-container{
-    /* border: 2px solid red; */
     height: 60vh;
     padding-top: 30px;
 }
 
- .Shooter .recommended-games-container{
-    /* margin-top: 40px; */
-    /* display: flex; */
-    /* justify-content: space-evenly; */
-    /* gap: 30px; */
-   
+ .Shooter .recommended-container h3{
+    margin-left: 2.3rem;
+  
 }
 
 
+.Shooter .genre-title{
+    background-color: #00ADB5;
+    border: none;
+    margin-left: 46%;
+
+}

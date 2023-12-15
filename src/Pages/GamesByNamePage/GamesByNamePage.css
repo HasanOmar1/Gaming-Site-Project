@@ -72,3 +72,15 @@
     border-radius: 10px;
    
 }
+
+.GamesByNamePage .back-btn{
+    height: 5ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.GamesByNamePage .back-icon{
+    font-size: 1rem;
+    
+}

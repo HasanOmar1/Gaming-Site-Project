@@ -1,13 +1,24 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./GamesByNamePage.css";
 import Button from "@mui/material/Button";
 import RadioGroupRating from "../../Components/Rating/Rating";
+import BackBtn from "react-bootstrap/Button";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function GamesByNamePage() {
   const { state } = useLocation();
+  const navigate = useNavigate();
   //   console.log(state.game);
   return (
     <main className="GamesByNamePage page">
+      <BackBtn
+        variant="outline-warning"
+        className="back-btn"
+        onClick={() => navigate(-1)}
+      >
+        <ArrowBackIosIcon className="back-icon" /> Back
+      </BackBtn>
+
       <div className="img-container">
         <a href={state?.game.game_url} target="_blank">
           <img src={state?.game?.thumbnail} alt={state?.game?.title} />
