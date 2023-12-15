@@ -21,7 +21,7 @@ export default function MMORPG() {
           <h3 id="more-games">More Games</h3>
           <div className="games-container">
             <div className="left-cards-container">
-              <Cards genre={mmorpgCategory.slice(29, 38)} />
+              <Cards genre={mmorpgCategory.slice(0, 9)} />
             </div>
             <div className="right-cards-container">
               <ColCards recommended={mmorpgCategory.slice(36, 42)} />

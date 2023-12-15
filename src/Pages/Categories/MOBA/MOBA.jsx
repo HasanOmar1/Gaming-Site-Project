@@ -6,7 +6,7 @@ import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
 
 export default function MOBA() {
-  const { loading, recommendedShooterGames, shooterCategory } = useCategories();
+  const { loading, mobaCategory } = useCategories();
 
   return (
     <main className="MOBA page">
@@ -15,17 +15,17 @@ export default function MOBA() {
           <div className="recommended-container">
             <h3>Recommended games in MOBA genre</h3>
             <div className="recommended-games-container">
-              <RecommendedCards recommended={recommendedShooterGames} />
+              <RecommendedCards recommended={mobaCategory.slice(0, 3)} />
             </div>
           </div>
           <h3 id="more-games">More Games</h3>
 
           <div className="games-container">
             <div className="left-cards-container">
-              <Cards genre={shooterCategory.slice(4, 13)} />
+              <Cards genre={mobaCategory.slice(10, 19)} />
             </div>
             <div className="right-cards-container">
-              <ColCards recommended={shooterCategory.slice(36, 42)} />
+              <ColCards recommended={mobaCategory.slice(19, 25)} />
             </div>
           </div>
         </div>

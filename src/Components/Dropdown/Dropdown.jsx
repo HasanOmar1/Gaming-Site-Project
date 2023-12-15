@@ -13,10 +13,27 @@ function DropdownBtn() {
         <Dropdown.Item onClick={() => navigate("/shooter")}>
           Shooter
         </Dropdown.Item>
+
         <Dropdown.Item onClick={() => navigate("/MMORPG")}>
           MMORPG
         </Dropdown.Item>
-        {/* <Dropdown.Item>Something else</Dropdown.Item> */}
+
+        <Dropdown.Item onClick={() => navigate("/MOBA")}>MOBA</Dropdown.Item>
+        <Dropdown.Item onClick={() => navigate("/Racing")}>
+          Racing
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => navigate("/Fighting")}>
+          Fighting
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => navigate("/Sports")}>
+          Sports
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => navigate("/Strategy")}>
+          Strategy
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => navigate("/BattleRoyale")}>
+          Battle Royale
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

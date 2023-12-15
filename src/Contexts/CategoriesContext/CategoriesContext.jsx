@@ -6,9 +6,13 @@ export const CategoriesContext = createContext();
 export default function CategoriesProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [shooterCategory, setShooterCategory] = useState([]);
-  const [recommendedShooterGames, setRecommendedShooterGames] = useState([]);
   const [mmorpgCategory, setMmorpgCategory] = useState([]);
-  const [recommendedMmorpgGames, setRecommendedMmorpgGames] = useState([]);
+  const [mobaCategory, setMobaCategory] = useState([]);
+  const [racingCategory, setRacingCategory] = useState([]);
+  const [fightingCategory, setFightingCategory] = useState([]);
+  const [sportsCategory, setSportsCategory] = useState([]);
+  const [strategyCategory, setStrategyCategory] = useState([]);
+  const [battleRoyaleCategory, setBattleRoyaleCategory] = useState([]);
 
   //SHOOTER
   useEffect(() => {
@@ -24,21 +28,6 @@ export default function CategoriesProvider({ children }) {
     }
     shooterGamesApi();
   }, []);
-
-  useEffect(() => {
-    if (shooterCategory) {
-      const theFinals = shooterCategory.find(
-        (game) => game.title === `The Finals`
-      );
-      const fortnite = shooterCategory.find(
-        (game) => game.title === `Fortnite`
-      );
-      const apexLegends = shooterCategory.find(
-        (game) => game.title === `Apex Legends`
-      );
-      setRecommendedShooterGames([theFinals, fortnite, apexLegends]);
-    }
-  }, [shooterCategory]);
 
   //MMORPG
 
@@ -56,28 +45,114 @@ export default function CategoriesProvider({ children }) {
     mmorpgGamesApi();
   }, []);
 
-  // useEffect(() => {
-  //   if (shooterCategory) {
-  //     const theFinals = shooterCategory.find(
-  //       (game) => game.title === `The Finals`
-  //     );
-  //     const fortnite = shooterCategory.find(
-  //       (game) => game.title === `Fortnite`
-  //     );
-  //     const apexLegends = shooterCategory.find(
-  //       (game) => game.title === `Apex Legends`
-  //     );
-  //     setRecommendedShooterGames([theFinals, fortnite, apexLegends]);
-  //   }
-  // }, [shooterCategory]);
+  //MOBA
+
+  useEffect(() => {
+    async function mobaGamesApi() {
+      try {
+        const response = await axios.get("games?category=moba");
+        setMobaCategory(response.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    mobaGamesApi();
+  }, []);
+
+  //Racing
+
+  useEffect(() => {
+    async function racingGamesApi() {
+      try {
+        const response = await axios.get("games?category=racing");
+        setRacingCategory(response.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    racingGamesApi();
+  }, []);
+
+  //Fighting
+
+  useEffect(() => {
+    async function fightingGamesApi() {
+      try {
+        const response = await axios.get("games?category=fighting");
+        setFightingCategory(response.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fightingGamesApi();
+  }, []);
+
+  //Sports
+
+  useEffect(() => {
+    async function sportsGamesApi() {
+      try {
+        const response = await axios.get("games?category=sports");
+        setSportsCategory(response.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    sportsGamesApi();
+  }, []);
+
+  //Strategy
+
+  useEffect(() => {
+    async function strategyGamesApi() {
+      try {
+        const response = await axios.get("games?category=strategy");
+        setStrategyCategory(response.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    strategyGamesApi();
+  }, []);
+
+  //Battle Royale
+
+  useEffect(() => {
+    async function battleRoyaleGamesApi() {
+      try {
+        const response = await axios.get("games?category=battle-royale");
+        setBattleRoyaleCategory(response.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    battleRoyaleGamesApi();
+  }, []);
 
   return (
     <CategoriesContext.Provider
       value={{
         loading,
         shooterCategory,
-        recommendedShooterGames,
         mmorpgCategory,
+        mobaCategory,
+        racingCategory,
+        fightingCategory,
+        sportsCategory,
+        strategyCategory,
+        battleRoyaleCategory,
       }}
     >
       {children}

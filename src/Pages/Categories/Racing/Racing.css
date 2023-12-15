@@ -1,12 +1,12 @@
 .Racing{
-    height: 235vh;
+    height: 140vh;
 }
 
 .Racing .all-container{
     padding-top: 30px;
     margin: 0 300px;
     background-color:#43485068 ;
-    height: 225vh;
+    height: 130vh;
 }
 
 .Racing .recommended-container{

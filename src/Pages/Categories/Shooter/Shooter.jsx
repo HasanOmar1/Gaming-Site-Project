@@ -6,7 +6,7 @@ import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
 
 export default function Shooter() {
-  const { loading, recommendedShooterGames, shooterCategory } = useCategories();
+  const { loading, shooterCategory } = useCategories();
 
   return (
     <main className="Shooter page">
@@ -15,7 +15,7 @@ export default function Shooter() {
           <div className="recommended-container">
             <h3>Recommended games in Shooter genre</h3>
             <div className="recommended-games-container">
-              <RecommendedCards recommended={recommendedShooterGames} />
+              <RecommendedCards recommended={shooterCategory.slice(50, 53)} />
             </div>
           </div>
           <h3 id="more-games">More Games</h3>

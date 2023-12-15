@@ -6,7 +6,7 @@ import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
 
 export default function Strategy() {
-  const { loading, recommendedShooterGames, shooterCategory } = useCategories();
+  const { loading, strategyCategory } = useCategories();
 
   return (
     <main className="Strategy page">
@@ -15,17 +15,17 @@ export default function Strategy() {
           <div className="recommended-container">
             <h3>Recommended games in Strategy genre</h3>
             <div className="recommended-games-container">
-              <RecommendedCards recommended={recommendedShooterGames} />
+              <RecommendedCards recommended={strategyCategory.slice(0, 3)} />
             </div>
           </div>
           <h3 id="more-games">More Games</h3>
 
           <div className="games-container">
             <div className="left-cards-container">
-              <Cards genre={shooterCategory.slice(4, 13)} />
+              <Cards genre={strategyCategory.slice(4, 13)} />
             </div>
             <div className="right-cards-container">
-              <ColCards recommended={shooterCategory.slice(36, 42)} />
+              <ColCards recommended={strategyCategory.slice(13, 19)} />
             </div>
           </div>
         </div>
