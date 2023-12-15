@@ -7,7 +7,14 @@
 
 .RecommendedCards .img-container{
     transition: transform 1s;
+
 }
+
 .RecommendedCards .img-container:hover{
     transform: scale(1.1);
+}
+
+.RecommendedCards img{
+    border-radius: 10px;
+
 }
