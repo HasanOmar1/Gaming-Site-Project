@@ -29,10 +29,10 @@ export default function Navbar() {
         {!currentUser ? (
           <>
             <Link to={"/login"} className="loginOrRegister login">
-              <div>Log in</div>
+              <div className="login-title">Log in</div>
             </Link>
             <Link to={"/register"} className="register">
-              <div>Join us</div>
+              <div className="register-title">Join us</div>
             </Link>
           </>
         ) : (

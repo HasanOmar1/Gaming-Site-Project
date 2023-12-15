@@ -54,10 +54,7 @@
 }
 
 .HomePage .cards-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #00ADB5;
-    margin-right: 570px;
+    margin-left: 350px;
     margin-top: 50px;
 }
