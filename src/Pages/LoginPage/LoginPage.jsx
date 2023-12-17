@@ -64,6 +64,7 @@ export default function LoginPage() {
                 placeholder="Enter Your Email"
                 value={emailInput}
                 onChange={(e) => handleEmailInput(e)}
+                required
               />
               <div className="password-error-msg">{passwordErrorMsg}</div>
               <input
@@ -72,6 +73,7 @@ export default function LoginPage() {
                 placeholder="Enter Your Password"
                 value={passwordInput}
                 onChange={(e) => handlePasswordInput(e)}
+                required
               />
               <button>Login</button>
             </form>
