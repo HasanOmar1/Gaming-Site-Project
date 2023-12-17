@@ -5,7 +5,7 @@ export const UserDataContext = createContext();
 
 export default function UserDataProvider({ children }) {
   const [users, setUsers] = useState([]);
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
     async function fetchUserData() {
