@@ -2,16 +2,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import DropdownBtn from "../Dropdown/Dropdown";
-import { useEffect, useState } from "react";
-import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function Navbar() {
-  // const [searchBarValue, setSearchBarValue] = useState("");
-  // const [searchedGame, setSearchedGame] = useState([]);
   const { currentUser, setCurrentUser } = useUserData();
-  const { gamesData, searchedGame, setGamesData, setSearchedGame } =
-    useGamesData();
   const navigate = useNavigate();
   // const location = useLocation();
   // if (location.pathname === `/404`) {
@@ -21,23 +15,6 @@ export default function Navbar() {
   function handleLogOut() {
     setCurrentUser(null);
   }
-
-  // function searchBarFilter(e) {
-  //   setSearchBarValue(e.target.value);
-  // }
-
-  // console.log(searchedGame);
-  // useEffect(() => {
-  //   if (!searchBarValue) {
-  //     setSearchedGame(gamesData);
-  //   } else {
-  //     const filteredGame = gamesData.filter((title) => {
-  //       return title.title.toLowerCase().includes(searchBarValue.toLowerCase());
-  //     });
-  //     // console.log(filteredGame);
-  //     return setSearchedGame(filteredGame);
-  //   }
-  // }, [searchBarValue]);
 
   return (
     <nav className="Header">
@@ -68,7 +45,14 @@ export default function Navbar() {
           </>
         ) : (
           <>
-            <div className="my-library ">My Library</div>
+            <button
+              type="button"
+              class="btn btn-secondary library"
+              onClick={() => navigate("/library")}
+            >
+              My Library
+            </button>
+
             <Link to={"/"} className="link">
               <div onClick={handleLogOut} className="loginOrRegister logout">
                 Log out

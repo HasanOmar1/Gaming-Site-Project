@@ -1,9 +1,9 @@
 import "./BattleRoyale.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
-import { Spinner } from "react-bootstrap";
 import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
+import LoadingSpinner from "../../../Components/Spinner/Spinner";
 
 export default function BattleRoyale() {
   const { loading, battleRoyaleCategory } = useCategories();
@@ -32,7 +32,9 @@ export default function BattleRoyale() {
           </div>
         </div>
       ) : (
-        <Spinner />
+        <div className="spinner">
+          <LoadingSpinner />
+        </div>
       )}
     </main>
   );

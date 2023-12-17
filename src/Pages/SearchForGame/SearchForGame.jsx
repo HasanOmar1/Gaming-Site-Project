@@ -41,7 +41,7 @@ export default function SearchForGame() {
         {!searchBarValue ? (
           <div className="recommended-cards-container">
             <h4>Games You Must Try</h4>
-            <div className="recommended-cards">
+            <div>
               <RecommendedCards recommended={searchedGame.slice(110, 114)} />
             </div>
             <div>

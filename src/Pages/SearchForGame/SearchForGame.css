@@ -45,9 +45,6 @@
 .SearchForGame .cards-container h4{
     
     color: #00ADB5;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
-.SearchForGame .recommended-cards{
-    display: flex;
-}

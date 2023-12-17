@@ -76,34 +76,28 @@
 
 }
 
-.Header .my-library{
-    color: #EEEEEE;
-    padding: 1.5rem 0;
-    margin: 5px 0;
-    text-decoration: none;
-    
-}
+
 
 .Header .home{
     color: #7ea5de;
     margin-left: 100px;
 }
 
-/* .Header .search-bar{
-    border: none;
-    border-radius:5px ;
-    width: 500px;
-    padding: 5px 10px;
-
+.Header .home:hover{
+    color: #7ea5dea9;
 }
 
-.Header .search-bar:focus{
-    outline: 3px solid #00ADB5;
-
-
-} */
 .Header .search-icon{
     margin-left: 400px;
     color: #00ADB5;
     cursor: pointer;
+}
+.Header .search-icon:hover{
+
+    color: #00acb582;
+}
+
+.Header .library{
+    background-color: #393E46;
+    border: none;
 }

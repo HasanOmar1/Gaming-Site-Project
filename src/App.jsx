@@ -17,6 +17,7 @@ import Sports from "./Pages/Categories/Sports/Sports";
 import Strategy from "./Pages/Categories/Strategy/Strategy";
 import BattleRoyale from "./Pages/Categories/BattleRoyale/BattleRoyale";
 import SearchForGame from "./Pages/SearchForGame/SearchForGame";
+import MyLibrary from "./Pages/MyLibrary/MyLibrary";
 
 function App() {
   return (
@@ -26,8 +27,12 @@ function App() {
           <Header />
           <Routes>
             <Route path={"/"} exact element={<HomePage />} />
+            <Route path={"/search"} element={<SearchForGame />} />
             <Route path={"/login"} element={<LoginPage />} />
             <Route path={"/register"} element={<RegisterPage />} />
+            <Route path={"/library"} element={<MyLibrary />} />
+
+            {/* categories */}
             <Route path={"/:name"} element={<GamesByNamePage />} />
             <Route path={"/shooter"} element={<Shooter />} />
             <Route path={"/mmorpg"} element={<MMORPG />} />
@@ -37,7 +42,7 @@ function App() {
             <Route path={"/sports"} element={<Sports />} />
             <Route path={"/strategy"} element={<Strategy />} />
             <Route path={"/battleRoyale"} element={<BattleRoyale />} />
-            <Route path={"/search"} element={<SearchForGame />} />
+
             <Route path={"/*"} element={<NotFoundPage />} />
           </Routes>
         </CategoriesProvider>

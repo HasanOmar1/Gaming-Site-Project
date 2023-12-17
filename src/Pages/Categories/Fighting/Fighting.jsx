@@ -1,7 +1,7 @@
 import "./Fighting.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
-import { Spinner } from "react-bootstrap";
+import LoadingSpinner from "../../../Components/Spinner/Spinner";
 import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
 
@@ -30,7 +30,9 @@ export default function Fighting() {
           </div>
         </div>
       ) : (
-        <Spinner />
+        <div className="spinner">
+          <LoadingSpinner />
+        </div>
       )}
     </main>
   );

@@ -12,8 +12,6 @@ export default function GamesDataProvider({ children }) {
         const response = await axios.get("games?platform=pc");
         setGamesData(response.data);
         setSearchedGame(response.data);
-
-        // console.log(gamesData.map((game) => game.title.toLowerCase()));
       } catch (error) {
         console.log(error);
       }

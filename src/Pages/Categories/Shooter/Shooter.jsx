@@ -1,9 +1,9 @@
 import "./Shooter.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
-import { Spinner } from "react-bootstrap";
 import Cards from "../../../Components/Cards/Cards";
 import ColCards from "../../../Components/ColCards/ColCards";
+import LoadingSpinner from "../../../Components/Spinner/Spinner";
 
 export default function Shooter() {
   const { loading, shooterCategory } = useCategories();
@@ -30,7 +30,9 @@ export default function Shooter() {
           </div>
         </div>
       ) : (
-        <Spinner />
+        <div className="spinner">
+          <LoadingSpinner />
+        </div>
       )}
     </main>
   );
