@@ -3,11 +3,11 @@ import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import "./SearchForGame.css";
 import Cards from "../../Components/Cards/Cards";
 import RecommendedCards from "../../Components/RecommendedCards/RecommendedCards";
+import SearchIcon from "@mui/icons-material/Search";
 
 export default function SearchForGame() {
   const [searchBarValue, setSearchBarValue] = useState("");
-  const { gamesData, searchedGame, setGamesData, setSearchedGame } =
-    useGamesData();
+  const { gamesData, searchedGame, setSearchedGame } = useGamesData();
 
   useEffect(() => {
     if (!searchBarValue) {
@@ -23,7 +23,10 @@ export default function SearchForGame() {
   return (
     <main className="SearchForGame page">
       <div className="search-container">
-        <h3>Find Games</h3>
+        <h3>
+          <SearchIcon className="search-icon" />
+          Find Games
+        </h3>
         <input
           type="text"
           className="search-bar"
@@ -37,7 +40,7 @@ export default function SearchForGame() {
       <div className="cards-container">
         {!searchBarValue ? (
           <div className="recommended-cards-container">
-            <h4>Recommended Games</h4>
+            <h4>Games You Must Try</h4>
             <div className="recommended-cards">
               <RecommendedCards recommended={searchedGame.slice(10, 14)} />
             </div>

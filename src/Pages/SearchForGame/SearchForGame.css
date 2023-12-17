@@ -1,5 +1,5 @@
 .SearchForGame {
-    height: 130vh;
+    height: 120vh;
     padding-left: 200px;
 }
 
@@ -19,16 +19,20 @@
 
 }
 
+.SearchForGame .search-icon{
+    font-size: 2.2rem;
+    
+}
+
 .SearchForGame .search-container{
-    padding: 50px;
+    padding-top: 50px;
 }
 
 .SearchForGame .search-container h3{
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .SearchForGame .cards-container{
-    margin-left: 25px;
     width: 800px;
     height: 150px;
     
@@ -41,6 +45,7 @@
 .SearchForGame .cards-container h4{
     
     color: #00ADB5;
+    padding-top: 10px;
 }
 
 .SearchForGame .recommended-cards{
