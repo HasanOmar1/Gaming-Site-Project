@@ -16,7 +16,7 @@ export default function RegisterPage() {
     e.preventDefault();
 
     if (emailValue.includes("@") && passwordValue.length > 5) {
-      users.map((users) => {
+      users?.map((users) => {
         if (emailValue === users.email) {
           setIsValid(false);
           setEmailErrorMsg("User already exists");

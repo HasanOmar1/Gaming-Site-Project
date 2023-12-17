@@ -13,7 +13,7 @@ export default function LoginPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    users.map((user) => {
+    users?.map((user) => {
       if (emailInput === user.email && passwordInput === user.password) {
         setIsValid(true);
         setCurrentUser(user);
