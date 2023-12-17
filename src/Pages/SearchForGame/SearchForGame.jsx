@@ -16,7 +16,6 @@ export default function SearchForGame() {
       const filteredGame = gamesData.filter((title) => {
         return title.title.toLowerCase().includes(searchBarValue.toLowerCase());
       });
-      console.log(searchedGame);
       return setSearchedGame(filteredGame);
     }
   }, [searchBarValue]);
@@ -36,7 +35,22 @@ export default function SearchForGame() {
       </div>
 
       <div className="cards-container">
-        <Cards genre={searchedGame.slice(0, 10)} />
+        {!searchBarValue ? (
+          <div className="recommended-cards-container">
+            <h4>Recommended Games</h4>
+            <div className="recommended-cards">
+              <RecommendedCards recommended={searchedGame.slice(10, 14)} />
+            </div>
+            <div>
+              <RecommendedCards recommended={searchedGame.slice(30, 34)} />
+            </div>
+            <div>
+              <RecommendedCards recommended={searchedGame.slice(70, 74)} />
+            </div>
+          </div>
+        ) : (
+          <Cards genre={searchedGame.slice(0, 5)} />
+        )}
       </div>
     </main>
   );

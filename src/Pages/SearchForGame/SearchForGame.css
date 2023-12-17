@@ -1,5 +1,5 @@
 .SearchForGame {
-    height: 220vh;
+    height: 130vh;
     padding-left: 200px;
 }
 
@@ -31,4 +31,18 @@
     margin-left: 25px;
     width: 800px;
     height: 150px;
+    
+}
+.SearchForGame .recommended-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SearchForGame .cards-container h4{
+    
+    color: #00ADB5;
+}
+
+.SearchForGame .recommended-cards{
+    display: flex;
 }
