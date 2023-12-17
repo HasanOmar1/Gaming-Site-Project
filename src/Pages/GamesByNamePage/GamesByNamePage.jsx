@@ -5,31 +5,36 @@ import RadioGroupRating from "../../Components/Rating/Rating";
 import BackBtn from "react-bootstrap/Button";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import LoadingSpinner from "../../Components/Spinner/Spinner";
-import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import axios from "../../axiosUsersConfig";
+import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 
 export default function GamesByNamePage() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { name } = useParams();
-  const { gamesData, currentUser, setCurrentUser } = useGamesData();
-
-  // console.log(currentUser);
-  // const loggedUser = localStorage.getItem("user");
+  const { currentUser, fetchUserData } = useUserData();
 
   async function addToLibrary() {
-    // console.log(currentUser);
-    // console.log(currentUser.email);
-    // try {
-    //   const updatedUser = {
-    //     ...currentUser,
-    //     library: [...currentUser.library, { game: state.game.title }],
-    //   };
-    //   const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
-    //   console.log(response.data);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      const updatedUser = {
+        ...currentUser,
+        library: [
+          ...currentUser.library,
+          {
+            id: state.game.id,
+            title: state.game.title,
+            thumbnail: state.game.thumbnail,
+            short_description: state.game.short_description,
+            genre: state.game.genre,
+          },
+        ],
+      };
+      const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
+      fetchUserData();
+      // console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

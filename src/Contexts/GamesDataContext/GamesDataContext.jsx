@@ -12,7 +12,7 @@ export default function GamesDataProvider({ children }) {
         const response = await axios.get("games?platform=pc");
         setGamesData(response.data);
         setSearchedGame(response.data);
-        console.log(gamesData);
+        // console.log(gamesData);
       } catch (error) {
         console.log(error);
       }

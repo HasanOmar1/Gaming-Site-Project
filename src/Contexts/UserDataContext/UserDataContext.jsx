@@ -7,16 +7,16 @@ export default function UserDataProvider({ children }) {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
 
-  useEffect(() => {
-    async function fetchUserData() {
-      try {
-        const response = await axios.get("/users");
-        console.log(response.data);
-        setUsers(response.data);
-      } catch (error) {
-        console.log(error);
-      }
+  async function fetchUserData() {
+    try {
+      const response = await axios.get("/users");
+      console.log(response.data);
+      setUsers(response.data);
+    } catch (error) {
+      console.log(error);
     }
+  }
+  useEffect(() => {
     fetchUserData();
   }, []);
 
@@ -27,6 +27,7 @@ export default function UserDataProvider({ children }) {
         password: password,
         library: [],
       });
+      fetchUserData();
       setUsers([...users, response.data]);
     } catch (error) {
       console.log(error);
@@ -39,9 +40,29 @@ export default function UserDataProvider({ children }) {
     }
   }, [users]);
 
+  async function removeGame(title) {
+    try {
+      const response = await axios.delete(`/users`);
+      const removedGames = currentUser?.library.filter((game) => {
+        return game.title !== title;
+      });
+      // fetchUserData();
+      setLibraryGames(removedGames);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <UserDataContext.Provider
-      value={{ users, createUser, setCurrentUser, currentUser }}
+      value={{
+        users,
+        createUser,
+        setCurrentUser,
+        currentUser,
+        fetchUserData,
+        removeGame,
+      }}
     >
       {children}
     </UserDataContext.Provider>
