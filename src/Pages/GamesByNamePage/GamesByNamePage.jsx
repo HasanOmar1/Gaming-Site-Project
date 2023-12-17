@@ -5,16 +5,39 @@ import RadioGroupRating from "../../Components/Rating/Rating";
 import BackBtn from "react-bootstrap/Button";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import LoadingSpinner from "../../Components/Spinner/Spinner";
-import { useEffect } from "react";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
+import axios from "../../axiosUsersConfig";
 
 export default function GamesByNamePage() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { name } = useParams();
-  const { gamesData } = useGamesData();
+  const { gamesData, currentUser } = useGamesData();
   // console.log(name);
   //   console.log(state.game);
+  console.log(currentUser);
+  async function addToLibrary() {
+    console.log(currentUser);
+    // console.log(currentUser.email);
+    // try {
+    //   const updatedUser = {
+    //     ...currentUser,
+    //     library: [...currentUser.library, { game: state.game.title }],
+    //   };
+    //   const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
+    //   console.log(response.data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    // try {
+    //   const response = await axios.post("/users", currentUser, {
+    //     library: [{ game: state.game.title }],
+    //   });
+    //   console.log(response.data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  }
 
   return (
     <main className="GamesByNamePage page">
@@ -45,6 +68,7 @@ export default function GamesByNamePage() {
                 variant="contained"
                 color="success"
                 className="add-to-library"
+                onClick={addToLibrary}
               >
                 Add To Library
               </Button>

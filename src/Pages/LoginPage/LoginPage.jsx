@@ -6,10 +6,10 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
-  const { users, setCurrentUser } = useUserData();
   const [isValid, setIsValid] = useState(false);
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
   const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
+  const { users, currentUser, setCurrentUser } = useUserData();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -18,6 +18,7 @@ export default function LoginPage() {
         setIsValid(true);
         setCurrentUser(user);
         console.log(user);
+        localStorage.setItem("user", JSON.stringify(user));
         navigate("/");
       } else if (emailInput === user.email && passwordInput !== user.password) {
         setIsValid(false);

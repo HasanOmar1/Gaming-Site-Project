@@ -14,6 +14,7 @@ export default function Navbar() {
 
   function handleLogOut() {
     setCurrentUser(null);
+    localStorage.clear();
   }
 
   return (
@@ -47,7 +48,7 @@ export default function Navbar() {
           <>
             <button
               type="button"
-              class="btn btn-secondary library"
+              className="btn btn-secondary library"
               onClick={() => navigate("/library")}
             >
               My Library

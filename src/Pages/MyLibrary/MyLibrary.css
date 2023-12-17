@@ -1,3 +1,8 @@
 .MyLibrary{
-    
+    padding-left: 300px;
+}
+
+.MyLibrary h3{
+    padding-top: 100px;
+    color: #00ADB5;
 }
