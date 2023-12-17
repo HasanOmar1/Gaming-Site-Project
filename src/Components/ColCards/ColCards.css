@@ -15,3 +15,28 @@
     border-radius: 10px;
 
 }
+
+@media (max-width: 1024px) {
+
+    .ColCards{
+        margin-top: -450px;
+    }
+    
+
+    
+    .ColCards img{
+        width: 200px;
+    
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .ColCards{
+        display: none;
+    }
+
+    
+
+}

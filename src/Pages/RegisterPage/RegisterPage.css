@@ -182,13 +182,14 @@
         .RegisterPage .login-container .login{
         
             height: 500px;
-            width:400px;
+            width:350px;
             border-radius: 10px;
         }
         
         .RegisterPage .login-container .login h1{
             padding-bottom: 30px;
             margin-top: 50px;
+            margin-left: -30px;
             font-size: 20px;
      
             

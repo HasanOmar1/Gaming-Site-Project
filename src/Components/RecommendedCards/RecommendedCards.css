@@ -18,3 +18,23 @@
     border-radius: 10px;
 
 }
+
+@media (max-width: 1024px) {
+
+    .RecommendedCards {
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        display: none;
+    }
+    
+
+
+
+}
+
+@media (max-width: 576px) {
+
+
+}

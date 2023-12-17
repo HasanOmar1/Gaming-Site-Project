@@ -44,3 +44,60 @@
     margin-top: 4rem;
     color: #00ADB5;
 }
+
+
+@media (max-width: 1024px) {
+    .Racing{
+        height: 96vh;
+    }
+    
+    .Racing .all-container{
+        padding-top: 30px;
+        margin: 0 ;
+        height: 96vh;
+    }
+    
+    .Racing .recommended-container{
+        padding-top: 0px;
+    }
+    
+     .Racing .recommended-container h3{
+        display: none;
+      
+    }
+    
+    
+    .Racing .left-cards-container{
+        display: flex;
+        flex-direction: column;
+        width: 520px;
+        height: 150px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .Racing .right-cards-container{
+        margin-top: 467px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .Racing #more-games{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+
+@media (max-width: 576px) {
+
+    .Racing{
+        height: 100vh;
+    }
+    .Racing .all-container{
+ 
+        height: 100vh;
+    }
+}

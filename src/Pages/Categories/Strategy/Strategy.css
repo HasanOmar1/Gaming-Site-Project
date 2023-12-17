@@ -44,3 +44,60 @@
     margin-top: 4rem;
     color: #00ADB5;
 }
+
+
+@media (max-width: 1024px) {
+    .Strategy{
+        height: 170vh;
+    }
+    
+    .Strategy .all-container{
+        padding-top: 30px;
+        margin: 0 ;
+        height: 170vh;
+    }
+    
+    .Strategy .recommended-container{
+        padding-top: 0px;
+    }
+    
+     .Strategy .recommended-container h3{
+        display: none;
+      
+    }
+    
+    
+    .Strategy .left-cards-container{
+        display: flex;
+        flex-direction: column;
+        width: 520px;
+        height: 150px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .Strategy .right-cards-container{
+        margin-top: 467px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .Strategy #more-games{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+
+@media (max-width: 576px) {
+
+    .Strategy{
+        height: 190vh;
+    }
+    .Strategy .all-container{
+ 
+        height: 190vh;
+    }
+}

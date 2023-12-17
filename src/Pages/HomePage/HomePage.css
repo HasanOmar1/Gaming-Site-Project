@@ -58,3 +58,72 @@
     margin-left: 350px;
     margin-top: 50px;
 }
+
+@media (max-width: 1024px) {
+    
+    .HomePage .welcome-msg{
+
+        padding: 50px 10px ;
+        letter-spacing: 1px;
+        gap: 20px;
+    }
+
+    .HomePage .welcome-msg h3 ,
+    .HomePage .welcome-msg h4{
+        font-size: 1.2rem;
+    }
+
+    
+    .HomePage .cards-section{
+        margin-top: 0px;
+    }
+    
+    .HomePage .left-cards-container{
+
+        padding: 0 ;
+    }
+    
+    .HomePage .right-cards-container{
+        margin-left: 1.2rem;
+        margin-top: -2.5rem;
+    
+    }
+    
+    .HomePage .cards-title{
+        margin-left: 30px;
+        margin-top: 50px;
+        padding-bottom: 10px;
+    }
+    
+
+
+}
+
+
+
+
+
+@media (max-width: 576px) {
+
+  
+    .HomePage .welcome-msg{
+
+        padding: 50px 120px ;
+        
+    }
+    
+    .HomePage .welcome-msg h3 ,
+    .HomePage .welcome-msg h4{
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    
+    .HomePage .welcome-msg button{
+
+        font-size: 0.9rem;
+
+    }
+    
+   
+}
