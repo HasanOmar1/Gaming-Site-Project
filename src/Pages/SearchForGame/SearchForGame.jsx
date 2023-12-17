@@ -42,7 +42,7 @@ export default function SearchForGame() {
           <div className="recommended-cards-container">
             <h4>Games You Must Try</h4>
             <div className="recommended-cards">
-              <RecommendedCards recommended={searchedGame.slice(10, 14)} />
+              <RecommendedCards recommended={searchedGame.slice(110, 114)} />
             </div>
             <div>
               <RecommendedCards recommended={searchedGame.slice(30, 34)} />
