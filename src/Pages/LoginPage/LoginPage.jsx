@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./LoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
+
 export default function LoginPage() {
   const navigate = useNavigate();
   const [emailInput, setEmailInput] = useState("");
@@ -11,8 +12,9 @@ export default function LoginPage() {
   const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
   const { users, currentUser, setCurrentUser } = useUserData();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
     users?.map((user) => {
       if (emailInput === user.email && passwordInput === user.password) {
         setIsValid(true);

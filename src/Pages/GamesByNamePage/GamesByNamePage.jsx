@@ -13,13 +13,12 @@ export default function GamesByNamePage() {
   const navigate = useNavigate();
   const { name } = useParams();
   const { gamesData, currentUser, setCurrentUser } = useGamesData();
-  // console.log(name);
-  //   console.log(state.game);
 
-  console.log(currentUser);
-  const loggedUser = localStorage.getItem("user");
+  // console.log(currentUser);
+  // const loggedUser = localStorage.getItem("user");
+
   async function addToLibrary() {
-    console.log(currentUser);
+    // console.log(currentUser);
     // console.log(currentUser.email);
     // try {
     //   const updatedUser = {
@@ -31,16 +30,6 @@ export default function GamesByNamePage() {
     // } catch (error) {
     //   console.log(error);
     // }
-    try {
-      const updatedUser = {
-        ...loggedUser,
-        library: [...loggedUser.library, { game: state.game.title }],
-      };
-      const response = await axios.put(`/users/${loggedUser.id}`, updatedUser);
-      console.log(response.data);
-    } catch (error) {
-      console.log(error);
-    }
   }
 
   return (

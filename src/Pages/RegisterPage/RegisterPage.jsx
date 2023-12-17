@@ -12,7 +12,7 @@ export default function RegisterPage() {
   const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     if (emailValue.includes("@") && passwordValue.length > 5) {
