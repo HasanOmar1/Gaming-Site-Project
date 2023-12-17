@@ -4,12 +4,16 @@ export const GamesDataContext = createContext();
 
 export default function GamesDataProvider({ children }) {
   const [gamesData, setGamesData] = useState([]);
+  const [searchedGame, setSearchedGame] = useState([]);
 
   useEffect(() => {
     async function gamesAPI() {
       try {
         const response = await axios.get("games?platform=pc");
         setGamesData(response.data);
+        setSearchedGame(response.data);
+
+        // console.log(gamesData.map((game) => game.title.toLowerCase()));
       } catch (error) {
         console.log(error);
       }
@@ -18,7 +22,9 @@ export default function GamesDataProvider({ children }) {
   }, []);
 
   return (
-    <GamesDataContext.Provider value={{ gamesData }}>
+    <GamesDataContext.Provider
+      value={{ gamesData, setGamesData, searchedGame, setSearchedGame }}
+    >
       {children}
     </GamesDataContext.Provider>
   );

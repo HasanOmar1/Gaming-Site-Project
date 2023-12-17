@@ -20,7 +20,6 @@ export default function CategoriesProvider({ children }) {
       try {
         const response = await axios.get("games?category=shooter");
         setShooterCategory(response.data);
-        console.log(shooterCategory);
       } catch (error) {
         console.log(error);
       } finally {

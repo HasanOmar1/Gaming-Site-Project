@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "./GamesByNamePage.css";
 import Button from "@mui/material/Button";
 import RadioGroupRating from "../../Components/Rating/Rating";
@@ -8,6 +8,9 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function GamesByNamePage() {
   const { state } = useLocation();
   const navigate = useNavigate();
+  const { name } = useParams();
+  // console.log(name);
+
   //   console.log(state.game);
   return (
     <main className="GamesByNamePage page">
@@ -21,7 +24,7 @@ export default function GamesByNamePage() {
 
       <div className="img-container">
         <a href={state?.game.game_url} target="_blank">
-          <img src={state?.game?.thumbnail} alt={state?.game?.title} />
+          <img src={state?.game?.thumbnail} alt={name} />
         </a>
 
         <div className="play-library-container">
@@ -45,7 +48,7 @@ export default function GamesByNamePage() {
         </div>
       </div>
       <div className="description">
-        <h1 className="game-title">{state?.game?.title}</h1>
+        <h1 className="game-title">{name}</h1>
         <p className="game-description">{state?.game?.short_description}</p>
         <div className="game-info">
           <p className="game-developer">

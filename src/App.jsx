@@ -16,6 +16,7 @@ import Fighting from "./Pages/Categories/Fighting/Fighting";
 import Sports from "./Pages/Categories/Sports/Sports";
 import Strategy from "./Pages/Categories/Strategy/Strategy";
 import BattleRoyale from "./Pages/Categories/BattleRoyale/BattleRoyale";
+import SearchForGame from "./Pages/SearchForGame/SearchForGame";
 
 function App() {
   return (
@@ -29,13 +30,14 @@ function App() {
             <Route path={"/register"} element={<RegisterPage />} />
             <Route path={"/:name"} element={<GamesByNamePage />} />
             <Route path={"/shooter"} element={<Shooter />} />
-            <Route path={"/MMORPG"} element={<MMORPG />} />
-            <Route path={"/MOBA"} element={<MOBA />} />
-            <Route path={"/Racing"} element={<Racing />} />
-            <Route path={"/Fighting"} element={<Fighting />} />
-            <Route path={"/Sports"} element={<Sports />} />
-            <Route path={"/Strategy"} element={<Strategy />} />
-            <Route path={"/BattleRoyale"} element={<BattleRoyale />} />
+            <Route path={"/mmorpg"} element={<MMORPG />} />
+            <Route path={"/moba"} element={<MOBA />} />
+            <Route path={"/racing"} element={<Racing />} />
+            <Route path={"/fighting"} element={<Fighting />} />
+            <Route path={"/sports"} element={<Sports />} />
+            <Route path={"/strategy"} element={<Strategy />} />
+            <Route path={"/battleRoyale"} element={<BattleRoyale />} />
+            <Route path={"/search"} element={<SearchForGame />} />
             <Route path={"/*"} element={<NotFoundPage />} />
           </Routes>
         </CategoriesProvider>

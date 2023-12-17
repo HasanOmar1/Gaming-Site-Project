@@ -34,7 +34,6 @@
 }
 
 .Header .login{
-    margin-left: 490px;
     border: none;
     color: #adb4be;
 }
@@ -72,7 +71,6 @@
 
 .Header .logged-user{
     color: #7ea5de;
-    margin-left: 100px;
     padding-right: 20px;
     padding-top: 0.5rem;
 
@@ -83,11 +81,29 @@
     padding: 1.5rem 0;
     margin: 5px 0;
     text-decoration: none;
-    margin-left: 400px;
     
 }
 
 .Header .home{
     color: #7ea5de;
     margin-left: 100px;
+}
+
+/* .Header .search-bar{
+    border: none;
+    border-radius:5px ;
+    width: 500px;
+    padding: 5px 10px;
+
+}
+
+.Header .search-bar:focus{
+    outline: 3px solid #00ADB5;
+
+
+} */
+.Header .search-icon{
+    margin-left: 400px;
+    color: #00ADB5;
+    cursor: pointer;
 }

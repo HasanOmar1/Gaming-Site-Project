@@ -1,0 +1,34 @@
+.SearchForGame {
+    height: 220vh;
+    padding-left: 200px;
+}
+
+.SearchForGame .search-bar{
+    border: none;
+    border-radius:5px ;
+    width: 500px;
+    padding: 10px 10px;
+    background-color: #1c1e2281;
+    color: rgb(202, 194, 194);
+
+}
+
+.SearchForGame .search-bar:focus{
+    outline: 3px solid #00ADB5;
+
+
+}
+
+.SearchForGame .search-container{
+    padding: 50px;
+}
+
+.SearchForGame .search-container h3{
+    padding-bottom: 20px;
+}
+
+.SearchForGame .cards-container{
+    margin-left: 25px;
+    width: 800px;
+    height: 150px;
+}
