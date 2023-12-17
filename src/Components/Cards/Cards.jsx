@@ -33,7 +33,7 @@ export default function Cards({ genre }) {
                 <Button
                   variant="danger"
                   className="delete-btn"
-                  onClick={() => removeGame(game.title)}
+                  onClick={() => removeGame(game.id)}
                 >
                   Remove
                 </Button>

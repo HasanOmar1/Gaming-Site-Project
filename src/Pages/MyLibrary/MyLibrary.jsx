@@ -10,7 +10,7 @@ export default function MyLibrary() {
     <main className="MyLibrary page">
       <h3>My Games</h3>
       <div className="game-container">
-        <Cards genre={userLibrary} />
+        {/* <Cards genre={userLibrary} /> */}
       </div>
     </main>
   );

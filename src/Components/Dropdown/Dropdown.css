@@ -1,5 +1,10 @@
 
 .DropdownBtn .drop-down{
     margin-left: 30px;
+
 }
 
+   
+@media (max-width: 576px) {
+
+}

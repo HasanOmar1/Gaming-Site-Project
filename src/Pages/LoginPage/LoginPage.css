@@ -97,3 +97,132 @@
 .LoginPage .email-error-msg{
     color: red;
 }
+
+@media (max-width: 1024px) {
+.LoginPage{
+    width: 100%;
+    height: 95.6vh;
+}
+
+.LoginPage .login-container{
+    margin: 20%  10%;
+    height: 500px;
+}
+
+.LoginPage .wave h1{
+    font-size: 20px;
+    padding-top: 300%;
+}
+
+.LoginPage .wave{
+    padding: 20px 80px;
+}
+
+
+.LoginPage .login-container .login{
+
+    height: 500px;
+    width: 400px;
+}
+
+.LoginPage .login-container .login h1{
+    padding-bottom: 30px;
+    margin-top: 50px;
+    font-size: 20px;
+    
+}
+
+.LoginPage form{
+    gap: 10px;
+
+}
+
+.LoginPage form input,
+.LoginPage form button{
+    padding: 5px 10px;
+    width: 300px;
+    font-size: 1.3rem;
+
+}
+
+.LoginPage form button{
+    margin-top: 10px;
+
+}
+
+.LoginPage .password-error-msg,
+.LoginPage .email-error-msg{
+    font-size: 15px;
+}
+}
+
+@media (max-width: 576px) {
+    .LoginPage{
+        width: 100%;
+        height: 93.6vh;
+    }
+    
+    .LoginPage .login-container{
+        margin: 20% 5%;
+        height: 500px;
+        
+    }
+    
+    .LoginPage .wave h1{
+
+        display: none;
+    }
+    
+    .LoginPage .wave{
+        display: none;
+    }
+    
+    
+    .LoginPage .login-container .login{
+    
+        height: 500px;
+        width:400px;
+        border-radius: 10px;
+    }
+    
+    .LoginPage .login-container .login h1{
+        padding-bottom: 30px;
+        margin-top: 50px;
+        font-size: 20px;
+ 
+        
+    }
+    
+    .LoginPage form{
+        gap: 10px;
+
+    }
+    
+    .LoginPage form input,
+    .LoginPage form button{
+        padding: 10px 10px;
+        width: 300px;
+        font-size: 1rem;
+    
+    }
+    
+    .LoginPage form button{
+        margin-top: 10px;
+    
+    }
+    
+    .LoginPage .password-error-msg,
+    .LoginPage .email-error-msg{
+        font-size: 12px;
+    }
+
+    
+
+.LoginPage .register span{
+    padding-left: 5px;
+
+
+}
+
+
+}

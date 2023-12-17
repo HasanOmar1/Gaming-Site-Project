@@ -98,3 +98,132 @@
 .RegisterPage .email-error-msg{
     color: red;
 }
+
+@media (max-width: 1024px) {
+    .RegisterPage{
+        width: 100%;
+        height: 95.6vh;
+    }
+    
+    .RegisterPage .login-container{
+        margin: 20%  10%;
+        height: 500px;
+    }
+    
+    .RegisterPage .wave h1{
+        font-size: 20px;
+        padding-top: 300%;
+    }
+    
+    .RegisterPage .wave{
+        padding: 20px 80px;
+    }
+    
+    
+    .RegisterPage .login-container .login{
+    
+        height: 500px;
+        width: 400px;
+    }
+    
+    .RegisterPage .login-container .login h1{
+        padding-bottom: 30px;
+        margin-top: 50px;
+        font-size: 20px;
+        
+    }
+    
+    .RegisterPage form{
+        gap: 10px;
+    
+    }
+    
+    .RegisterPage form input,
+    .RegisterPage form button{
+        padding: 5px 10px;
+        width: 300px;
+        font-size: 1.3rem;
+    
+    }
+    
+    .RegisterPage form button{
+        margin-top: 10px;
+    
+    }
+    
+    .RegisterPage .password-error-msg,
+    .RegisterPage .email-error-msg{
+        font-size: 15px;
+    }
+    }
+    
+    @media (max-width: 576px) {
+        .RegisterPage{
+            width: 100%;
+            height: 93.6vh;
+        }
+        
+        .RegisterPage .login-container{
+            margin: 20% 5%;
+            height: 500px;
+            
+        }
+        
+        .RegisterPage .wave h1{
+    
+            display: none;
+        }
+        
+        .RegisterPage .wave{
+            display: none;
+        }
+        
+        
+        .RegisterPage .login-container .login{
+        
+            height: 500px;
+            width:400px;
+            border-radius: 10px;
+        }
+        
+        .RegisterPage .login-container .login h1{
+            padding-bottom: 30px;
+            margin-top: 50px;
+            font-size: 20px;
+     
+            
+        }
+        
+        .RegisterPage form{
+            gap: 10px;
+    
+        }
+        
+        .RegisterPage form input,
+        .RegisterPage form button{
+            padding: 10px 10px;
+            width: 300px;
+            font-size: 1rem;
+        
+        }
+        
+        .RegisterPage form button{
+            margin-top: 10px;
+        
+        }
+        
+        .RegisterPage .password-error-msg,
+        .RegisterPage .email-error-msg{
+            font-size: 12px;
+        }
+    
+        
+    
+    .RegisterPage .register span{
+        padding-left: 5px;
+    
+    
+    }
+    
+    
+    }

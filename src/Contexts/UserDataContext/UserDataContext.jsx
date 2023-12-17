@@ -40,14 +40,18 @@ export default function UserDataProvider({ children }) {
     }
   }, [users]);
 
-  async function removeGame(title) {
+  async function removeGame(id) {
     try {
-      const response = await axios.delete(`/users`);
       const removedGames = currentUser?.library.filter((game) => {
-        return game.title !== title;
+        return game.id !== id;
       });
-      // fetchUserData();
-      setLibraryGames(removedGames);
+      const updatedUser = {
+        ...currentUser,
+        library: [removedGames],
+      };
+      const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
+      fetchUserData();
+      console.log(removedGames);
     } catch (error) {
       console.error(error);
     }
