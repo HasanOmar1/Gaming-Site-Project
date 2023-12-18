@@ -4,7 +4,7 @@ import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import Button from "react-bootstrap/Button";
 
 export default function Cards({ genre }) {
-  const { currentUser, removeGame } = useUserData();
+  const { removeGame } = useUserData();
   const location = useLocation();
 
   const showRemoveBtn = location.pathname === "/library";

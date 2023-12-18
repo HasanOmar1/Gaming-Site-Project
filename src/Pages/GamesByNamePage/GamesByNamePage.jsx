@@ -9,7 +9,6 @@ import axios from "../../axiosUsersConfig";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import { useEffect, useState } from "react";
-import { useLibraryCounter } from "../../Contexts/LibraryCounterContext/LibraryCounterContext";
 
 export default function GamesByNamePage() {
   const [theGame, setTheGame] = useState({});
@@ -18,7 +17,6 @@ export default function GamesByNamePage() {
   const { name } = useParams();
   const { currentUser, fetchUserData } = useUserData();
   const { gamesData } = useGamesData();
-  const { setLibraryCounter } = useLibraryCounter();
 
   useEffect(() => {
     if (state) {
@@ -26,12 +24,12 @@ export default function GamesByNamePage() {
     } else {
       const searchByName = name.split("-").join(" ");
       const myGame = gamesData.find((game) => game.title == searchByName);
-      console.log(myGame);
+      // console.log(myGame);
       setTheGame(myGame);
     }
   }, [gamesData]);
 
-  console.log(theGame);
+  // console.log(theGame);
   async function addToLibrary() {
     try {
       const updatedUser = {
@@ -53,8 +51,6 @@ export default function GamesByNamePage() {
     } catch (error) {
       console.log(error);
     }
-
-    // setLibraryCounter((prev) => prev + 1);
   }
 
   return (
@@ -110,6 +106,9 @@ export default function GamesByNamePage() {
               </p>
               <p className="game-platform">
                 Platform: <span>{theGame?.platform}</span>
+              </p>
+              <p className="game-platform">
+                Genre: <span>{theGame?.genre}</span>
               </p>
             </div>
           </div>

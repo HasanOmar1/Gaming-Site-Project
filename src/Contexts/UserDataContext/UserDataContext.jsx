@@ -54,15 +54,10 @@ export default function UserDataProvider({ children }) {
       const removedGames = currentUser?.library.filter((game) => {
         return game.id !== id;
       });
-      // const updatedUser = {
-      //   ...currentUser,
-      //   library: removedGames,
-      // };
       const response = await axios.put(`/users/${currentUser.id}`, {
         library: removedGames,
       });
       fetchUserData();
-      console.log(removedGames);
     } catch (error) {
       console.error(error);
     }

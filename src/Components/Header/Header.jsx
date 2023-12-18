@@ -3,12 +3,13 @@ import "./Header.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import DropdownBtn from "../Dropdown/Dropdown";
 import SearchIcon from "@mui/icons-material/Search";
-import { useLibraryCounter } from "../../Contexts/LibraryCounterContext/LibraryCounterContext";
+import SportsEsportsTwoToneIcon from "@mui/icons-material/SportsEsportsTwoTone";
 
 export default function Navbar() {
   const { currentUser, setCurrentUser } = useUserData();
-  const { libraryCounter } = useLibraryCounter();
+  const userLibrary = currentUser?.library?.map((game) => game);
   const navigate = useNavigate();
+
   // const location = useLocation();
   // if (location.pathname === `/404`) {
   //   return null;
@@ -53,7 +54,11 @@ export default function Navbar() {
               className="btn btn-secondary library"
               onClick={() => navigate("/library")}
             >
-              {/* My Library {libraryCounter} */}
+              My Library{" "}
+              <span className="library-icon">
+                <SportsEsportsTwoToneIcon />
+              </span>
+              <span className="library-counter"> {userLibrary.length} </span>
             </button>
 
             <Link to={"/"} className="link">

@@ -6,6 +6,7 @@
     background-color: #222831;
     display: flex;
     font-family: 'Inter' , Arial, Helvetica, sans-serif;
+
     
 }
 
@@ -100,6 +101,21 @@
 .Header .library{
     background-color: #393E46;
     border: none;
+    position: relative;
+
+}
+
+.Header .library-counter{
+    font-size: 0.67rem;
+    position: absolute;
+    right: 23px;
+    top: 0;
+}
+
+.Header .library-icon{
+    position: relative;
+    /* right: 30px; */
+    top: 5px;
 }
 
 @media (max-width: 1024px) {
@@ -152,7 +168,19 @@
         font-size: 1rem;
         position: absolute;
     }
+
+    .Header .library-counter{
+        font-size: 0.67rem;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+    }
     
+    .Header .library-icon{
+        /* position: relative; */
+        /* right: 30px; */
+        top: 0px;
+    }
 }
 
     @media (max-width: 576px) {
