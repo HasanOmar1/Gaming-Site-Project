@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    height: 105vh;
 }
 
 .GamesByNamePage .img-container{
@@ -38,6 +39,7 @@
 .GamesByNamePage .description{
     padding-left: 70px;
     padding-top: 50px;
+    padding-bottom: 100px;
 }
 .GamesByNamePage .game-title{
     padding-bottom: 20px;
@@ -89,6 +91,7 @@
     width: 100%;
     display: flex;
     height: fit-content;
+    padding-top: 50px;
 }
 
 .GamesByNamePage .recommended-games-container h4{
@@ -102,4 +105,12 @@
     left: 20%;
 
 
+}
+
+.GamesByNamePage .line{
+    border: 2px dotted #EEEEEE;
+    width: 65vw;
+    left: 400px;
+    position: absolute;
+    top: 550px;
 }

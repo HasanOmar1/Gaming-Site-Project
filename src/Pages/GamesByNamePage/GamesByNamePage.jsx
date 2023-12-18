@@ -122,7 +122,9 @@ export default function GamesByNamePage() {
               </p>
             </div>
           </div>
-
+          <div>
+            <hr className="line" />
+          </div>
           {currentCategory ? (
             <>
               <div className="recommended-games-container">
@@ -149,12 +151,6 @@ export default function GamesByNamePage() {
               </div>
             </>
           )}
-          {/* <div className="recommended-games-container">
-            <h4>Recommended games in the same genre</h4>
-            <div className="recommended-games">
-              <RecommendedCards recommended={currentCategory?.slice(3, 6)} />
-            </div>
-          </div> */}
         </>
       ) : (
         <LoadingSpinner />
