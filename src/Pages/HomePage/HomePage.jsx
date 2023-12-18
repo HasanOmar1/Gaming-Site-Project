@@ -13,12 +13,13 @@ export default function HomePage() {
   const { gamesData } = useGamesData();
   const [recommendedGenre, setRecommendedGenre] = useState(null);
   const [currentGenre, setCurrentGenre] = useState(null);
+  const { [currentGenre]: currentCategory } = useCategories();
+  const [renderRandomGames, setRenderRandomGames] = useState(0);
 
   useEffect(() => {
     if (currentUser?.library) {
       const libraryLength = currentUser?.library.length;
       const randomNum = Math.floor(Math.random() * libraryLength);
-      console.log(randomNum);
 
       const gameGenre = currentUser?.library.map((getGenre) =>
         getGenre.genre.toLowerCase()
@@ -27,11 +28,13 @@ export default function HomePage() {
       if (currentUser?.library.length !== 0) {
         setRecommendedGenre(randomGameGenre);
       }
+    }
 
-      // console.log(randomGameGenre);
-      // console.log(gameGenre);
-
-      // const randomGamesByGenre = Math.ceil(Math.random() * currentCategory?.length);
+    if (currentCategory?.length) {
+      const randomGamesToRender = Math.floor(
+        Math.random() * currentCategory?.length
+      );
+      setRenderRandomGames(randomGamesToRender);
     }
   }, [currentUser?.library]);
 
@@ -40,14 +43,7 @@ export default function HomePage() {
     if (recommendedGenre !== null) {
       setCurrentGenre(pickCategory);
     }
-    // if(!currentGenre.includes('null') || !currentGenre.includes('undefined')){
-
-    // }
   }, [recommendedGenre]);
-
-  // console.log(currentGenre);
-  const { [currentGenre]: currentCategory } = useCategories();
-  console.log(currentGenre);
 
   return (
     <main className="HomePage page">
@@ -65,14 +61,15 @@ export default function HomePage() {
         </div>
       )}
       {currentUser && currentCategory && (
-        <RecommendedCards
-          recommended={currentCategory?.slice(
-            0,
-            3
-            // recommendedGenre,
-            // recommendedGenre + 3
-          )}
-        />
+        <div className="recommended-games">
+          <h5>Games you might like based on your recent activities</h5>
+          <RecommendedCards
+            recommended={currentCategory?.slice(
+              renderRandomGames,
+              renderRandomGames + 3
+            )}
+          />
+        </div>
       )}
       <h2 className="cards-title">Recently Added</h2>
       <section className="cards-section">

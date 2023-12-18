@@ -60,6 +60,28 @@
     margin-top: 50px;
 }
 
+.HomePage .recommended-games {
+    margin-left: 18%;
+    border-radius: 10px;
+    background-color: #353b43;
+    padding-bottom: 2rem;
+    width: 65vw;
+    margin-top: 2%;
+
+}
+.HomePage .recommended-games h5{
+    margin-left: 2.5%;
+    padding-top: 15px;
+    color: #00acb5;
+
+}
+
+.HomePage .recommended-games img{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
 @media (max-width: 1024px) {
     .HomePage{
         width: 100%;
