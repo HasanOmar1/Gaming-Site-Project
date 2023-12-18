@@ -39,11 +39,11 @@ export default function GamesByNamePage() {
         library: [
           ...currentUser.library,
           {
-            id: state.game.id,
-            title: state.game.title,
-            thumbnail: state.game.thumbnail,
-            short_description: state.game.short_description,
-            genre: state.game.genre,
+            id: theGame.id,
+            title: theGame.title,
+            thumbnail: theGame.thumbnail,
+            short_description: theGame.short_description,
+            genre: theGame.genre,
           },
         ],
       };
@@ -52,7 +52,7 @@ export default function GamesByNamePage() {
       console.log(currentUser);
       // console.log(response.data);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
   const gameGenre = state?.game?.genre.toLowerCase();
