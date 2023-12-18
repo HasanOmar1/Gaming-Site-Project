@@ -5,7 +5,6 @@ import Header from "./Components/Header/Header";
 import HomePage from "./Pages/HomePage/HomePage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
-import GamesDataProvider from "./Contexts/GamesDataContext/GamesDataContext";
 import GamesByNamePage from "./Pages/GamesByNamePage/GamesByNamePage";
 import Shooter from "./Pages/Categories/Shooter/Shooter";
 import CategoriesProvider from "./Contexts/CategoriesContext/CategoriesContext";
@@ -22,31 +21,30 @@ import MyLibrary from "./Pages/MyLibrary/MyLibrary";
 function App() {
   return (
     <>
-      <GamesDataProvider>
-        <CategoriesProvider>
-          <Header />
-          <Routes>
-            <Route path={"/"} exact element={<HomePage />} />
-            <Route path={"/search"} element={<SearchForGame />} />
-            <Route path={"/login"} element={<LoginPage />} />
-            <Route path={"/register"} element={<RegisterPage />} />
-            <Route path={"/library"} element={<MyLibrary />} />
+      <CategoriesProvider>
+        <Header />
+        <Routes>
+          <Route path={"/"} exact element={<HomePage />} />
+          <Route path={"/search"} element={<SearchForGame />} />
+          <Route path={"/login"} element={<LoginPage />} />
+          <Route path={"/register"} element={<RegisterPage />} />
+          <Route path={"/library"} element={<MyLibrary />} />
 
-            {/* categories */}
-            <Route path={"/:name"} element={<GamesByNamePage />} />
-            <Route path={"/shooter"} element={<Shooter />} />
-            <Route path={"/mmorpg"} element={<MMORPG />} />
-            <Route path={"/moba"} element={<MOBA />} />
-            <Route path={"/racing"} element={<Racing />} />
-            <Route path={"/fighting"} element={<Fighting />} />
-            <Route path={"/sports"} element={<Sports />} />
-            <Route path={"/strategy"} element={<Strategy />} />
-            <Route path={"/battleRoyale"} element={<BattleRoyale />} />
+          {/* categories */}
+          <Route path={"/:name"} element={<GamesByNamePage />} />
+          <Route path={"/shooter"} element={<Shooter />} />
+          <Route path={"/mmorpg"} element={<MMORPG />} />
+          <Route path={"/moba"} element={<MOBA />} />
+          <Route path={"/racing"} element={<Racing />} />
+          <Route path={"/fighting"} element={<Fighting />} />
+          <Route path={"/sports"} element={<Sports />} />
+          <Route path={"/strategy"} element={<Strategy />} />
+          <Route path={"/battleRoyale"} element={<BattleRoyale />} />
 
-            <Route path={"/*"} element={<NotFoundPage />} />
-          </Routes>
-        </CategoriesProvider>
-      </GamesDataProvider>
+          <Route path={"/notFound"} element={<NotFoundPage />} />
+          <Route path={"/*"} element={<NotFoundPage />} />
+        </Routes>
+      </CategoriesProvider>
     </>
   );
 }

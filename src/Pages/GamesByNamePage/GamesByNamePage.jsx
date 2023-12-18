@@ -1,4 +1,9 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+  Navigate,
+} from "react-router-dom";
 import "./GamesByNamePage.css";
 import Button from "@mui/material/Button";
 import RadioGroupRating from "../../Components/Rating/Rating";
@@ -23,13 +28,24 @@ export default function GamesByNamePage() {
   const dialog = useRef();
 
   useEffect(() => {
+    let timeoutId;
     if (state) {
       setTheGame(state.game);
     } else {
       const searchByName = name.split("-").join(" ");
       const myGame = gamesData.find((game) => game.title == searchByName);
       setTheGame(myGame);
+
+      timeoutId = setTimeout(() => {
+        if (!myGame) {
+          navigate("/notFound");
+        }
+      }, 1000);
     }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [gamesData]);
 
   // console.log(theGame);
@@ -59,9 +75,9 @@ export default function GamesByNamePage() {
   const gameGenre = state?.game?.genre.toLowerCase();
   const pickCategory = gameGenre + "Category";
   const { [pickCategory]: currentCategory } = useCategories();
-
   const randomGames = Math.ceil(Math.random() * gamesData.length);
   const randomGamesByGenre = Math.ceil(Math.random() * currentCategory?.length);
+
   return (
     <main className="GamesByNamePage page">
       {theGame ? (
