@@ -19,7 +19,6 @@ export default function GamesByNamePage() {
   const { name } = useParams();
   const { currentUser, fetchUserData } = useUserData();
   const { gamesData } = useGamesData();
-  const { shooterCategory } = useCategories();
 
   useEffect(() => {
     if (state) {
@@ -59,6 +58,10 @@ export default function GamesByNamePage() {
   const pickCategory = gameGenre + "Category";
   const { [pickCategory]: currentCategory } = useCategories();
 
+  // console.log(gamesData.length); //321
+  const randomGames = Math.ceil(Math.random() * 321);
+  const randomGamesByGenre = Math.ceil(Math.random() * currentCategory?.length);
+  // console.log(randomGames);
   // console.log(pickCategory);
   return (
     <main className="GamesByNamePage page">
@@ -126,7 +129,10 @@ export default function GamesByNamePage() {
                 <h4>Recommended games in the same genre</h4>
                 <div className="recommended-games">
                   <RecommendedCards
-                    recommended={currentCategory?.slice(6, 9)}
+                    recommended={currentCategory?.slice(
+                      randomGamesByGenre,
+                      randomGamesByGenre + 3
+                    )}
                   />
                 </div>
               </div>
@@ -136,7 +142,9 @@ export default function GamesByNamePage() {
               <div className="recommended-games-container">
                 <h4>Recommended Games</h4>
                 <div className="recommended-games">
-                  <RecommendedCards recommended={gamesData?.slice(31, 34)} />
+                  <RecommendedCards
+                    recommended={gamesData?.slice(randomGames, randomGames + 3)}
+                  />
                 </div>
               </div>
             </>
