@@ -3,9 +3,11 @@ import "./Header.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import DropdownBtn from "../Dropdown/Dropdown";
 import SearchIcon from "@mui/icons-material/Search";
+import { useLibraryCounter } from "../../Contexts/LibraryCounterContext/LibraryCounterContext";
 
 export default function Navbar() {
   const { currentUser, setCurrentUser } = useUserData();
+  const { libraryCounter } = useLibraryCounter();
   const navigate = useNavigate();
   // const location = useLocation();
   // if (location.pathname === `/404`) {
@@ -51,7 +53,7 @@ export default function Navbar() {
               className="btn btn-secondary library"
               onClick={() => navigate("/library")}
             >
-              My Library
+              {/* My Library {libraryCounter} */}
             </button>
 
             <Link to={"/"} className="link">

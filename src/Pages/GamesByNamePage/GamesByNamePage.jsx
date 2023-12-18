@@ -9,14 +9,16 @@ import axios from "../../axiosUsersConfig";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import { useEffect, useState } from "react";
+import { useLibraryCounter } from "../../Contexts/LibraryCounterContext/LibraryCounterContext";
 
 export default function GamesByNamePage() {
-  const { state } = useLocation();
   const [theGame, setTheGame] = useState({});
+  const { state } = useLocation();
   const navigate = useNavigate();
   const { name } = useParams();
   const { currentUser, fetchUserData } = useUserData();
   const { gamesData } = useGamesData();
+  const { setLibraryCounter } = useLibraryCounter();
 
   useEffect(() => {
     if (state) {
@@ -51,6 +53,8 @@ export default function GamesByNamePage() {
     } catch (error) {
       console.log(error);
     }
+
+    // setLibraryCounter((prev) => prev + 1);
   }
 
   return (
