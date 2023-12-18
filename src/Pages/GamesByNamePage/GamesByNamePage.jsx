@@ -7,17 +7,32 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import LoadingSpinner from "../../Components/Spinner/Spinner";
 import axios from "../../axiosUsersConfig";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
+import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
+import { useEffect, useState } from "react";
 
 export default function GamesByNamePage() {
   const { state } = useLocation();
+  const [theGame, setTheGame] = useState({});
   const navigate = useNavigate();
   const { name } = useParams();
   const { currentUser, fetchUserData } = useUserData();
+  const { gamesData } = useGamesData();
 
+  useEffect(() => {
+    if (state) {
+      setTheGame(state.game);
+    } else {
+      const searchByName = name.split("-").join(" ");
+      const myGame = gamesData.find((game) => game.title == searchByName);
+      console.log(myGame);
+      setTheGame(myGame);
+    }
+  }, [gamesData]);
+
+  console.log(theGame);
   async function addToLibrary() {
     try {
       const updatedUser = {
-        ...currentUser,
         library: [
           ...currentUser.library,
           {
@@ -40,7 +55,7 @@ export default function GamesByNamePage() {
 
   return (
     <main className="GamesByNamePage page">
-      {state ? (
+      {theGame ? (
         <>
           <BackBtn
             variant="outline-warning"
@@ -51,14 +66,14 @@ export default function GamesByNamePage() {
           </BackBtn>
 
           <div className="img-container">
-            <a href={state?.game.game_url} target="_blank">
-              <img src={state?.game?.thumbnail} alt={name} />
+            <a href={theGame?.game_url} target="_blank">
+              <img src={theGame?.thumbnail} alt={name} />
             </a>
 
             <div className="play-library-container">
               <Button
                 variant="contained"
-                href={state?.game?.game_url}
+                href={theGame?.game_url}
                 target="_blank"
               >
                 Play
@@ -78,19 +93,19 @@ export default function GamesByNamePage() {
           </div>
           <div className="description">
             <h1 className="game-title">{name}</h1>
-            <p className="game-description">{state?.game?.short_description}</p>
+            <p className="game-description">{theGame?.short_description}</p>
             <div className="game-info">
               <p className="game-developer">
-                Developer: <span>{state?.game?.developer}</span>
+                Developer: <span>{theGame?.developer}</span>
               </p>
               <p className="game-publisher">
-                Publisher: <span>{state?.game?.publisher}</span>
+                Publisher: <span>{theGame?.publisher}</span>
               </p>
               <p className="game-release-date">
-                Release Date: <span>{state?.game?.release_date}</span>
+                Release Date: <span>{theGame?.release_date}</span>
               </p>
               <p className="game-platform">
-                Platform: <span>{state?.game?.platform}</span>
+                Platform: <span>{theGame?.platform}</span>
               </p>
             </div>
           </div>
