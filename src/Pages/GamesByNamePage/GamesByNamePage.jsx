@@ -8,9 +8,10 @@ import LoadingSpinner from "../../Components/Spinner/Spinner";
 import axios from "../../axiosUsersConfig";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import RecommendedCards from "../../Components/RecommendedCards/RecommendedCards";
 import { useCategories } from "../../Contexts/CategoriesContext/CategoriesContext";
+import Dialog from "../../Components/Dialog/Dialog";
 
 export default function GamesByNamePage() {
   const [theGame, setTheGame] = useState({});
@@ -19,6 +20,7 @@ export default function GamesByNamePage() {
   const { name } = useParams();
   const { currentUser, fetchUserData } = useUserData();
   const { gamesData } = useGamesData();
+  const dialog = useRef();
 
   useEffect(() => {
     if (state) {
@@ -26,7 +28,6 @@ export default function GamesByNamePage() {
     } else {
       const searchByName = name.split("-").join(" ");
       const myGame = gamesData.find((game) => game.title == searchByName);
-      // console.log(myGame);
       setTheGame(myGame);
     }
   }, [gamesData]);
@@ -49,20 +50,18 @@ export default function GamesByNamePage() {
       const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
       fetchUserData();
       console.log(currentUser);
-      // console.log(response.data);
     } catch (error) {
       console.error(error);
     }
+
+    dialog.current.showModal();
   }
   const gameGenre = state?.game?.genre.toLowerCase();
   const pickCategory = gameGenre + "Category";
   const { [pickCategory]: currentCategory } = useCategories();
 
-  // console.log(gamesData.length); //321
-  const randomGames = Math.ceil(Math.random() * 321);
+  const randomGames = Math.ceil(Math.random() * gamesData.length);
   const randomGamesByGenre = Math.ceil(Math.random() * currentCategory?.length);
-  // console.log(randomGames);
-  // console.log(pickCategory);
   return (
     <main className="GamesByNamePage page">
       {theGame ? (
@@ -151,6 +150,7 @@ export default function GamesByNamePage() {
               </div>
             </>
           )}
+          <Dialog ref={dialog} />
         </>
       ) : (
         <LoadingSpinner />
