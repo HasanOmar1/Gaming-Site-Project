@@ -40,6 +40,15 @@ export default function UserDataProvider({ children }) {
     }
   }, [users]);
 
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setCurrentUser(foundUser);
+    }
+  }, []);
+
   async function removeGame(id) {
     try {
       const removedGames = currentUser?.library.filter((game) => {

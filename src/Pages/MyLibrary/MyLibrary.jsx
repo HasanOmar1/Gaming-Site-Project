@@ -4,13 +4,13 @@ import "./MyLibrary.css";
 export default function MyLibrary() {
   const { currentUser } = useUserData();
   // console.log(currentUser?.library);
-  const userLibrary = currentUser?.library.map((game) => game);
-  // console.log(userLibrary);
+  const userLibrary = currentUser?.library?.map((game) => game);
+  console.log(userLibrary);
   return (
     <main className="MyLibrary page">
       <h3>My Games</h3>
       <div className="game-container">
-        {/* <Cards genre={userLibrary} /> */}
+        {/* {userLibrary && <Cards genre={userLibrary} />} */}
       </div>
     </main>
   );

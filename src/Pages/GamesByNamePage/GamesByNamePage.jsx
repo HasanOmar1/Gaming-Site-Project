@@ -31,6 +31,7 @@ export default function GamesByNamePage() {
       };
       const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
       fetchUserData();
+      console.log(currentUser);
       // console.log(response.data);
     } catch (error) {
       console.log(error);
