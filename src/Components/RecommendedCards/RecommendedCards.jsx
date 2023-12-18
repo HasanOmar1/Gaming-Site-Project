@@ -7,6 +7,9 @@ export default function RecommendedCards({ recommended }) {
       {recommended?.map((game) => {
         return (
           <Link
+            reloadDocument
+            // target="_blank"
+            // rel="noopener noreferrer"
             key={game?.id}
             to={`/${game?.title.replace(/ /g, "-")}`}
             state={{ game }}

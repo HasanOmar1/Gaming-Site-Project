@@ -9,6 +9,8 @@ import axios from "../../axiosUsersConfig";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import { useGamesData } from "../../Contexts/GamesDataContext/GamesDataContext";
 import { useEffect, useState } from "react";
+import RecommendedCards from "../../Components/RecommendedCards/RecommendedCards";
+import { useCategories } from "../../Contexts/CategoriesContext/CategoriesContext";
 
 export default function GamesByNamePage() {
   const [theGame, setTheGame] = useState({});
@@ -17,6 +19,7 @@ export default function GamesByNamePage() {
   const { name } = useParams();
   const { currentUser, fetchUserData } = useUserData();
   const { gamesData } = useGamesData();
+  const { shooterCategory } = useCategories();
 
   useEffect(() => {
     if (state) {
@@ -52,7 +55,11 @@ export default function GamesByNamePage() {
       console.log(error);
     }
   }
+  const gameGenre = state?.game?.genre.toLowerCase();
+  const pickCategory = gameGenre + "Category";
+  const { [pickCategory]: currentCategory } = useCategories();
 
+  // console.log(pickCategory);
   return (
     <main className="GamesByNamePage page">
       {theGame ? (
@@ -112,6 +119,34 @@ export default function GamesByNamePage() {
               </p>
             </div>
           </div>
+
+          {currentCategory ? (
+            <>
+              <div className="recommended-games-container">
+                <h4>Recommended games in the same genre</h4>
+                <div className="recommended-games">
+                  <RecommendedCards
+                    recommended={currentCategory?.slice(6, 9)}
+                  />
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="recommended-games-container">
+                <h4>Recommended Games</h4>
+                <div className="recommended-games">
+                  <RecommendedCards recommended={gamesData?.slice(31, 34)} />
+                </div>
+              </div>
+            </>
+          )}
+          {/* <div className="recommended-games-container">
+            <h4>Recommended games in the same genre</h4>
+            <div className="recommended-games">
+              <RecommendedCards recommended={currentCategory?.slice(3, 6)} />
+            </div>
+          </div> */}
         </>
       ) : (
         <LoadingSpinner />
