@@ -42,7 +42,7 @@ export default function GamesByNamePage() {
         if (!myGame) {
           navigate("/notFound");
         }
-      }, 1000);
+      }, 2000);
     }
 
     return () => {
