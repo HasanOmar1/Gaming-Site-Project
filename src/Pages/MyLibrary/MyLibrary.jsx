@@ -4,6 +4,7 @@ import "./MyLibrary.css";
 export default function MyLibrary() {
   const { currentUser } = useUserData();
   const userLibrary = currentUser?.library?.map((game) => game);
+  console.log(userLibrary);
   return (
     <main className="MyLibrary page">
       <h3>My Games</h3>

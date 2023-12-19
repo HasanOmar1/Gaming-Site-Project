@@ -29,6 +29,8 @@ export default function GamesByNamePage() {
   const dialog = useRef();
   const { setIsInLibrary } = useIsInLibrary();
 
+  console.log(state);
+
   useEffect(() => {
     let timeoutId;
     if (state) {
@@ -70,6 +72,11 @@ export default function GamesByNamePage() {
                 thumbnail: theGame.thumbnail,
                 short_description: theGame.short_description,
                 genre: theGame.genre,
+                developer: theGame.developer,
+                game_url: theGame.game_url,
+                publisher: theGame.publisher,
+                release_date: theGame.release_date,
+                platform: theGame.platform,
               },
             ],
           };

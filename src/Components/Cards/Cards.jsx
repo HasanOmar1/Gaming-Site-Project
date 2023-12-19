@@ -13,6 +13,7 @@ export default function Cards({ genre }) {
     <div className="Cards">
       <div className="cards-container">
         {genre?.map((game) => {
+          console.log(game);
           return (
             <div key={game.id}>
               <Link to={`/${game.title.replace(/ /g, "-")}`} state={{ game }}>
