@@ -115,6 +115,7 @@
 .Header .library-icon{
     position: relative;
     top: 5px;
+    color: greenyellow;
 }
 
 @media (max-width: 1024px) {
