@@ -42,7 +42,6 @@ dialog h3{
 @media (max-width: 1024px) {
 
 dialog{
-    /* top: 0; */
     left: 130px;
 }
 }
