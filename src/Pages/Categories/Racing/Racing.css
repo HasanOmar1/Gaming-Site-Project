@@ -58,14 +58,9 @@
     }
     
     .Racing .recommended-container{
-        padding-top: 0px;
-    }
-    
-     .Racing .recommended-container h3{
         display: none;
-      
     }
-    
+
     
     .Racing .left-cards-container{
         display: flex;

@@ -57,15 +57,9 @@
     }
     
     .BattleRoyale .recommended-container{
-        padding-top: 0px;
-    }
-    
-     .BattleRoyale .recommended-container h3{
         display: none;
-      
     }
-    
-    
+
     .BattleRoyale .left-cards-container{
         display: flex;
         flex-direction: column;

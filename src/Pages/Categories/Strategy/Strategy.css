@@ -58,14 +58,8 @@
     }
     
     .Strategy .recommended-container{
-        padding-top: 0px;
-    }
-    
-     .Strategy .recommended-container h3{
         display: none;
-      
-    }
-    
+    } 
     
     .Strategy .left-cards-container{
         display: flex;

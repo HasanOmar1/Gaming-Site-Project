@@ -57,15 +57,10 @@
     }
     
     .MOBA .recommended-container{
-        padding-top: 0px;
-    }
-    
-     .MOBA .recommended-container h3{
         display: none;
-      
     }
     
-    
+
     .MOBA .left-cards-container{
         display: flex;
         flex-direction: column;

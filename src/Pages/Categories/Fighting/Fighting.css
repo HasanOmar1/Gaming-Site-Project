@@ -55,17 +55,10 @@
         margin: 0 ;
         height: 170vh;
     }
-    
     .Fighting .recommended-container{
-        padding-top: 0px;
-    }
-    
-     .Fighting .recommended-container h3{
         display: none;
-      
     }
-    
-    
+
     .Fighting .left-cards-container{
         display: flex;
         flex-direction: column;
