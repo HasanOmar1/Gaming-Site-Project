@@ -1,6 +1,7 @@
 .MyLibrary{
     padding-left: 300px;
     height: 150vh;
+    background-color: #393E46;
 }
 
 .MyLibrary h3{
@@ -11,4 +12,27 @@
 .MyLibrary .game-container{
     width: 800px;
     height: 150px;
+}
+
+@media (max-width: 1024px) {
+    .MyLibrary{
+        padding-left: 30px;
+    }
+
+    .MyLibrary .game-container{
+        width: 500px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .MyLibrary{
+        padding-left: 20px;
+    }
+
+    .MyLibrary .game-container{
+        width: 400px;
+        height: 160px;
+    }
 }

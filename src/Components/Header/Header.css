@@ -114,7 +114,6 @@
 
 .Header .library-icon{
     position: relative;
-    /* right: 30px; */
     top: 5px;
 }
 
@@ -143,6 +142,8 @@
     .Header .logged-user{
         padding-right: 0px;
         padding-top: 0.5rem;
+        margin-right: 110px;
+        font-size: 0.9rem;
         
     }
     
@@ -151,7 +152,7 @@
     }
     
     .Header .search-icon{
-        margin-left: 300px;
+        margin-left: 130px;
         
     }
     
@@ -172,14 +173,16 @@
     .Header .library-counter{
         font-size: 0.67rem;
         position: absolute;
-        right: 20px;
-        top: 60px;
+        right: 15px;
+        top: 0px;
     }
     
     .Header .library-icon{
-        /* position: relative; */
-        /* right: 30px; */
         top: 0px;
+    }
+
+    .Header .library{
+        padding: 10px 5px;
     }
 }
 
@@ -237,8 +240,15 @@
             
         }
 
+        
         .Header .library{
+            padding: 5px 5px;
             font-size: 0.7rem;
         }
-
+        .Header .library-counter{
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+        
     }

@@ -123,29 +123,30 @@
         padding-bottom: 10px;
     }
     
-
+    .HomePage .recommended-games {
+       display: none;
+    
+    }
 
 }
 
 
-
-
-
 @media (max-width: 576px) {
 
-  .HomePage{
-    height: 170vh;
-  }
+    .HomePage{
+        height: 190vh;
+    }
     .HomePage .welcome-msg{
 
-        padding: 50px 120px ;
-        
+        padding-bottom: 20px;
+
     }
     
     .HomePage .welcome-msg h3 ,
     .HomePage .welcome-msg h4{
         font-size: 0.9rem;
         line-height: 1.5;
+        width: 29ch;
     }
 
     

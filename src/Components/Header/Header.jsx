@@ -54,7 +54,7 @@ export default function Navbar() {
               className="btn btn-secondary library"
               onClick={() => navigate("/library")}
             >
-              My Library{" "}
+              My Library
               <span className="library-icon">
                 <SportsEsportsTwoToneIcon />
               </span>

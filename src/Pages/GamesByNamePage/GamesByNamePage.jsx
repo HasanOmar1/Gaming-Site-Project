@@ -50,10 +50,11 @@ export default function GamesByNamePage() {
 
   // console.log(theGame);
   async function addToLibrary() {
+    if (!currentUser) return;
     try {
       const updatedUser = {
         library: [
-          ...currentUser.library,
+          ...currentUser?.library,
           {
             id: theGame.id,
             title: theGame.title,
@@ -63,11 +64,14 @@ export default function GamesByNamePage() {
           },
         ],
       };
-      const response = await axios.put(`/users/${currentUser.id}`, updatedUser);
+      const response = await axios.put(
+        `/users/${currentUser?.id}`,
+        updatedUser
+      );
       fetchUserData();
       console.log(currentUser);
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
 
     dialog.current.showModal();
