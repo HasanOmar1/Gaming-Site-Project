@@ -108,13 +108,14 @@
 .Header .library-counter{
     font-size: 0.67rem;
     position: absolute;
-    right: 23px;
+    right: 20px;
     top: 0;
 }
 
 .Header .library-icon{
     position: relative;
     top: 5px;
+    right: -3px;
     color: greenyellow;
 }
 
