@@ -39,7 +39,7 @@ const dialogModal = forwardRef(function Dialog({ children }, ref) {
 
       {currentUser && !isInLibrary && (
         <>
-          <h3>Already in Library</h3>
+          <h3 style={{ color: "red" }}>Already in Library</h3>
           <form className="dialog-form" method="dialog">
             <button className="close-dialog">Close</button>
             <button
