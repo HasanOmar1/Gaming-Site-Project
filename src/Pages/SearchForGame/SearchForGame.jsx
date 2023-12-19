@@ -37,24 +37,20 @@ export default function SearchForGame() {
         <hr style={{ width: `50vw` }} />
       </div>
 
-      <div className="cards-container">
-        {!searchBarValue ? (
+      {!searchBarValue ? (
+        <div className="cards-container">
           <div className="recommended-cards-container">
             <h4>Games You Must Try</h4>
             <div>
-              <RecommendedCards recommended={searchedGame.slice(110, 114)} />
-            </div>
-            <div>
-              <RecommendedCards recommended={searchedGame.slice(30, 34)} />
-            </div>
-            <div>
-              <RecommendedCards recommended={searchedGame.slice(70, 74)} />
+              <RecommendedCards recommended={searchedGame.slice(110, 122)} />
             </div>
           </div>
-        ) : (
+        </div>
+      ) : (
+        <div className="searched-cards-container">
           <Cards genre={searchedGame.slice(0, 5)} />
-        )}
-      </div>
+        </div>
+      )}
     </main>
   );
 }
