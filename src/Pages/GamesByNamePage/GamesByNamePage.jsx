@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import RecommendedCards from "../../Components/RecommendedCards/RecommendedCards";
 import { useCategories } from "../../Contexts/CategoriesContext/CategoriesContext";
 import Dialog from "../../Components/Dialog/Dialog";
+import { useIsInLibrary } from "../../Contexts/AlreadyInLibraryContext/AlreadyInLibraryContext";
 
 export default function GamesByNamePage() {
   const [theGame, setTheGame] = useState({});
@@ -26,6 +27,7 @@ export default function GamesByNamePage() {
   const { currentUser, fetchUserData } = useUserData();
   const { gamesData } = useGamesData();
   const dialog = useRef();
+  const { setIsInLibrary } = useIsInLibrary();
 
   useEffect(() => {
     let timeoutId;
@@ -49,33 +51,49 @@ export default function GamesByNamePage() {
   }, [gamesData]);
 
   // console.log(theGame);
-  async function addToLibrary() {
-    if (!currentUser) return;
-    try {
-      const updatedUser = {
-        library: [
-          ...currentUser?.library,
-          {
-            id: theGame.id,
-            title: theGame.title,
-            thumbnail: theGame.thumbnail,
-            short_description: theGame.short_description,
-            genre: theGame.genre,
-          },
-        ],
-      };
-      const response = await axios.put(
-        `/users/${currentUser?.id}`,
-        updatedUser
-      );
-      fetchUserData();
-      console.log(currentUser);
-    } catch (error) {
-      console.log(error);
+  async function addToLibrary(id) {
+    const inLibrary = currentUser?.library.find((game) => {
+      return game?.id === id;
+    });
+    // console.log(inLibrary);
+
+    if (currentUser) {
+      try {
+        if (!inLibrary) {
+          setIsInLibrary(true);
+          const updatedUser = {
+            library: [
+              ...currentUser?.library,
+              {
+                id: theGame.id,
+                title: theGame.title,
+                thumbnail: theGame.thumbnail,
+                short_description: theGame.short_description,
+                genre: theGame.genre,
+              },
+            ],
+          };
+          const response = await axios.put(
+            `/users/${currentUser?.id}`,
+            updatedUser
+          );
+
+          fetchUserData();
+
+          console.log(currentUser);
+        } else {
+          setIsInLibrary(false);
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     dialog.current.showModal();
+
+    if (!currentUser) return;
   }
+
   const gameGenre = state?.game?.genre.toLowerCase();
   const pickCategory = gameGenre + "Category";
   const { [pickCategory]: currentCategory } = useCategories();
@@ -111,7 +129,7 @@ export default function GamesByNamePage() {
                 variant="contained"
                 color="success"
                 className="add-to-library"
-                onClick={addToLibrary}
+                onClick={() => addToLibrary(theGame.id)}
               >
                 Add To Library
               </Button>

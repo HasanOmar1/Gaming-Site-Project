@@ -17,33 +17,36 @@ import Strategy from "./Pages/Categories/Strategy/Strategy";
 import BattleRoyale from "./Pages/Categories/BattleRoyale/BattleRoyale";
 import SearchForGame from "./Pages/SearchForGame/SearchForGame";
 import MyLibrary from "./Pages/MyLibrary/MyLibrary";
+import AlreadyInLibraryProvider from "./Contexts/AlreadyInLibraryContext/AlreadyInLibraryContext";
 
 function App() {
   return (
     <>
       <CategoriesProvider>
-        <Header />
-        <Routes>
-          <Route path={"/"} exact element={<HomePage />} />
-          <Route path={"/search"} element={<SearchForGame />} />
-          <Route path={"/login"} element={<LoginPage />} />
-          <Route path={"/register"} element={<RegisterPage />} />
-          <Route path={"/library"} element={<MyLibrary />} />
+        <AlreadyInLibraryProvider>
+          <Header />
+          <Routes>
+            <Route path={"/"} exact element={<HomePage />} />
+            <Route path={"/search"} element={<SearchForGame />} />
+            <Route path={"/login"} element={<LoginPage />} />
+            <Route path={"/register"} element={<RegisterPage />} />
+            <Route path={"/library"} element={<MyLibrary />} />
 
-          {/* categories */}
-          <Route path={"/:name"} element={<GamesByNamePage />} />
-          <Route path={"/shooter"} element={<Shooter />} />
-          <Route path={"/mmorpg"} element={<MMORPG />} />
-          <Route path={"/moba"} element={<MOBA />} />
-          <Route path={"/racing"} element={<Racing />} />
-          <Route path={"/fighting"} element={<Fighting />} />
-          <Route path={"/sports"} element={<Sports />} />
-          <Route path={"/strategy"} element={<Strategy />} />
-          <Route path={"/battleRoyale"} element={<BattleRoyale />} />
+            {/* categories */}
+            <Route path={"/:name"} element={<GamesByNamePage />} />
+            <Route path={"/shooter"} element={<Shooter />} />
+            <Route path={"/mmorpg"} element={<MMORPG />} />
+            <Route path={"/moba"} element={<MOBA />} />
+            <Route path={"/racing"} element={<Racing />} />
+            <Route path={"/fighting"} element={<Fighting />} />
+            <Route path={"/sports"} element={<Sports />} />
+            <Route path={"/strategy"} element={<Strategy />} />
+            <Route path={"/battleRoyale"} element={<BattleRoyale />} />
 
-          <Route path={"/notFound"} element={<NotFoundPage />} />
-          <Route path={"/*"} element={<NotFoundPage />} />
-        </Routes>
+            <Route path={"/notFound"} element={<NotFoundPage />} />
+            <Route path={"/*"} element={<NotFoundPage />} />
+          </Routes>
+        </AlreadyInLibraryProvider>
       </CategoriesProvider>
     </>
   );
