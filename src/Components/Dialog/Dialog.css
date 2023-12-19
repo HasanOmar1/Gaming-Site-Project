@@ -38,3 +38,18 @@ dialog h3{
 .close-dialog:hover{
     background-color: #5e6c819b;
 }
+
+@media (max-width: 1024px) {
+
+dialog{
+    /* top: 0; */
+    left: 130px;
+}
+}
+
+@media (max-width: 576px) {
+
+    dialog{
+        left: 10px;
+    }
+}
