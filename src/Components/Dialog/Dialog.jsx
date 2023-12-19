@@ -7,9 +7,7 @@ import { useIsInLibrary } from "../../Contexts/AlreadyInLibraryContext/AlreadyIn
 const dialogModal = forwardRef(function Dialog({ children }, ref) {
   const navigate = useNavigate();
   const { currentUser } = useUserData();
-  const { isInLibrary, setIsInLibrary } = useIsInLibrary();
-
-  // console.log(isInLibrary);
+  const { isInLibrary } = useIsInLibrary();
 
   return (
     <dialog ref={ref}>
