@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px ;
+    padding: 0 50px ;
     border-left: none;
     width: 500px;
     background-color: #22283172;
@@ -85,6 +85,7 @@
     padding-top: 20px;
     font-size: 0.9rem;
     text-decoration: none;
+    padding-left: 5rem;
 
 }
 
@@ -97,6 +98,11 @@
 .RegisterPage .password-error-msg,
 .RegisterPage .email-error-msg{
     color: red;
+    height: 10px;
+    padding-bottom: 5px;
+}
+.RegisterPage .email-input{
+    margin-bottom: -15px;
 }
 
 @media (max-width: 1024px) {
@@ -228,12 +234,3 @@
     
     
     }
-
-
-    @media (min-width: 2560px) {
-
-        .RegisterPage{
-            height: 95.6vh;
-        }
-        
-        }

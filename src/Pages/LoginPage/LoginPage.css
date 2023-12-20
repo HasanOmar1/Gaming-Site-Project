@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px ;
+    padding: 0 50px ;
     border-left: none;
     width: 500px;
     background-color: #22283172;
@@ -67,6 +67,7 @@
     border:none;
 }
 
+
 .LoginPage form button{
     cursor: pointer;
     background-color: #4e5e75;
@@ -83,6 +84,7 @@
     padding-top: 20px;
     font-size: 0.9rem;
     text-decoration: none;
+    padding-left: 5rem;
     
 }
 
@@ -96,6 +98,16 @@
 .LoginPage .password-error-msg,
 .LoginPage .email-error-msg{
     color: red;
+    height: 10px;
+    padding-bottom: 0px;
+
+}
+
+.LoginPage .email-error-msg{
+    padding-bottom: 0;
+}
+.LoginPage .email-input{
+    margin-bottom: -15px;
 }
 
 @media (max-width: 1024px) {

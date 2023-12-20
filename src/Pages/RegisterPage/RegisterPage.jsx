@@ -6,8 +6,7 @@ import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 export default function RegisterPage() {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
-  const [isValid, setIsValid] = useState(false);
-  const { createUser, users } = useUserData();
+  const { createUser, users, setCurrentUser } = useUserData();
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
   const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
   const navigate = useNavigate();
@@ -15,33 +14,40 @@ export default function RegisterPage() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (emailValue.includes("@") && passwordValue.length > 5) {
-      users?.map((users) => {
-        if (emailValue === users.email) {
-          setIsValid(false);
-          setEmailErrorMsg("User already exists");
-          setEmailValue("");
-          setPasswordValue("");
-        } else {
-          setIsValid(true);
-        }
-      });
-    }
-    if (passwordValue.length < 6) {
-      setIsValid(false);
-      setPasswordErrorMsg("password must be longer than 5 characters");
+    const user = users?.find((singleUser) => {
+      return singleUser.email === emailValue;
+    });
+
+    if (user) {
+      setEmailErrorMsg("User already exists");
+      setEmailValue("");
+      setPasswordValue("");
+      return;
     }
 
-    if (isValid) {
-      createUser(emailValue, passwordValue);
-      navigate("/login");
+    if (passwordValue.length < 6) {
+      setPasswordErrorMsg("password must be longer than 5 characters");
+      setPasswordValue("");
+      return;
+    }
+
+    if (passwordValue.length > 5 && !user) {
+      const user = await createUser(emailValue, passwordValue);
+      setCurrentUser(user);
+      navigate("/");
     }
   }
 
   function handlePasswordInput(e) {
     setPasswordValue(e.target.value);
-    if (passwordValue.length > 5) {
+    if (passwordValue.length > 4) {
       setPasswordErrorMsg("");
+    }
+  }
+  function handleEmailInput(e) {
+    setEmailValue(e.target.value);
+    if (emailValue.length > 0) {
+      setEmailErrorMsg("");
     }
   }
 
@@ -61,7 +67,9 @@ export default function RegisterPage() {
                 name="email"
                 placeholder="Enter Your Email"
                 value={emailValue}
-                onChange={(e) => setEmailValue(e.target.value)}
+                onChange={(e) => handleEmailInput(e)}
+                required
+                className="email-input"
               />
               <div className="password-error-msg">{passwordErrorMsg}</div>
               <input
@@ -70,16 +78,17 @@ export default function RegisterPage() {
                 placeholder="Enter Your Password"
                 value={passwordValue}
                 onChange={(e) => handlePasswordInput(e)}
+                required
               />
               <button type="submit">Register</button>
+              <p className="register">
+                Already a member?
+                <Link to={"/login"} className="link">
+                  <span>Login</span>
+                </Link>
+              </p>
             </form>
           </div>
-          <p className="register">
-            Already a member?
-            <Link to={"/login"} className="register">
-              <span>Login</span>
-            </Link>
-          </p>
         </div>
       </div>
     </main>

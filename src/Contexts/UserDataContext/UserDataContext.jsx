@@ -27,8 +27,9 @@ export default function UserDataProvider({ children }) {
         password: password,
         library: [],
       });
-      fetchUserData();
-      setUsers([...users, response.data]);
+      console.log(response.data);
+      await fetchUserData();
+      return response.data;
     } catch (error) {
       console.log(error);
     }

@@ -10,26 +10,33 @@ export default function LoginPage() {
   const [isValid, setIsValid] = useState(false);
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
   const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
-  const { users, currentUser, setCurrentUser } = useUserData();
+  const { users, setCurrentUser } = useUserData();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    users?.map((user) => {
-      if (emailInput === user.email && passwordInput === user.password) {
-        setIsValid(true);
-        setCurrentUser(user);
-        console.log(user);
-        localStorage.setItem("user", JSON.stringify(user));
-        navigate("/");
-      } else if (emailInput === user.email && passwordInput !== user.password) {
-        setIsValid(false);
-        setPasswordInput("");
-        setEmailErrorMsg("Email or Password is not correct");
-      } else if (emailInput === user.email) {
-        setEmailErrorMsg("not found");
-      }
+    const user = users?.find((singleUser) => {
+      return singleUser.email === emailInput;
     });
+
+    if (!user) {
+      setEmailErrorMsg("Email or Password is not correct");
+      setEmailInput("");
+      setPasswordInput("");
+      return;
+    }
+    if (emailInput === user.email && passwordInput === user.password) {
+      setIsValid(true);
+      setCurrentUser(user);
+      console.log(user);
+      localStorage.setItem("user", JSON.stringify(user));
+      navigate("/");
+    } else if (emailInput === user.email && passwordInput !== user.password) {
+      setIsValid(false);
+      setEmailInput("");
+      setPasswordInput("");
+      setEmailErrorMsg("Email or Password is not correct");
+    }
 
     if (passwordInput.length < 5) {
       setPasswordErrorMsg("Password must be more than 5 characters!");
@@ -67,6 +74,7 @@ export default function LoginPage() {
                 value={emailInput}
                 onChange={(e) => handleEmailInput(e)}
                 required
+                className="email-input"
               />
               <div className="password-error-msg">{passwordErrorMsg}</div>
               <input
@@ -78,14 +86,14 @@ export default function LoginPage() {
                 required
               />
               <button>Login</button>
+              <p className="register">
+                Not a member?
+                <Link className="link" to={"/register"}>
+                  <span>Register</span>
+                </Link>
+              </p>
             </form>
           </div>
-          <p className="register">
-            Not a member?
-            <Link className="register" to={"/register"}>
-              <span>Register</span>
-            </Link>
-          </p>
         </div>
       </div>
     </main>
