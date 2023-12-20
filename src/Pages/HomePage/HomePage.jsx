@@ -48,6 +48,13 @@ export default function HomePage() {
 
   return (
     <main className="HomePage page">
+      <img className="left-logo" src="/src/assets/Logo.png" alt="site's logo" />
+      <img
+        className="right-logo"
+        src="/src/assets/Logo.png"
+        alt="site's logo"
+      />
+
       {users && (
         <div className="welcome-msg">
           <h3>Looking for a game to play? Then you are in the right place!</h3>

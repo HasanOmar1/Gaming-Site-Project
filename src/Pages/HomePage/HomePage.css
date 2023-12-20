@@ -6,6 +6,20 @@
    
 }
 
+.HomePage .left-logo,
+.HomePage .right-logo{
+    width: 200px;
+    position: absolute;
+}
+.HomePage .left-logo{
+    left: 30px;
+}
+.HomePage .right-logo{
+    right: 30px;
+   
+}
+
+
 .HomePage .welcome-msg{
     display: flex;
     justify-content: center;

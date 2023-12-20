@@ -10,11 +10,6 @@ export default function Navbar() {
   const userLibrary = currentUser?.library?.map((game) => game);
   const navigate = useNavigate();
 
-  // const location = useLocation();
-  // if (location.pathname === `/404`) {
-  //   return null;
-  // }
-
   function handleLogOut() {
     setCurrentUser(null);
     localStorage.clear();
