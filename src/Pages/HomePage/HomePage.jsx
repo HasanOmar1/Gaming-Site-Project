@@ -8,6 +8,7 @@ import { useCategories } from "../../Contexts/CategoriesContext/CategoriesContex
 import { useEffect, useState } from "react";
 import RecommendedCards from "../../Components/RecommendedCards/RecommendedCards";
 import Button from "react-bootstrap/Button";
+import Logo from "../../assets/Logo.png";
 
 export default function HomePage() {
   const { users, currentUser } = useUserData();
@@ -48,12 +49,8 @@ export default function HomePage() {
 
   return (
     <main className="HomePage page">
-      <img className="left-logo" src="/src/assets/Logo.png" alt="site's logo" />
-      <img
-        className="right-logo"
-        src="/src/assets/Logo.png"
-        alt="site's logo"
-      />
+      <img className="left-logo" src={Logo} alt="site's logo" />
+      <img className="right-logo" src={Logo} alt="site's logo" />
 
       {users && (
         <div className="welcome-msg">
