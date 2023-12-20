@@ -62,9 +62,15 @@ dialog h3{
 }
 .nickname-dialog-form .close-dialog{
     position: relative;
-
     left: 50px;
 }
+
+.nickname-dialog-form .error-msg{
+color: red;
+height: 0px;
+
+}
+
 @media (max-width: 1024px) {
 
 dialog{

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const dialogModal = forwardRef(function UserDialog({ email, password }, ref) {
   const { createUser, setCurrentUser } = useUserData();
   const [nickNameValue, setNickNameValue] = useState("");
+  const [errorMsg, setErrorMsg] = useState(false);
   const navigate = useNavigate();
 
   const nickNameRef = useRef();
@@ -14,7 +15,9 @@ const dialogModal = forwardRef(function UserDialog({ email, password }, ref) {
   }
 
   async function addNickName() {
-    if (!nickNameValue) {
+    if (!nickNameValue || nickNameValue.trim() === "") {
+      setErrorMsg(true);
+      setNickNameValue("");
       return;
     }
 
@@ -29,6 +32,7 @@ const dialogModal = forwardRef(function UserDialog({ email, password }, ref) {
   return (
     <dialog className="nickname-dialog-form" ref={ref}>
       <h3>Enter Your Nickname</h3>
+      {errorMsg && <p className="error-msg">Please Enter a nickname</p>}
       <form method="dialog">
         <input
           type="text"
