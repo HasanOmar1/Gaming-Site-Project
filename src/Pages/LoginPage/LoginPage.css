@@ -165,6 +165,9 @@
 .LoginPage .password-error-msg,
 .LoginPage .email-error-msg{
     font-size: 15px;
+    height: 20px;
+    margin-bottom: 2px;
+    padding-top: 6px;
 }
 }
 

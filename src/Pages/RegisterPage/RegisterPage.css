@@ -160,7 +160,12 @@
     .RegisterPage .password-error-msg,
     .RegisterPage .email-error-msg{
         font-size: 15px;
+        height: 20px;
+        margin-bottom: 2px;
+        padding-top: 6px;
     }
+
+ 
     }
     
     @media (max-width: 576px) {

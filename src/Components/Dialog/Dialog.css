@@ -76,11 +76,41 @@ height: 0px;
 dialog{
     left: 130px;
 }
+.nickname-dialog-form {
+    left: 150px;
+}
+
+.nickname-dialog-form h3{
+    margin-left: -50px;
+}
+
+.nickname-dialog-form .error-msg{
+    margin-left: -50px;
+
+}
 }
 
 @media (max-width: 576px) {
 
     dialog{
         left: 10px;
+    }
+    .nickname-dialog-form {
+        left: 15px;
+    }
+    
+    .nickname-dialog-form h3{
+        margin-left: -10px;
+    }
+    
+    .nickname-dialog-form .error-msg{
+        margin-left: -10px;
+    
+    }
+    .nickname-dialog-form #nickname{
+        margin-left: 50px;
+    }
+    .nickname-dialog-form .close-dialog{
+        margin-left: 0px;
     }
 }
