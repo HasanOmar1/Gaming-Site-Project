@@ -158,3 +158,13 @@
     
    
 }
+
+
+@media (min-width: 2560px) {
+
+
+.HomePage .cards-title{
+    margin-left: 27%;
+}
+
+}
