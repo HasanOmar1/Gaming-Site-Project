@@ -89,6 +89,12 @@
     
        
     }
+
+    .HomePage .left-logo,
+    .HomePage .right-logo{
+    display: none;
+    }
+
     .HomePage .welcome-msg{
 
         padding: 50px 10px ;
@@ -136,6 +142,12 @@
     .HomePage{
         height: 190vh;
     }
+
+    .HomePage .left-logo,
+    .HomePage .right-logo{
+    display: none;
+    }
+    
     .HomePage .welcome-msg{
 
         padding-bottom: 20px;

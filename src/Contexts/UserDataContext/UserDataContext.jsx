@@ -10,7 +10,7 @@ export default function UserDataProvider({ children }) {
   async function fetchUserData() {
     try {
       const response = await axios.get("/users");
-      console.log(response.data);
+      // console.log(response.data);
       setUsers(response.data);
     } catch (error) {
       console.log(error);

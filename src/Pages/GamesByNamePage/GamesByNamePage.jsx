@@ -29,8 +29,6 @@ export default function GamesByNamePage() {
   const dialog = useRef();
   const { setIsInLibrary } = useIsInLibrary();
 
-  console.log(state);
-
   useEffect(() => {
     let timeoutId;
     if (state) {
@@ -86,8 +84,6 @@ export default function GamesByNamePage() {
           );
 
           fetchUserData();
-
-          console.log(currentUser);
         } else {
           setIsInLibrary(false);
         }
