@@ -16,21 +16,7 @@
     gap: 20px;
     background-color: #52555a1c;
 }
-.HomePage .welcome-msg button{
-    padding: 10px;
-    background-color: #00ADB5;
-    border: none;
-    color: #EEEEEE;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-}
 
-.HomePage .welcome-msg button:hover{
-
-    background-color: #00acb5a9;
-    color: rgb(231, 157, 66);
-}
 
 .HomePage .cards-section{
     display: flex;

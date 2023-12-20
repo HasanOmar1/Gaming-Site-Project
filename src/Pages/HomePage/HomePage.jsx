@@ -7,6 +7,7 @@ import ColCards from "../../Components/ColCards/ColCards";
 import { useCategories } from "../../Contexts/CategoriesContext/CategoriesContext";
 import { useEffect, useState } from "react";
 import RecommendedCards from "../../Components/RecommendedCards/RecommendedCards";
+import Button from "react-bootstrap/Button";
 
 export default function HomePage() {
   const { users, currentUser } = useUserData();
@@ -54,7 +55,7 @@ export default function HomePage() {
             <>
               <h4>Join us for extra features!</h4>
               <Link to={"/register"}>
-                <button>Get Started</button>
+                <Button variant="outline-info">Get Started</Button>
               </Link>
             </>
           )}

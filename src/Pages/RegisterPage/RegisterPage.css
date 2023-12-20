@@ -1,6 +1,6 @@
 
 .RegisterPage{
-    height: 95.6vh;
+    height: 93.5vh;
     display: flex;
 
 }
@@ -228,3 +228,12 @@
     
     
     }
+
+
+    @media (min-width: 2560px) {
+
+        .RegisterPage{
+            height: 95.6vh;
+        }
+        
+        }
