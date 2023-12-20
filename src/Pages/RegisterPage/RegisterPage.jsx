@@ -1,15 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./RegisterPage.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
+import NickNameDialog from "../../Components/Dialog/NickNameDialog";
 
 export default function RegisterPage() {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
-  const { createUser, users, setCurrentUser } = useUserData();
+  const { users } = useUserData();
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
   const [passwordErrorMsg, setPasswordErrorMsg] = useState("");
+
   const navigate = useNavigate();
+
+  const dialog = useRef();
+  // dialog.current.showModal();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,9 +37,7 @@ export default function RegisterPage() {
     }
 
     if (passwordValue.length > 5 && !user) {
-      const user = await createUser(emailValue, passwordValue);
-      setCurrentUser(user);
-      navigate("/");
+      dialog.current.showModal();
     }
   }
 
@@ -53,6 +56,12 @@ export default function RegisterPage() {
 
   return (
     <main className="RegisterPage page">
+      <NickNameDialog
+        ref={dialog}
+        email={emailValue}
+        password={passwordValue}
+      />
+
       <div className="login-container">
         <div className="wave">
           <h1>Hello Gamer 👋</h1>

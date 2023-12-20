@@ -6,6 +6,7 @@ export const UserDataContext = createContext();
 export default function UserDataProvider({ children }) {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
+  const [userNickName, setUserNickName] = useState(false);
 
   async function fetchUserData() {
     try {
@@ -20,11 +21,12 @@ export default function UserDataProvider({ children }) {
     fetchUserData();
   }, []);
 
-  async function createUser(email, password) {
+  async function createUser(email, password, nickname) {
     try {
       const response = await axios.post(`/users`, {
         email: email,
         password: password,
+        nickname: nickname,
         library: [],
       });
       console.log(response.data);
@@ -73,6 +75,8 @@ export default function UserDataProvider({ children }) {
         currentUser,
         fetchUserData,
         removeGame,
+        userNickName,
+        setUserNickName,
       }}
     >
       {children}

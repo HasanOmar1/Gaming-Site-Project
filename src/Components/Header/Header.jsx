@@ -61,7 +61,7 @@ export default function Navbar() {
                 Log out
               </div>
             </Link>
-            <h5 className="logged-user">{currentUser.email}</h5>
+            <h5 className="logged-user">{currentUser.nickname}</h5>
           </>
         )}
       </div>

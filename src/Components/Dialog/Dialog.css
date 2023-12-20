@@ -1,4 +1,4 @@
-dialog{
+dialog , .nickname-dialog-form{
     text-align: center;
     width: 500px;
     height: 200px;
@@ -17,12 +17,19 @@ dialog::backdrop{
     background-color: black;
     opacity: 0.6;
 }
+.nickname-dialog-form{
+
+    height: 300px;
+    width: 500px;
+    left: 40%;
+}
 
 dialog h3{
     color: rgb(43, 185, 43);
 }
 
-.close-dialog{
+.close-dialog ,
+ .nickname-dialog-form .close-dialog{
     padding: 10px 30px;
     margin-top: 10px;
     cursor: pointer;
@@ -39,6 +46,25 @@ dialog h3{
     background-color: #5e6c819b;
 }
 
+#nickname{
+    background-color: white;
+    margin-left: 80px;
+    color: black;
+}
+
+.nickname-dialog-form .x{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: fit-content;
+    padding: 5px 10px;
+
+}
+.nickname-dialog-form .close-dialog{
+    position: relative;
+
+    left: 50px;
+}
 @media (max-width: 1024px) {
 
 dialog{
