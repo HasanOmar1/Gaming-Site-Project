@@ -1,4 +1,4 @@
-import "./Shooter.css";
+import "../Categories.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
 import Cards from "../../../Components/Cards/Cards";
@@ -9,7 +9,7 @@ export default function Shooter() {
   const { loading, shooterCategory } = useCategories();
 
   return (
-    <main className="Shooter page">
+    <main className="Categories page">
       {!loading ? (
         <div className="all-container">
           <div className="recommended-container">

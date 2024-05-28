@@ -1,4 +1,4 @@
-import "./BattleRoyale.css";
+import "../Categories.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
 import Cards from "../../../Components/Cards/Cards";
@@ -9,7 +9,7 @@ export default function BattleRoyale() {
   const { loading, battleRoyaleCategory } = useCategories();
 
   return (
-    <main className="BattleRoyale page">
+    <main className="Categories page">
       {!loading ? (
         <div className="all-container">
           <div className="recommended-container">

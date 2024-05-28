@@ -1,4 +1,4 @@
-import "./Racing.css";
+import "../Categories.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
 import LoadingSpinner from "../../../Components/Spinner/Spinner";
@@ -9,7 +9,7 @@ export default function Racing() {
   const { loading, racingCategory } = useCategories();
 
   return (
-    <main className="Racing page">
+    <main className="Categories page">
       {!loading ? (
         <div className="all-container">
           <div className="recommended-container">

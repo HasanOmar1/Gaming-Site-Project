@@ -1,4 +1,4 @@
-import "./MOBA.css";
+import "../Categories.css";
 import { useCategories } from "../../../Contexts/CategoriesContext/CategoriesContext";
 import RecommendedCards from "../../../Components/RecommendedCards/RecommendedCards";
 import LoadingSpinner from "../../../Components/Spinner/Spinner";
@@ -9,7 +9,7 @@ export default function MOBA() {
   const { loading, mobaCategory } = useCategories();
 
   return (
-    <main className="MOBA page">
+    <main className="Categories page">
       {!loading ? (
         <div className="all-container">
           <div className="recommended-container">

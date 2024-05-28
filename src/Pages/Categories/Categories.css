@@ -1,8 +1,8 @@
-.Racing {
+.Categories {
   min-height: 100vh;
 }
 
-.Racing .all-container {
+.Categories .all-container {
   padding-top: 30px;
   margin: 0 300px;
   background-color: #43485068;
@@ -10,72 +10,70 @@
   min-height: 100vh;
 }
 
-.Racing .recommended-container {
+.Categories .recommended-container {
   padding-top: 30px;
 }
 
-.Racing .recommended-container h3 {
+.Categories .recommended-container h3 {
   margin-left: 2.3rem;
 }
 
-.Racing .games-container {
+.Categories .games-container {
   display: flex;
 }
 
-.Racing .left-cards-container {
+.Categories .left-cards-container {
   display: flex;
   flex-direction: column;
   width: 800px;
-  height: 150px;
   margin-top: 1rem;
   margin-left: 3rem;
 }
 
-.Racing .right-cards-container {
+.Categories .right-cards-container {
   margin-top: 1rem;
   margin-left: 3.7rem;
   display: flex;
   flex-direction: column;
 }
 
-.Racing #more-games {
+.Categories #more-games {
   margin-left: 3rem;
   margin-top: 4rem;
   color: #00adb5;
 }
 
 @media (max-width: 1440px) {
-  .Racing .all-container {
+  .Categories .all-container {
     margin: 0;
   }
 }
 
 @media (max-width: 1024px) {
-  .Racing .all-container {
+  .Categories .all-container {
     padding-top: 30px;
   }
 
-  .Racing .recommended-container {
+  .Categories .recommended-container {
     display: none;
   }
 
-  .Racing .left-cards-container {
+  .Categories .left-cards-container {
     display: flex;
     flex-direction: column;
     width: 520px;
-    height: 150px;
     margin-top: 1rem;
     margin-left: 1rem;
   }
 
-  .Racing .right-cards-container {
+  .Categories .right-cards-container {
     margin-top: 467px;
     margin-left: 0;
     display: flex;
     flex-direction: column;
   }
 
-  .Racing #more-games {
+  .Categories #more-games {
     margin-left: 1rem;
     margin-top: 1rem;
   }
