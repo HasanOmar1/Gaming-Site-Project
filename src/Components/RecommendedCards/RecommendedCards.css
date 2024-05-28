@@ -24,5 +24,10 @@
     gap: 20px;
     justify-content: space-evenly;
     margin-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .RecommendedCards img {
+    width: 230px;
   }
 }

@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useUserData } from "../../Contexts/UserDataContext/UserDataContext";
 import DropdownBtn from "../Dropdown/Dropdown";
@@ -61,7 +61,6 @@ export default function Navbar() {
                 Log out
               </div>
             </Link>
-            <h5 className="logged-user">{currentUser.nickname}</h5>
           </>
         )}
       </div>

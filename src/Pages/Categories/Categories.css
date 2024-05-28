@@ -54,10 +54,6 @@
     padding-top: 30px;
   }
 
-  .Categories .recommended-container {
-    display: none;
-  }
-
   .Categories .left-cards-container {
     display: flex;
     flex-direction: column;
@@ -76,5 +72,19 @@
   .Categories #more-games {
     margin-left: 1rem;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .Categories .recommended-container h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 415px) {
+  .Categories .games-container {
+    width: 340px;
   }
 }

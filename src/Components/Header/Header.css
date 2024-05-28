@@ -139,7 +139,6 @@
 
   .Header .library-counter {
     font-size: 0.67rem;
-    position: absolute;
     right: 15px;
     top: 0px;
   }
@@ -211,5 +210,28 @@
     position: absolute;
     right: 20px;
     top: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .Header .navbar-links {
+    font-size: 0.7rem;
+  }
+
+  .Header .logout {
+    font-size: 0.6rem;
+    width: 30px;
+  }
+
+  .Header .btn {
+    font-size: 0.7rem;
+  }
+
+  .Header .library {
+    width: 70px;
+  }
+
+  .Header .library-counter {
+    right: 12px;
   }
 }
