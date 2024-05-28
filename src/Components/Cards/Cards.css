@@ -130,3 +130,12 @@
     left: 280px;
   }
 }
+
+@media (max-width: 375px) {
+  .Cards .games-container {
+    width: 350px;
+  }
+  .Cards .game-genre {
+    left: 250px;
+  }
+}
