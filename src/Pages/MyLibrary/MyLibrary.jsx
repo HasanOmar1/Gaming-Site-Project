@@ -9,6 +9,9 @@ export default function MyLibrary() {
       <h3>My Games</h3>
       <div className="game-container">
         {userLibrary && <Cards genre={userLibrary} />}
+        {userLibrary?.length === 0 && (
+          <h4 id="no-games">No games found in your library</h4>
+        )}
       </div>
     </main>
   );

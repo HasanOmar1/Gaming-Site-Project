@@ -17,6 +17,10 @@
   height: 150px;
 }
 
+.MyLibrary #no-games {
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .MyLibrary {
     padding-left: 30px;
