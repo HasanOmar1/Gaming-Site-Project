@@ -1,38 +1,63 @@
-.MyLibrary{
-    padding-left: 300px;
-    height: 150vh;
-    background-color: #393E46;
+.MyLibrary {
+  min-height: 100vh;
+  background-color: #393e46;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.MyLibrary h3{
-    padding-top: 100px;
-    color: #00ADB5;
+.MyLibrary h3 {
+  color: #00adb5;
+  padding-bottom: 50px;
 }
 
-.MyLibrary .game-container{
-    width: 800px;
-    height: 150px;
+.MyLibrary .game-container {
+  width: 800px;
+  height: 150px;
 }
 
 @media (max-width: 1024px) {
-    .MyLibrary{
-        padding-left: 30px;
-    }
+  .MyLibrary {
+    padding-left: 30px;
+  }
 
-    .MyLibrary .game-container{
-        width: 500px;
-        height: 150px;
-    }
+  .MyLibrary .game-container {
+    width: 500px;
+    height: 150px;
+  }
 }
 
 @media (max-width: 576px) {
+  .MyLibrary h3 {
+    padding-bottom: 100px;
+  }
 
-    .MyLibrary{
-        padding-left: 20px;
-    }
+  .MyLibrary {
+    padding-left: 20px;
+  }
 
-    .MyLibrary .game-container{
-        width: 400px;
-        height: 160px;
-    }
+  .MyLibrary .game-container {
+    width: 400px;
+    height: 160px;
+  }
+
+  .MyLibrary .Cards .cards-container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 415px) {
+  .MyLibrary .game-container {
+    width: 100%;
+  }
+  .MyLibrary .games-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 360px) {
+  .MyLibrary .games-container {
+    width: 300px;
+  }
 }
