@@ -67,7 +67,6 @@
   }
 
   .SearchForGame .searched-cards-container {
-    height: 155px;
     width: 600px;
   }
   .SearchForGame .recommended-cards-container img {
@@ -81,39 +80,27 @@
 }
 
 @media (max-width: 576px) {
-  .SearchForGame {
-    padding-left: 20px;
-  }
-
   .SearchForGame .search-bar {
     width: 300px;
   }
 
-  .SearchForGame .cards-container {
-    width: 400px;
-    height: 150px;
-  }
-
-  .SearchForGame .recommended-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 300px;
-    margin-left: 2px;
-  }
-
   .SearchForGame .searched-cards-container {
-    margin-left: -10px;
-    height: 155px;
-    width: 400px;
+    width: 100%;
   }
-  .SearchForGame .recommended-cards-container img {
-    width: fit-content;
-    height: fit-content;
+}
+
+@media (max-width: 415px) {
+  .SearchForGame .searched-cards-container {
+    width: 350px;
   }
 
-  .SearchForGame .cards-container h4 {
-    padding-left: 0px;
-    padding-top: 30px;
+  .SearchForGame .Cards .games-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 375px) {
+  .SearchForGame {
+    padding-left: 10px;
   }
 }

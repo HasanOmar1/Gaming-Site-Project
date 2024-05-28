@@ -1,10 +1,10 @@
-.NotFoundPage{
-    height: 93.5vh;
+.NotFoundPage {
+  min-height: 93.5vh;
 }
 
-.NotFoundPage h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 150px;
+.NotFoundPage h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
 }

@@ -1,253 +1,213 @@
-.LoginPage{
-    height: 93.5vh;
-    display: flex;
-
+.LoginPage {
+  min-height: 93.5vh;
+  display: flex;
 }
 
-.LoginPage .login-container{
-    display: flex;
-    margin: 6% 20%;
-    height: 500px;
-
+.LoginPage .login-container {
+  display: flex;
+  margin: 6% 20%;
+  height: 500px;
 }
 
-.LoginPage .wave{
-    padding: 160px;
-    border-right: none;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background: url('https://img.freepik.com/premium-vector/rgb-hexagonal-background_11469-76.jpg') no-repeat;
-    background-size: cover;
-
+.LoginPage .wave {
+  padding: 160px;
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: url("https://img.freepik.com/premium-vector/rgb-hexagonal-background_11469-76.jpg")
+    no-repeat;
+  background-size: cover;
 }
-.LoginPage .wave h1{
-    padding-top: 60px;
-}
-
-
-.LoginPage .login-container .login{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 50px ;
-    border-left: none;
-    width: 500px;
-    background-color: #22283172;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-
-
-}
-.LoginPage .login-container .login h1{
-    padding-bottom: 20px;
-    margin-top: 70px;
-    font-size: 1.6rem;
-    
+.LoginPage .wave h1 {
+  padding-top: 60px;
 }
 
-.LoginPage form{
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    gap: 15px;
-    
-    
+.LoginPage .login-container .login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 50px;
+  border-left: none;
+  width: 500px;
+  background-color: #22283172;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.LoginPage .login-container .login h1 {
+  padding-bottom: 20px;
+  margin-top: 70px;
+  font-size: 1.6rem;
+}
+
+.LoginPage form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 15px;
 }
 
 .LoginPage form input,
-.LoginPage form button{
-    padding: 15px 10px;
-    width: 350px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    outline: none;
-    background-color: #222831;
-    color: white;
-    border:none;
+.LoginPage form button {
+  padding: 15px 10px;
+  width: 350px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  outline: none;
+  background-color: #222831;
+  color: white;
+  border: none;
 }
 
-
-.LoginPage form button{
-    cursor: pointer;
-    background-color: #4e5e75;
-    
-
+.LoginPage form button {
+  cursor: pointer;
+  background-color: #4e5e75;
 }
 
-.LoginPage form button:hover{
-    background-color: #4e5e758c;
-
+.LoginPage form button:hover {
+  background-color: #4e5e758c;
 }
 
-.LoginPage .register{
-    padding-top: 20px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    padding-left: 5rem;
-    
+.LoginPage .register {
+  padding-top: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding-left: 5rem;
 }
 
-.LoginPage .register span{
-    color: rgb(128, 128, 249);
-    cursor: pointer;
-    padding-left: 5px;
-
+.LoginPage .register span {
+  color: rgb(128, 128, 249);
+  cursor: pointer;
+  padding-left: 5px;
 }
 
 .LoginPage .password-error-msg,
-.LoginPage .email-error-msg{
-    color: red;
-    height: 10px;
-    padding-bottom: 0px;
-
+.LoginPage .email-error-msg {
+  color: red;
+  height: 10px;
+  padding-bottom: 0px;
 }
 
-.LoginPage .email-error-msg{
-    padding-bottom: 0;
+.LoginPage .email-error-msg {
+  padding-bottom: 0;
 }
-.LoginPage .email-input{
-    margin-bottom: -15px;
+.LoginPage .email-input {
+  margin-bottom: -15px;
 }
 
 @media (max-width: 1024px) {
-.LoginPage{
+  .LoginPage {
     width: 100%;
     height: 95.6vh;
-}
+  }
 
-.LoginPage .login-container{
-    margin: 20%  10%;
+  .LoginPage .login-container {
+    margin: 20% 10%;
     height: 500px;
-}
+  }
 
-.LoginPage .wave h1{
+  .LoginPage .wave h1 {
     font-size: 20px;
     padding-top: 300%;
-}
+  }
 
-.LoginPage .wave{
+  .LoginPage .wave {
     padding: 20px 80px;
-}
+  }
 
-
-.LoginPage .login-container .login{
-
+  .LoginPage .login-container .login {
     height: 500px;
     width: 400px;
-}
+  }
 
-.LoginPage .login-container .login h1{
+  .LoginPage .login-container .login h1 {
     padding-bottom: 30px;
     margin-top: 50px;
     font-size: 20px;
-    
-}
+  }
 
-.LoginPage form{
+  .LoginPage form {
     gap: 10px;
+  }
 
-}
-
-.LoginPage form input,
-.LoginPage form button{
+  .LoginPage form input,
+  .LoginPage form button {
     padding: 5px 10px;
     width: 300px;
     font-size: 1.3rem;
+  }
 
-}
-
-.LoginPage form button{
+  .LoginPage form button {
     margin-top: 10px;
+  }
 
-}
-
-.LoginPage .password-error-msg,
-.LoginPage .email-error-msg{
+  .LoginPage .password-error-msg,
+  .LoginPage .email-error-msg {
     font-size: 15px;
     height: 20px;
     margin-bottom: 2px;
     padding-top: 6px;
-}
+  }
 }
 
 @media (max-width: 576px) {
-    .LoginPage{
-        width: 100%;
-        height: 93.6vh;
-    }
-    
-    .LoginPage .login-container{
-        margin: 20% 5%;
-        height: 500px;
-        
-    }
-    
-    .LoginPage .wave h1{
+  .LoginPage {
+    width: 100%;
+    height: 93.6vh;
+  }
 
-        display: none;
-    }
-    
-    .LoginPage .wave{
-        display: none;
-    }
-    
-    
-    .LoginPage .login-container .login{
-    
-        height: 500px;
-        width:350px;
-        border-radius: 10px;
-    }
-    
-    .LoginPage .login-container .login h1{
-        padding-bottom: 30px;
-        margin-top: 50px;
-        margin-left: -30px;
-        font-size: 20px;
- 
-        
-    }
-    
-    .LoginPage form{
-        gap: 10px;
+  .LoginPage .login-container {
+    margin: 20% 5%;
+    height: 500px;
+  }
 
-    }
-    
-    .LoginPage form input,
-    .LoginPage form button{
-        padding: 10px 10px;
-        width: 300px;
-        font-size: 1rem;
-    
-    }
-    
-    .LoginPage form button{
-        margin-top: 10px;
-    
-    }
-    
-    .LoginPage .password-error-msg,
-    .LoginPage .email-error-msg{
-        font-size: 12px;
-    }
+  .LoginPage .wave h1 {
+    display: none;
+  }
 
-    
+  .LoginPage .wave {
+    display: none;
+  }
 
-.LoginPage .register span{
+  .LoginPage .login-container .login {
+    height: 500px;
+    width: 350px;
+    border-radius: 10px;
+  }
+
+  .LoginPage .login-container .login h1 {
+    padding-bottom: 30px;
+    margin-top: 50px;
+    margin-left: -30px;
+    font-size: 20px;
+  }
+
+  .LoginPage form {
+    gap: 10px;
+  }
+
+  .LoginPage form input,
+  .LoginPage form button {
+    padding: 10px 10px;
+    width: 300px;
+    font-size: 1rem;
+  }
+
+  .LoginPage form button {
+    margin-top: 10px;
+  }
+
+  .LoginPage .password-error-msg,
+  .LoginPage .email-error-msg {
+    font-size: 12px;
+  }
+
+  .LoginPage .register span {
     padding-left: 5px;
-
-
+  }
 }
-
-
-}
-
 
 @media (min-width: 2560px) {
-
-.LoginPage{
+  .LoginPage {
     height: 95.6vh;
-}
-
+  }
 }
