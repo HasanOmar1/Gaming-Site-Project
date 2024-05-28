@@ -53,7 +53,7 @@ export default function Navbar() {
               <span className="library-icon">
                 <SportsEsportsTwoToneIcon />
               </span>
-              <span className="library-counter"> {userLibrary.length} </span>
+              <span className="library-counter"> {userLibrary?.length} </span>
             </button>
 
             <Link to={"/"} className="link">

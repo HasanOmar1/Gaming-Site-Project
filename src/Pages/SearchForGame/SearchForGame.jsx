@@ -24,13 +24,12 @@ export default function SearchForGame() {
     <main className="SearchForGame page">
       <div className="search-container">
         <h3>
-          <SearchIcon className="search-icon" />
-          Find Games
+          Find Games <SearchIcon className="search-icon" />
         </h3>
         <input
           type="text"
           className="search-bar"
-          placeholder="Search for a game"
+          placeholder="Search for a game..."
           onChange={(e) => setSearchBarValue(e.target.value)}
           value={searchBarValue}
         />
@@ -48,7 +47,7 @@ export default function SearchForGame() {
         </div>
       ) : (
         <div className="searched-cards-container">
-          <Cards genre={searchedGame.slice(0, 5)} />
+          <Cards genre={searchedGame} />
         </div>
       )}
     </main>

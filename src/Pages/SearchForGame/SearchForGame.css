@@ -1,141 +1,119 @@
 .SearchForGame {
-    height: 120vh;
-    padding-left: 200px;
-
+  min-height: 100vh;
+  padding-left: 200px;
 }
 
-.SearchForGame .search-bar{
-    border: none;
-    border-radius:5px ;
-    width: 500px;
-    padding: 10px 10px;
-    background-color: #1c1e2281;
-    color: rgb(202, 194, 194);
-
+.SearchForGame .search-bar {
+  border: none;
+  border-radius: 5px;
+  width: 500px;
+  padding: 10px 10px;
+  background-color: #1c1e2281;
+  color: rgb(202, 194, 194);
 }
 
-.SearchForGame .search-bar:focus{
-    outline: 3px solid #00ADB5;
-
-
+.SearchForGame .search-bar:focus {
+  outline: 3px solid #00adb5;
 }
 
-.SearchForGame .search-icon{
-    font-size: 2.2rem;
-    
+.SearchForGame .search-icon {
+  font-size: 2.2rem;
 }
 
-.SearchForGame .search-container{
-    padding-top: 50px;
+.SearchForGame .search-container {
+  padding-top: 50px;
 }
 
-.SearchForGame .search-container h3{
-    padding-bottom: 10px;
+.SearchForGame .search-container h3 {
+  padding-bottom: 10px;
 }
 
-.SearchForGame .cards-container{
-    width: fit-content;
-    height: 150px;
-  
+.SearchForGame .cards-container {
+  padding-bottom: 50px;
 }
 
-.SearchForGame .cards-container h4{
-    
-    color: #00ADB5;
-    padding-top: 30px;
+.SearchForGame .cards-container h4 {
+  color: #00adb5;
+  padding-top: 30px;
 }
 
-.SearchForGame .searched-cards-container{
-    height: 155px;
-    width: 810px;
+.SearchForGame .searched-cards-container {
+  width: 810px;
 }
-.SearchForGame .recommended-cards-container{
-    margin-left: -30px;
-
+.SearchForGame .recommended-cards-container {
+  margin-left: -30px;
 }
 
-.SearchForGame .cards-container h4{
-    padding-left: 30px;
+.SearchForGame .cards-container h4 {
+  padding-left: 30px;
 }
 
-.SearchForGame .recommended-cards-container img{
-    height: 200px;
-
+@media (max-width: 1440px) {
+  .SearchForGame {
+    padding-left: 50px;
+  }
 }
-
 
 @media (max-width: 1024px) {
-    .SearchForGame {
-        height: 130vh;
-        padding-left: 30px;
-    }
-    
+  .SearchForGame {
+    padding-left: 30px;
+  }
 
-    .SearchForGame .recommended-cards-container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin-left: -50px;
+  .SearchForGame .recommended-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -50px;
+  }
 
-    }
- 
-    .SearchForGame .searched-cards-container{
-        height: 155px;
-        width: 600px;
-    }
-    .SearchForGame .recommended-cards-container img{
-        width: 250px;
-        height: fit-content;
-    }
-  
-    .SearchForGame .cards-container h4{
-        padding-left: 85px;
-    }
+  .SearchForGame .searched-cards-container {
+    height: 155px;
+    width: 600px;
+  }
+  .SearchForGame .recommended-cards-container img {
+    width: 250px;
+    height: fit-content;
+  }
 
-   
+  .SearchForGame .cards-container h4 {
+    padding-left: 85px;
+  }
 }
 
 @media (max-width: 576px) {
-    .SearchForGame {
-        height: 350vh;
-        padding-left: 20px;
-    }
-    
-    .SearchForGame .search-bar{
-        width: 300px;
+  .SearchForGame {
+    padding-left: 20px;
+  }
 
-    }
+  .SearchForGame .search-bar {
+    width: 300px;
+  }
 
+  .SearchForGame .cards-container {
+    width: 400px;
+    height: 150px;
+  }
 
-    .SearchForGame .cards-container{
-        width: 400px;
-        height: 150px;
-     
-    }
+  .SearchForGame .recommended-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 2px;
+  }
 
-    .SearchForGame .recommended-cards-container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 300px;
-        margin-left:2px;
+  .SearchForGame .searched-cards-container {
+    margin-left: -10px;
+    height: 155px;
+    width: 400px;
+  }
+  .SearchForGame .recommended-cards-container img {
+    width: fit-content;
+    height: fit-content;
+  }
 
-    }
- 
-    .SearchForGame .searched-cards-container{
-        margin-left: -10px;
-        height: 155px;
-        width: 400px;
-
-    }
-    .SearchForGame .recommended-cards-container img{
-        width:fit-content;
-        height: fit-content;
-    }
-  
-    .SearchForGame .cards-container h4{
-        padding-left:0px;
-        padding-top: 30px;
-    }
- 
+  .SearchForGame .cards-container h4 {
+    padding-left: 0px;
+    padding-top: 30px;
+  }
 }

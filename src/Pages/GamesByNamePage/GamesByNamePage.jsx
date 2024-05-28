@@ -1,9 +1,4 @@
-import {
-  useLocation,
-  useNavigate,
-  useParams,
-  Navigate,
-} from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "./GamesByNamePage.css";
 import Button from "@mui/material/Button";
 import RadioGroupRating from "../../Components/Rating/Rating";
@@ -107,91 +102,91 @@ export default function GamesByNamePage() {
     <main className="GamesByNamePage page">
       {theGame ? (
         <>
-          <BackBtn
-            variant="outline-warning"
-            className="back-btn"
-            onClick={() => navigate(-1)}
-          >
-            <ArrowBackIosIcon className="back-icon" /> Back
-          </BackBtn>
+          <div className="top-container">
+            <div className="img-container">
+              <a href={theGame?.game_url} target="_blank">
+                <img src={theGame?.thumbnail} alt={name} />
+              </a>
 
-          <div className="img-container">
-            <a href={theGame?.game_url} target="_blank">
-              <img src={theGame?.thumbnail} alt={name} />
-            </a>
+              <div className="play-library-container">
+                <Button
+                  variant="contained"
+                  href={theGame?.game_url}
+                  target="_blank"
+                >
+                  Play
+                </Button>
+                <Button
+                  variant="contained"
+                  color="success"
+                  className="add-to-library"
+                  onClick={() => addToLibrary(theGame.id)}
+                >
+                  Add To Library
+                </Button>
+              </div>
+              <div className="rating">
+                <RadioGroupRating />
+              </div>
+            </div>
 
-            <div className="play-library-container">
-              <Button
-                variant="contained"
-                href={theGame?.game_url}
-                target="_blank"
-              >
-                Play
-              </Button>
-              <Button
-                variant="contained"
-                color="success"
-                className="add-to-library"
-                onClick={() => addToLibrary(theGame.id)}
-              >
-                Add To Library
-              </Button>
-            </div>
-            <div className="rating">
-              <RadioGroupRating />
-            </div>
-          </div>
-          <div className="description">
-            <h1 className="game-title">{name}</h1>
-            <p className="game-description">{theGame?.short_description}</p>
-            <div className="game-info">
-              <p className="game-developer">
-                Developer: <span>{theGame?.developer}</span>
-              </p>
-              <p className="game-publisher">
-                Publisher: <span>{theGame?.publisher}</span>
-              </p>
-              <p className="game-release-date">
-                Release Date: <span>{theGame?.release_date}</span>
-              </p>
-              <p className="game-platform">
-                Platform: <span>{theGame?.platform}</span>
-              </p>
-              <p className="game-platform">
-                Genre: <span>{theGame?.genre}</span>
-              </p>
-            </div>
-          </div>
-          <div>
-            <hr className="line" />
-          </div>
-          {currentCategory ? (
-            <>
-              <div className="recommended-games-container">
-                <h4>Recommended games in the same genre</h4>
-                <div className="recommended-games">
-                  <RecommendedCards
-                    recommended={currentCategory?.slice(
-                      randomGamesByGenre,
-                      randomGamesByGenre + 3
-                    )}
-                  />
-                </div>
+            <div className="description">
+              <h1 className="game-title">{name}</h1>
+              <p className="game-description">{theGame?.short_description}</p>
+              <div className="game-info">
+                <p className="game-developer">
+                  Developer: <span>{theGame?.developer}</span>
+                </p>
+                <p className="game-publisher">
+                  Publisher: <span>{theGame?.publisher}</span>
+                </p>
+                <p className="game-release-date">
+                  Release Date: <span>{theGame?.release_date}</span>
+                </p>
+                <p className="game-platform">
+                  Platform: <span>{theGame?.platform}</span>
+                </p>
+                <p className="game-platform">
+                  Genre: <span>{theGame?.genre}</span>
+                </p>
               </div>
-            </>
-          ) : (
-            <>
-              <div className="recommended-games-container">
-                <h4>Recommended Games</h4>
-                <div className="recommended-games">
-                  <RecommendedCards
-                    recommended={gamesData?.slice(randomGames, randomGames + 3)}
-                  />
+            </div>
+          </div>
+
+          <hr className="line" />
+
+          <div className="bottom-container">
+            {currentCategory ? (
+              <>
+                <div className="recommended-games-container">
+                  <h4>Recommended games in the same genre</h4>
+                  <div className="recommended-games">
+                    <RecommendedCards
+                      recommended={currentCategory?.slice(
+                        randomGamesByGenre,
+                        randomGamesByGenre + 3
+                      )}
+                    />
+                  </div>
                 </div>
-              </div>
-            </>
-          )}
-          <Dialog ref={dialog} />
+              </>
+            ) : (
+              <>
+                <div className="recommended-games-container">
+                  <h4>Recommended Games</h4>
+                  <div className="recommended-games">
+                    <RecommendedCards
+                      recommended={gamesData?.slice(
+                        randomGames,
+                        randomGames + 3
+                      )}
+                    />
+                  </div>
+                </div>
+              </>
+            )}
+            <Dialog ref={dialog} />
+          </div>
         </>
       ) : (
         <LoadingSpinner />

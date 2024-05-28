@@ -1,40 +1,28 @@
 .RecommendedCards {
-    display: flex;
-    gap: 50px;
-    justify-content: space-evenly;
-    margin-top: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .RecommendedCards .img-container {
-    transition: transform 1s;
-
+  transition: transform 1s;
 }
 
-.RecommendedCards .img-container:hover{
-    transform: scale(1.1);
+.RecommendedCards .img-container:hover {
+  transform: scale(1.1);
 }
 
-.RecommendedCards img{
-    border-radius: 10px;
+.RecommendedCards img {
+  border-radius: 10px;
 }
 
 @media (max-width: 1024px) {
-
-    .RecommendedCards {
-        display: flex;
-        gap: 20px;
-        justify-content: space-evenly;
-        margin-top: 40px;
-        /* display: none; */
-    }
-    
-
-
-
-}
-
-@media (max-width: 576px) {
-
-
+  .RecommendedCards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
 }

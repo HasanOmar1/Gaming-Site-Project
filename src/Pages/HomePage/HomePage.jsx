@@ -76,15 +76,21 @@ export default function HomePage() {
           />
         </div>
       )}
-      <h2 className="cards-title">Recently Added</h2>
-      <section className="cards-section">
-        <div className="left-cards-container">
-          <Cards genre={gamesData.slice(0, 7)} />
-        </div>
-        <div className="right-cards-container">
-          <ColCards recommended={gamesData.slice(50, 55)} />
-        </div>
-      </section>
+      {gamesData.length > 0 ? (
+        <>
+          <h2 className="cards-title">Recently Added</h2>
+          <section className="cards-section">
+            <div className="left-cards-container">
+              <Cards genre={gamesData.slice(0, 7)} />
+            </div>
+            <div className="right-cards-container">
+              <ColCards recommended={gamesData.slice(50, 55)} />
+            </div>
+          </section>
+        </>
+      ) : (
+        <h3 id="loading">Loading ...</h3>
+      )}
     </main>
   );
 }

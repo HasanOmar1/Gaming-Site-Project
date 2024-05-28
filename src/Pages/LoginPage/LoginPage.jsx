@@ -28,7 +28,7 @@ export default function LoginPage() {
     if (emailInput === user.email && passwordInput === user.password) {
       setIsValid(true);
       setCurrentUser(user);
-      console.log(user);
+      // console.log(user);
       localStorage.setItem("user", JSON.stringify(user));
       navigate("/");
     } else if (emailInput === user.email && passwordInput !== user.password) {

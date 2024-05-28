@@ -1,249 +1,216 @@
-.GamesByNamePage{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    height: 105vh;
+.GamesByNamePage {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
 }
 
-.GamesByNamePage .img-container{
-    width: 400px;
-    height: 300px;
-    border-radius: 20px;
-
-    
+.GamesByNamePage .top-container {
+  display: flex;
+  gap: 100px;
 }
 
-.GamesByNamePage .img-container img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 1s;
-    border-radius: 330px;
-   
+.GamesByNamePage .img-container {
+  width: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.GamesByNamePage .img-container img:hover{
-    transform: scale(1.1);
-
+.GamesByNamePage .img-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  border-radius: 330px;
 }
 
-.GamesByNamePage .play-library-container{
-    margin-top: 20px;
-
-}
-.GamesByNamePage .add-to-library{
-    width: 300px;
-    margin-left: 10px;
+.GamesByNamePage .img-container img:hover {
+  transform: scale(1.1);
 }
 
-.GamesByNamePage .description{
-    padding-left: 70px;
-    padding-top: 50px;
-    padding-bottom: 100px;
+.GamesByNamePage .play-library-container {
+  margin-top: 20px;
 }
-.GamesByNamePage .game-title{
-    padding-bottom: 20px;
-
+.GamesByNamePage .add-to-library {
+  width: 300px;
+  margin-left: 10px;
 }
 
-.GamesByNamePage .game-description{
-    width: 60ch;
-    line-height: 1.7;
-    color: rgb(173, 172, 172);
+.GamesByNamePage .description {
+  /* padding-left: 70px;
+  padding-top: 50px;
+  padding-bottom: 100px; */
+}
+.GamesByNamePage .game-title {
+  padding-bottom: 20px;
 }
 
-.GamesByNamePage .game-info{
-    margin-top: 20px;
-    line-height: 1.7;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    color: #00ADB5;
+.GamesByNamePage .game-description {
+  width: 60ch;
+  line-height: 1.7;
+  color: rgb(173, 172, 172);
 }
 
-.GamesByNamePage .game-info span{
-    font-size: 0.9rem;
-    color: #eeeeeec4;
-}
-.GamesByNamePage .rating{
-    margin-top: 10px;
-    padding: 5px 10px;
-    width: 150px;
-    border: 2px solid rgb(189, 123, 123);
-    border-radius: 10px;
-   
+.GamesByNamePage .game-info {
+  margin-top: 20px;
+  line-height: 1.7;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #00adb5;
 }
 
-.GamesByNamePage .back-btn{
-    height: 5ch;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.GamesByNamePage .game-info span {
+  font-size: 0.9rem;
+  color: #eeeeeec4;
 }
-.GamesByNamePage .back-icon{
-    font-size: 1rem;
-    
-}
-
-.GamesByNamePage .recommended-games-container{
-    position: absolute;
-    top: 60%;
-    width: 100%;
-    display: flex;
-    height: fit-content;
-    padding-top: 50px;
+.GamesByNamePage .rating {
+  margin-top: 10px;
+  padding: 5px 10px;
+  width: 150px;
+  border: 2px solid rgb(189, 123, 123);
+  border-radius: 10px;
 }
 
-.GamesByNamePage .recommended-games-container h4{
-    position: absolute;
-    left: 23%;
-    color: #00ADB5;
+.GamesByNamePage .back-btn {
+  height: 5ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.GamesByNamePage .back-icon {
+  font-size: 1rem;
 }
 
-.GamesByNamePage .recommended-games{
-    position: absolute;
-    left: 22%;
+.GamesByNamePage .recommended-games-container {
+  /* position: absolute;
+  top: 60%;
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  padding-top: 50px; */
 }
 
-.GamesByNamePage .recommended-games img{
-    border-radius: 30%;
-
+.GamesByNamePage .recommended-games-container h4 {
+  /* position: absolute;
+  left: 23%; */
+  color: #00adb5;
 }
 
-
-.GamesByNamePage .line{
-    border: 2px dotted #EEEEEE;
-    width: 65vw;
-    left: 400px;
-    position: absolute;
-    top: 550px;
+.GamesByNamePage .recommended-games {
+  /* position: absolute; 
+ left: 22%; */
 }
 
+.GamesByNamePage .recommended-games img {
+  border-radius: 30%;
+}
+
+.GamesByNamePage .line {
+  border: 2px dotted #eeeeee;
+  width: 70%;
+}
 
 @media (max-width: 1024px) {
-
-.GamesByNamePage{
-    height: 100vh;
-  
-}
-
-.GamesByNamePage .img-container{
+  .GamesByNamePage .img-container {
     width: 300px;
     height: 300px;
     border-radius: 0;
     margin-left: -100px;
     margin-top: 70px;
- 
-}
+  }
 
-.GamesByNamePage .img-container img{
+  .GamesByNamePage .img-container img {
     height: fit-content;
-    border-radius: 60px;    
-}
+    border-radius: 60px;
+  }
 
-.GamesByNamePage .play-library-container{
+  .GamesByNamePage .play-library-container {
     margin-top: 30px;
-
-}
-.GamesByNamePage .add-to-library{
+  }
+  .GamesByNamePage .add-to-library {
     width: 200px;
     margin-left: 10px;
-}
+  }
 
-.GamesByNamePage .description{
+  .GamesByNamePage .description {
     padding-left: 0px;
     padding-top: 30px;
     padding-bottom: 0px;
     margin-top: 430px;
     margin-left: -380px;
-}
-.GamesByNamePage .game-title{
+  }
+  .GamesByNamePage .game-title {
     padding-bottom: 20px;
     margin-left: 150px;
+  }
 
-}
-
-.GamesByNamePage .rating{
+  .GamesByNamePage .rating {
     margin-top: 15px;
-   
-}
+  }
 
-.GamesByNamePage .recommended-games-container{
-
+  .GamesByNamePage .recommended-games-container {
     display: none;
-}
+  }
 
-
-.GamesByNamePage .line{
+  .GamesByNamePage .line {
     left: 60px;
     top: 530px;
+  }
 }
-}
-
 
 @media (max-width: 576px) {
-    .GamesByNamePage{
-        height: 120vh;
-      
-    }
-    
-    .GamesByNamePage .img-container{
-        width: 300px;
-        height: 300px;
-        border-radius: 0;
-        margin-left: -50px;
-        margin-top: 70px;
-     
-    }
-    
-    .GamesByNamePage .img-container img{
-        height: fit-content;
-        border-radius: 60px;    
-    }
-    
-    .GamesByNamePage .play-library-container{
-        margin-top: 30px;
-    
-    }
-    .GamesByNamePage .add-to-library{
-        width: 200px;
-        height: fit-content;
-        margin-left: 10px;
-    }
-    
-    .GamesByNamePage .description{
-        position: absolute;
-        padding-left: 0px;
-        padding-top: 30px;
-        padding-bottom: 0px;
-        margin-top: 430px;
-        margin-left: 30px;
-    }
+  .GamesByNamePage .img-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 0;
+    margin-left: -50px;
+    margin-top: 70px;
+  }
 
-    .GamesByNamePage .game-description{
-        width: 30ch;
-        line-height: 1.7;
-    }
+  .GamesByNamePage .img-container img {
+    height: fit-content;
+    border-radius: 60px;
+  }
 
-    .GamesByNamePage .game-title{
-        padding-bottom: 20px;
-        margin-left: 0px;
-    
-    }
-    
-    .GamesByNamePage .rating{
-        margin-top: 15px;
-       
-    }
-    
-    .GamesByNamePage .recommended-games-container{
-    
-        display: none;
-    }
-    
-    
-    .GamesByNamePage .line{
-        left: 60px;
-        top: 530px;
-    }
+  .GamesByNamePage .play-library-container {
+    margin-top: 30px;
+  }
+  .GamesByNamePage .add-to-library {
+    width: 200px;
+    height: fit-content;
+    margin-left: 10px;
+  }
+
+  .GamesByNamePage .description {
+    position: absolute;
+    padding-left: 0px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    margin-top: 430px;
+    margin-left: 30px;
+  }
+
+  .GamesByNamePage .game-description {
+    width: 30ch;
+    line-height: 1.7;
+  }
+
+  .GamesByNamePage .game-title {
+    padding-bottom: 20px;
+    margin-left: 0px;
+  }
+
+  .GamesByNamePage .rating {
+    margin-top: 15px;
+  }
+
+  .GamesByNamePage .recommended-games-container {
+    display: none;
+  }
+
+  .GamesByNamePage .line {
+    left: 60px;
+    top: 530px;
+  }
 }

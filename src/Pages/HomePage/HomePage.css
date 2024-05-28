@@ -1,182 +1,159 @@
-.HomePage{
-    width: 100%;
-    height: fit-content; 
-    padding-bottom: 30px;
-
-   
+.HomePage {
+  width: 100%;
+  /* height: fit-content; */
+  padding-bottom: 30px;
+  min-height: 100vh;
 }
 
 .HomePage .left-logo,
-.HomePage .right-logo{
-    width: 200px;
-    position: absolute;
+.HomePage .right-logo {
+  width: 200px;
+  position: absolute;
 }
-.HomePage .left-logo{
-    left: 30px;
+.HomePage .left-logo {
+  left: 30px;
 }
-.HomePage .right-logo{
-    right: 30px;
-   
-}
-
-
-.HomePage .welcome-msg{
-    display: flex;
-    justify-content: center;
-    padding: 50px 10px ;
-    letter-spacing: 1.2px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #52555a1c;
+.HomePage .right-logo {
+  right: 30px;
 }
 
-
-.HomePage .cards-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    position: relative;
+.HomePage .welcome-msg {
+  display: flex;
+  justify-content: center;
+  padding: 50px 10px;
+  letter-spacing: 1.2px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #52555a1c;
 }
 
-.HomePage .left-cards-container{
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px;
+.HomePage .cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
 }
 
-.HomePage .right-cards-container{
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    margin-top: -2rem;
-
+.HomePage .left-cards-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
 }
 
-.HomePage .cards-title{
-    color: #00ADB5;
-    margin-left: 350px;
-    margin-top: 50px;
+.HomePage .right-cards-container {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+}
+
+.HomePage .cards-title {
+  color: #00adb5;
+  margin-left: 350px;
+  margin-top: 50px;
 }
 
 .HomePage .recommended-games {
-    margin-left: 18%;
-    border-radius: 10px;
-    background-color: #353b43;
-    padding-bottom: 2rem;
-    width: 65vw;
-    margin-top: 2%;
-
+  margin-left: 18%;
+  border-radius: 10px;
+  background-color: #353b43;
+  padding-bottom: 2rem;
+  width: 65vw;
+  margin-top: 2%;
 }
-.HomePage .recommended-games h5{
-    margin-left: 2.5%;
-    padding-top: 15px;
-    color: #00acb5;
-
+.HomePage .recommended-games h5 {
+  margin-left: 2.5%;
+  padding-top: 15px;
+  color: #00acb5;
 }
 
-.HomePage .recommended-games img{
-    display: flex;
-    justify-content: space-evenly;
-    width: 300px;
+.HomePage .recommended-games img {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+.HomePage #loading {
+  text-align: center;
+  padding-top: 50px;
 }
 
 @media (max-width: 1024px) {
-    .HomePage{
-        width: 100%;
-        height: 160vh;  
-    
-       
-    }
+  .HomePage {
+    width: 100%;
+    height: 160vh;
+  }
 
-    .HomePage .left-logo,
-    .HomePage .right-logo{
+  .HomePage .left-logo,
+  .HomePage .right-logo {
     display: none;
-    }
+  }
 
-    .HomePage .welcome-msg{
+  .HomePage .welcome-msg {
+    padding: 50px 10px;
+    letter-spacing: 1px;
+    gap: 20px;
+  }
 
-        padding: 50px 10px ;
-        letter-spacing: 1px;
-        gap: 20px;
-    }
+  .HomePage .welcome-msg h3,
+  .HomePage .welcome-msg h4 {
+    font-size: 1.2rem;
+  }
 
-    .HomePage .welcome-msg h3 ,
-    .HomePage .welcome-msg h4{
-        font-size: 1.2rem;
-    }
+  .HomePage .cards-section {
+    margin-top: 0px;
+  }
 
-    
-    .HomePage .cards-section{
-        margin-top: 0px;
-    }
-    
-    .HomePage .left-cards-container{
+  .HomePage .left-cards-container {
+    padding: 0;
+  }
 
-        padding: 0 ;
-    }
-    
-    .HomePage .right-cards-container{
-        margin-left: 1.2rem;
-        margin-top: -2.5rem;
-    
-    }
-    
-    .HomePage .cards-title{
-        margin-left: 30px;
-        margin-top: 50px;
-        padding-bottom: 10px;
-    }
-    
-    .HomePage .recommended-games {
-       display: none;
-    
-    }
+  .HomePage .right-cards-container {
+    margin-left: 1.2rem;
+    margin-top: -2.5rem;
+  }
 
+  .HomePage .cards-title {
+    margin-left: 30px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  .HomePage .recommended-games {
+    display: none;
+  }
 }
-
 
 @media (max-width: 576px) {
+  .HomePage {
+    height: 190vh;
+  }
 
-    .HomePage{
-        height: 190vh;
-    }
-
-    .HomePage .left-logo,
-    .HomePage .right-logo{
+  .HomePage .left-logo,
+  .HomePage .right-logo {
     display: none;
-    }
-    
-    .HomePage .welcome-msg{
+  }
 
-        padding-bottom: 20px;
+  .HomePage .welcome-msg {
+    padding-bottom: 20px;
+  }
 
-    }
-    
-    .HomePage .welcome-msg h3 ,
-    .HomePage .welcome-msg h4{
-        font-size: 0.9rem;
-        line-height: 1.5;
-        width: 29ch;
-    }
+  .HomePage .welcome-msg h3,
+  .HomePage .welcome-msg h4 {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    width: 29ch;
+  }
 
-    
-    .HomePage .welcome-msg button{
-
-        font-size: 0.9rem;
-
-    }
-    
-   
+  .HomePage .welcome-msg button {
+    font-size: 0.9rem;
+  }
 }
-
 
 @media (min-width: 2560px) {
-
-
-.HomePage .cards-title{
+  .HomePage .cards-title {
     margin-left: 27%;
-}
-
+  }
 }

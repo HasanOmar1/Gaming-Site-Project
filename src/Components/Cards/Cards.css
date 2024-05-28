@@ -1,145 +1,122 @@
-
-.Cards .cards-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    position: relative;
+.Cards .cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
 }
-.Cards .games-container{
-    width: 800px;
-    height: 150px;
-    background-color: #32383e;
-    position: relative;
-    transition: transform 1s;
-    border: none;
-    border-radius: 10px;
-    
+.Cards .games-container {
+  width: 800px;
+  height: 150px;
+  background-color: #32383e;
+  position: relative;
+  transition: transform 1s;
+  border: none;
+  border-radius: 10px;
 }
 
-.Cards .games-container:hover{
-    transform: scale(1.1);
+.Cards .games-container:hover {
+  transform: scale(1.1);
 }
 
-.Cards .img-container{
-    width: 200px;
-    height: 80%;
-    padding-left: 15px; 
+.Cards .img-container {
+  width: 200px;
+  height: 80%;
+  padding-left: 15px;
 }
-.Cards .game-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-
-}
-
-.Cards .game-title{
-    font-weight: 600;
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    color: rgb(231, 217, 217);
+.Cards .game-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
-.Cards .game-description{
-    font-size: 0.8rem;
-    width: 60ch;
-    color: rgb(163, 156, 156);
-    position: absolute;
-    top: 60px;
-    left: 250px;
+.Cards .game-title {
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  color: rgb(231, 217, 217);
 }
 
-.Cards .game-genre{
-    position: absolute;
-    top: 115px;
-    left: 250px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #00ADB5;
-    background-color: #53565aa7;
-    padding: 3px 5px;
+.Cards .game-description {
+  font-size: 0.8rem;
+  width: 60ch;
+  color: rgb(163, 156, 156);
+  position: absolute;
+  top: 60px;
+  left: 250px;
 }
 
-.Cards .delete-btn{
-    margin-left: 850px;
-    margin-top: -150px;
-    
+.Cards .game-genre {
+  position: absolute;
+  top: 115px;
+  left: 250px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #00adb5;
+  background-color: #53565aa7;
+  padding: 3px 5px;
+}
+
+.Cards .delete-btn {
+  margin-left: 850px;
+  margin-top: -150px;
 }
 
 @media (max-width: 1024px) {
+  .Cards .games-container {
+    width: 500px;
+    height: 150px;
+  }
 
-    .Cards .games-container{
-        width: 500px;
-        height: 150px;
-    }
-    
-    
-    .Cards .img-container{
-        width: 200px;
-        height: 80%;
-        padding-left: 10px; 
-    }
-    .Cards .game-img{
-        width: 100%;
-        height: 100%;
-        margin-top: 15px;
-    
-    }
-    
-    .Cards .game-title{
-        top: 20px;
-        left: 210px;
-    }
-    
-    .Cards .game-description{
-        width: 30ch;
-        left: 210px;
-    }
-    
-    .Cards .game-genre{
-        left: 400px;
+  .Cards .img-container {
+    width: 200px;
+    height: 80%;
+    padding-left: 10px;
+  }
+  .Cards .game-img {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+  }
 
-    }
-    
-    .Cards .delete-btn{
+  .Cards .game-title {
+    top: 20px;
+    left: 210px;
+  }
 
-        margin-left: 520px;
-        margin-top: -180px;
-        
-    }
+  .Cards .game-description {
+    width: 30ch;
+    left: 210px;
+  }
 
+  .Cards .game-genre {
+    left: 400px;
+  }
 
+  .Cards .delete-btn {
+    margin-left: 520px;
+    margin-top: -180px;
+  }
 }
 
-
 @media (max-width: 576px) {
+  .Cards .games-container {
+    width: 400px;
+    overflow: hidden;
+  }
 
+  .Cards .game-description {
+    width: 15ch;
+    left: 210px;
+  }
 
+  .Cards .game-genre {
+    left: 320px;
+  }
 
-    .Cards .games-container{
-        width: 400px;
-        overflow: hidden;
-
-    }
-    
-
-  
-    
-    .Cards .game-description{
-        width: 15ch;
-        left: 210px;
-    }
-    
-    .Cards .game-genre{
-        left: 320px;
-    }
-    
-    .Cards .delete-btn{
-        margin-left: 250px;
-        margin-top: -370px;
-        
-    }
-
-
+  .Cards .delete-btn {
+    margin-left: 250px;
+    margin-top: -370px;
+  }
 }

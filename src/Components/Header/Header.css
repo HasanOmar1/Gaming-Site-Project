@@ -1,256 +1,215 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-.Header{
-    width: 100%;
-    height: 60px;
-    background-color: #222831;
-    display: flex;
-    font-family: 'Inter' , Arial, Helvetica, sans-serif;
-
-    
+.Header {
+  width: 100%;
+  height: 60px;
+  background-color: #222831;
+  display: flex;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
-.Header .logo{
-    padding: 0.3rem 0 ;
-    font-size: 1.8rem;
-    color: #00acb5ba;
-    text-decoration: none;
-    margin-left: 20%;
+.Header .logo {
+  padding: 0.3rem 0;
+  font-size: 1.8rem;
+  color: #00acb5ba;
+  text-decoration: none;
+  margin-left: 20%;
 }
-.Header .navbar-links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.Header .loginOrRegister{
-    color: #EEEEEE;
-    border: 2px solid rgb(41, 119, 119);
-    padding: 1.2rem 0;
-    border-radius: 10px;
-    text-decoration: none;
-    
-
+.Header .navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.Header .login{
-    border: none;
-    color: #adb4be;
+.Header .loginOrRegister {
+  color: #eeeeee;
+  border: 2px solid rgb(41, 119, 119);
+  padding: 1.2rem 0;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
-.Header .logout{
-    margin-left: 10px;
-    padding-top: 1.5rem;
-    border: 2px solid rgb(188, 82, 82);
-    color: #7ea5de; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
-    padding: 5px 30px;
-    
+.Header .login {
+  border: none;
+  color: #adb4be;
 }
 
-.Header .register{
-    color: #7ea5de;
-    border: 2px solid rgb(41, 119, 119);
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 10px;
+.Header .logout {
+  margin-left: 10px;
+  padding-top: 1.5rem;
+  border: 2px solid rgb(188, 82, 82);
+  color: #7ea5de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+  padding: 5px 30px;
+}
 
-    
+.Header .register {
+  color: #7ea5de;
+  border: 2px solid rgb(41, 119, 119);
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .Header .loginOrRegister:hover,
-.Header .register:hover{
-    border-color: rgb(59, 59, 151);
-    color: darkcyan;
+.Header .register:hover {
+  border-color: rgb(59, 59, 151);
+  color: darkcyan;
 }
 
+.Header .logged-user {
+  color: #7ea5de;
+  padding-right: 20px;
+  padding-top: 0.5rem;
+}
 
+.Header .home {
+  color: #7ea5de;
+  margin-left: 100px;
+}
 
-.Header .logged-user{
-    color: #7ea5de;
-    padding-right: 20px;
+.Header .home:hover {
+  color: #7ea5dea9;
+}
+
+.Header .search-icon {
+  margin-left: 400px;
+  color: #00adb5;
+  cursor: pointer;
+}
+.Header .search-icon:hover {
+  color: #00acb582;
+}
+
+.Header .library {
+  background-color: #393e46;
+  border: none;
+  position: relative;
+}
+
+.Header .library-counter {
+  font-size: 0.67rem;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.Header .library-icon {
+  position: relative;
+  top: 5px;
+  right: -3px;
+  color: greenyellow;
+}
+
+@media (max-width: 1440px) {
+  .Header .logo {
+    display: none;
+  }
+
+  .Header .loginOrRegister {
+    padding: 1.2rem 0;
+  }
+
+  .Header .logged-user {
+    padding-right: 0px;
     padding-top: 0.5rem;
+    margin-right: 110px;
+    font-size: 0.9rem;
+  }
 
-}
+  .Header .home {
+    margin-left: 10px;
+  }
 
+  .Header .logout {
+    margin-left: 10px;
+    padding-top: 1.5rem;
+    margin-top: 1px;
+    padding: 5px 30px;
+  }
 
+  .Header h5 {
+    font-size: 1rem;
+    position: absolute;
+  }
 
-.Header .home{
-    color: #7ea5de;
-    margin-left: 100px;
-}
-
-.Header .home:hover{
-    color: #7ea5dea9;
-}
-
-.Header .search-icon{
-    margin-left: 400px;
-    color: #00ADB5;
-    cursor: pointer;
-}
-.Header .search-icon:hover{
-
-    color: #00acb582;
-}
-
-.Header .library{
-    background-color: #393E46;
-    border: none;
-    position: relative;
-
-}
-
-.Header .library-counter{
+  .Header .library-counter {
     font-size: 0.67rem;
     position: absolute;
-    right: 20px;
-    top: 0;
+    right: 15px;
+    top: 0px;
+  }
+
+  .Header .library-icon {
+    top: 0px;
+  }
+
+  .Header .library {
+    padding: 10px 5px;
+  }
 }
 
-.Header .library-icon{
+@media (max-width: 850px) {
+  .Header .search-icon {
+    margin-left: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Header {
+    width: 100%;
+    height: 60px;
     position: relative;
-    top: 5px;
-    right: -3px;
-    color: greenyellow;
+  }
+
+  .Header .logo {
+    padding-top: 15px;
+    display: none;
+  }
+
+  .Header .loginOrRegister {
+    font-size: 13px;
+    padding: 1.2rem 0;
+  }
+
+  .Header h5 {
+    font-size: 1rem;
+    position: absolute;
+    top: 70px;
+    left: 160px;
+  }
+
+  .Header .logged-user {
+    padding-right: 20px;
+    padding-top: 0.5rem;
+  }
+
+  .Header .home {
+    margin-left: 10px;
+  }
+
+  .Header .search-icon {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .Header .logout {
+    margin-left: 0px;
+    margin-top: 1px;
+    padding: 5px 5px;
+  }
+
+  .Header .library {
+    padding: 5px 5px;
+    font-size: 0.7rem;
+  }
+  .Header .library-counter {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
 }
-
-@media (max-width: 1024px) {
-
-    .Header{
-        width: 100%;
-        height: 60px;
-        position: relative;
-        
-    }
-    
-    .Header .logo{
-
-        display: none;
-    }
-
-    
-    .Header .loginOrRegister{
-
-        padding: 1.2rem 0; 
-    
-    }
-    
-    
-    .Header .logged-user{
-        padding-right: 0px;
-        padding-top: 0.5rem;
-        margin-right: 110px;
-        font-size: 0.9rem;
-        
-    }
-    
-    .Header .home{
-        margin-left: 10px;
-    }
-    
-    .Header .search-icon{
-        margin-left: 130px;
-        
-    }
-    
-    
-    .Header .logout{
-        margin-left: 10px;
-        padding-top: 1.5rem;
-        margin-top: 1px;
-        padding: 5px 30px;
-        
-    }
-
-    .Header h5{
-        font-size: 1rem;
-        position: absolute;
-    }
-
-    .Header .library-counter{
-        font-size: 0.67rem;
-        position: absolute;
-        right: 15px;
-        top: 0px;
-    }
-    
-    .Header .library-icon{
-        top: 0px;
-    }
-
-    .Header .library{
-        padding: 10px 5px;
-    }
-}
-
-    @media (max-width: 576px) {
-
-        .Header{
-            width: 100%;
-            height: 60px;
-            position: relative;
-            
-        }
-        
-        .Header .logo{
-            padding-top: 15px;
-            display: none;
-        }
-    
-        
-        .Header .loginOrRegister{
-            font-size: 13px;
-            padding: 1.2rem 0; 
-        
-        }
-        
-        
-        .Header h5{
-            font-size: 1rem;
-            position: absolute;
-            top: 70px;
-            left: 160px;
-
-        }
-        
-        .Header .logged-user{
-            padding-right: 20px;
-            padding-top: 0.5rem;
-            
-        }
-        
-        .Header .home{
-            margin-left: 10px;
-        }
-        
-        .Header .search-icon{
-            margin-left: 10px;
-            font-size: 16px;
-            
-        }
-        
-        
-        .Header .logout{
-            margin-left: 0px;
-            margin-top: 1px;
-            padding: 5px 5px;
-            
-        }
-
-        
-        .Header .library{
-            padding: 5px 5px;
-            font-size: 0.7rem;
-        }
-        .Header .library-counter{
-            position: absolute;
-            right: 20px;
-            top: 25px;
-        }
-        
-    }
